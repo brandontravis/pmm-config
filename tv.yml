@@ -252,7 +252,7 @@ collections:
   Best TV Shows of the 2020's:
     template: {name: BestOfTimePeriod, summary: "2020's", start: 2020, end: 2029, poster: best-2020s.jpg, sec: "04", num: "03", library: true, shared: true}
   Best TV Shows of the Last Five Years:
-    template: {name: BestOfTimePeriod, summary: "last five years", start: 2017, end: 2023, poster: best-5-years.jpg, sec: "04", num: "04", library: true, shared: true}
+    template: {name: BestOfTimePeriod, summary: "last five years", start: 2017, end: 2023, poster: best-5-years-updated.jpg, sec: "04", num: "04", library: true, shared: true}
 
 #########################
 ##     Award Shows     ##
