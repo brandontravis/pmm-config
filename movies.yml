@@ -88,6 +88,11 @@ collections:
     plex_search:
       duration.lte: 90
       genre.not: Animation
+  The Curated Collection:
+    template: {name: Basic, poster: chart-brandon-curated.jpg, sec: "01", num: "09", order: release.desc, home: true, library: true, shared: true}
+    summary: Brandon's favorites.
+    trakt_list:
+      - https://trakt.tv/users/idealbrandon/lists/the-brandon-collection?sort=rank,asc
 
 #######################
 ##     Originals     ##
@@ -203,7 +208,7 @@ collections:
   Best Films of the 2020's:
     template: {name: BestOfTimePeriod, poster: best-2020s.jpg, summary: "2020's", start: 2020, end: 2029, sec: "05", num: "05", library: true, shared: true}
   Best Films of the Last Five Years:
-    template: {name: BestOfTimePeriod, poster: best-5-years-updated.jpg, summary: "last five years", start: 2017, end: 2023, sec: "05", num: "06", library: true, shared: true}
+    template: {name: BestOfTimePeriod, poster: best-5.jpg, summary: "last five years", start: 2017, end: 2023, sec: "05", num: "06", library: true, shared: true}
 
 #########################
 ##     Award Shows     ##
@@ -219,19 +224,20 @@ collections:
       - url: https://www.imdb.com/search/title/?groups=golden_globe_winner
         limit: 1000
   Best Picture Winners:
-    template: {name: Basic, poster: award-best-picture.jpg, sec: "06", num: "02", order: release.desc, library: true, shared: true}
+    template: {name: Basic, poster: award-best-picture-winners.jpg, sec: "06", num: "02", order: release.desc, library: true, shared: true}
     summary: Best Picture winning movies sorted by release date.
     imdb_list:
       url: https://www.imdb.com/search/title/?groups=best_picture_winner
       limit: 1000
   Best Director Winners:
-    template: {name: Basic, poster: award-best-director.jpg, sec: "06", num: "03", order: release.desc, library: true, shared: true}
+    template: {name: Basic, poster: award-best-director-winners
+    .jpg, sec: "06", num: "03", order: release.desc, library: true, shared: true}
     summary: Best Director winning films sorted by release date.
     imdb_list:
       url: https://www.imdb.com/search/title/?groups=best_director_winner
       limit: 1000
   Razzie Winning Movies:
-    template: {name: Basic, poster: award-razzie.jpg, sec: "06", num: "04", order: release.desc, library: true, shared: true}
+    template: {name: Basic, poster: award-razzie-winners.jpg, sec: "06", num: "04", order: release.desc, library: true, shared: true}
     summary: Razzie Award Winners sorted by release date.
     imdb_list:
       url: https://www.imdb.com/search/title/?groups=razzie_winner
@@ -307,13 +313,29 @@ collections:
     imdb_list:
      - https://www.imdb.com/list/ls075204988/
   Never Forget:
-    template: {name: Basic, sec: "07", num: "05", poster: holiday-never-forget.jpg, order: release.desc, library: true, shared: true}
-    summary: Remebering 9/11 and the ensuing War on Terror.
+    template: {name: Basic, sec: "07", num: "05", poster: holiday-911.jpg, order: release.desc, library: true, shared: true}
+    summary: Remebering 9/11.
     visible_home: range(08/01-09/11)
     visible_shared: range(08/01-09/11)
     #schedule: range(02/01-02/14)
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/holiday-9-11?sort=rank,asc
+  Steak & Blowjob Day:
+    template: {name: Basic, sec: "07", num: "06", poster: holiday-fathers.jpg, order: release.desc, library: true, shared: true}
+    summary: Because it's well deserved.
+    visible_home: range(05/15-06/20)
+    visible_shared: range(05/15-06/20)
+    #schedule: range(02/01-02/14)
+    trakt_list:
+      - https://trakt.tv/users/idealbrandon/lists/holiday-father-mothers?sort=rank,asc
+  Alone Time is Overrated:
+    template: {name: Basic, sec: "07", num: "07", poster: holiday-mothers-day.jpg, order: release.desc, library: true, shared: true}
+    summary: Because it's well deserved.
+    visible_home: range(04/15-05/15)
+    visible_shared: range(04/15-05/15)
+    #schedule: range(02/01-02/14)
+    trakt_list:
+      - https://trakt.tv/users/idealbrandon/lists/holiday-father-mothers?sort=rank,asc
 
 #########################
 ##     Collections     ##
