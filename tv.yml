@@ -1,0 +1,387 @@
+templates:
+  Basic:
+    sort_title: +<<sec>>_<<num>>-<<collection_name>>
+    url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
+    sync_mode: sync
+    collection_order: <<order>>
+    smart_label: <<label>>
+    collection_mode: hide
+    visible_library: <<library>>
+    visible_home: <<home>
+    visible_shared: <<shared>>
+    radarr_add: <<a>>
+    radarr_search: <<s>>
+    radarr_monitor: <<m>>
+    limit: <<limit>>
+    optional:
+      - poster
+      - library
+      - home
+      - shared
+      - order
+      - label
+      - limit
+      - a
+      - s
+      - m
+  BestOfTimePeriod:
+    sync_mode: sync
+    sort_title: +<<sec>>_<<num>>-<<collection_name>>
+    url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
+    collection_order: custom
+    collection_mode: hide
+    visible_home: true
+    visible_shared: true
+    limit: 150
+    summary: Top rated films from the <<summary>>.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&release_date=<<start>>-01-01,<<end>>-12-31&num_votes=10000,&sort=user_rating,desc
+      limit: 2000
+  IMDB-Best-Episodes:
+    sort_title: +<<sec>>_<<num>>-<<collection_name>>
+    url_poster: <<poster>>
+    sync_mode: sync
+    collection_order: custom
+    collection_mode: hide
+    visible_library: <<library>>
+    visible_home: <<home>
+    visible_shared: <<shared>>
+    radarr_add: <<a>>
+    radarr_search: <<s>>
+    radarr_monitor: <<m>>
+    summary: The best episodes of <<showName>>, sorted by IMDB audience rating.
+    collection_level: episode
+    imdb_list:
+      url: https://www.imdb.com/search/title/?series=<<imdb_series>>&sort=user_rating,desc
+      limit: 100
+    optional:
+      - poster
+      - library
+      - home
+      - shared
+      - a
+      - s
+      - m
+
+collections:
+####################
+##     Charts     ##
+####################
+  Trending TV Shows Right Now:
+    template: {name: Basic, poster: chart-trakt-trending-right-now.jpg, limit: 100, sec: "01", num: "01", order: release.desc, library: true, home: true, shared: true}
+    summary: Hot and trending tv shows from across the internet.
+    trakt_trending: 150
+    tmdb_trending_daily: 50
+    tmdb_trending_weekly: 150
+  Most Popular TV Shows This Week on Trakt:
+    template: {name: Basic, poster: chart-trakt-most-popular-this-week.jpg, limit: 100, sec: "01", num: "02", order: release.desc, home: true, library: true, shared: true}
+    summary: The most watched TV shows for the last seven days. Sorted by number of unique watchers.
+    trakt_chart:
+      chart: watched
+      time_period: weekly
+      limit: 1000
+  Most Popular TV Shows This Year on Trakt:
+    template: {name: Basic, poster: chart-trakt-most-popular-this-year.jpg, limit: 100, sec: "01", num: "03", order: release.desc, home: true, library: true, shared: true}
+    summary: The most watched TV shows for the last year. Sorted by number of unique watchers.
+    trakt_chart:
+      chart: watched
+      time_period: yearly
+      limit: 1000
+  Top Rated TV Shows on IMDB:
+    template: {name: Basic, poster: chart-imdb-top-rated.jpg, limit: 100, sec: "01", num: "04", order: custom, home: true, library: true, shared: true}
+    summary: Popular movies on IMDB, sorted by random.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=tv_series,tv_miniseries&num_votes=20000,&sort=user_rating,desc
+      limit: 1000
+  Our Most Watched TV Shows:
+    template: {name: Basic, poster: chart-plex-most-watched.jpg, limit: 100, sec: "01", num: "05", order: release.desc, home: true, library: true, shared: true}
+    summary: Our most watch TV shows on Plex.
+    tautulli_popular:
+      list_days: 180
+      list_size: 60
+      list_buffer: 60
+    tautulli_watched:
+      list_days: 180
+      list_size: 60
+      list_buffer: 60
+  Recently Added Shows:
+    template: { name: Basic, sec: "01", num: "06", poster: chart-plex-recently-added.jpg, library: true, home: true, shared: true}
+    plex_search:
+      added: 90
+  Recently Released Shows:
+    template: { name: Basic, sec: "01", num: "07", poster: chart-plex-new-release.jpg, order: release.desc, library: true, home: true, shared: true}
+    plex_search:
+      release: 180
+
+#######################
+##     Originals     ##
+#######################
+  Netflix Originals:
+    template: {name: Basic, poster: streaming-netflix-originals.jpg, sec: "02", num: "01", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/netflix-shows
+    summary: Netflix original shows.
+  Most Popular On Netflix:
+    template: {name: Basic, poster: streaming-netflix-popular.jpg, sec: "02", num: "02", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Netflix.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0144901&sort=user_rating,desc
+      limit: 1000
+  Apple TV+ Originals:
+    template: {name: Basic, poster: streaming-apple-originals.jpg, sec: "02", num: "03", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/appletv-shows
+    summary: Apple TV+ original shows.
+  Most Popular On Apple TV+:
+    template: {name: Basic, poster: streaming-apple-popular.jpg, sec: "02", num: "04", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Apple TV+
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0546168&sort=user_rating,desc
+      limit: 1000
+  Disney+ Originals:
+    template: {name: Basic, poster: streaming-disney-originals.jpg, sec: "02", num: "05", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/disney-shows
+    summary: Disney+ original shows.
+  Most Popular On Disney+:
+    template: {name: Basic, poster: streaming-disney-popular.jpg, sec: "02", num: "06", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Disney+
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0721120&sort=user_rating,desc
+      limit: 1000
+  Hulu Originals:
+    template: {name: Basic, poster: streaming-hulu-originals.jpg, sec: "02", num: "07", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/hulu-shows
+    summary: Hulu original shows.
+  Most Popular On Hulu:
+    template: {name: Basic, poster: streaming-hulu-popular.jpg, sec: "02", num: "08", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Hulu.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0218858&sort=user_rating,desc
+      limit: 1000
+  HBO Max Originals:
+    template: {name: Basic, poster: streaming-hbo-originals.jpg, sec: "02", num: "09", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/hbomax-shows
+    summary: HBO Max original shows.
+  Most Popular On HBO Max:
+    template: {name: Basic, poster: streaming-hbo-popular.jpg, sec: "02", num: "10", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on HBO Max.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0754095&sort=user_rating,desc
+      limit: 1000
+  Peacock Originals:
+    template: {name: Basic, poster: streaming-peacock-originals.jpg, sec: "02", num: "11", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/peacock-shows
+    summary: Peacock original shows.
+  Most Popular On Peacock:
+    template: {name: Basic, poster: streaming-peacock-popular.jpg, sec: "02", num: "12", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Peacock.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0764707&sort=user_rating,desc
+      limit: 1000
+  Prime Video Originals:
+    template: {name: Basic, poster: streaming-prime-originals.jpg, sec: "02", num: "13", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/amazon-shows
+    summary: Prime Video original shows.
+  Most Popular On Prime Video:
+    template: {name: Basic, poster: streaming-prime-popular.jpg, sec: "02", num: "14", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Prime Video.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0476953&sort=user_rating,desc
+      limit: 1000
+  Paramount+ Originals:
+    template: {name: Basic, poster: streaming-paramount-originals.jpg, sec: "02", num: "15", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/paramount-shows
+    summary: Paramount original shows.
+  Most Popular On Paramount+:
+    template: {name: Basic, poster: streaming-paramount-popular.jpg, sec: "02", num: "16", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Paramount+.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0820547&sort=user_rating,desc
+      limit: 1000
+  Showtime Originals:
+    template: {name: Basic, poster: streaming-showtime-originals.jpg, sec: "02", num: "17", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/showtime-shows
+    summary: Showtime original shows.
+  Most Popular On Showtime:
+    template: {name: Basic, poster: streaming-showtime-popular.jpg, sec: "02", num: "18", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Showtime.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0052980&sort=user_rating,desc
+      limit: 1000
+  Discovery+ Originals:
+    template: {name: Basic, poster: streaming-discovery-originals.jpg, sec: "02", num: "19", order: custom, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/hdlists/discovery-original-tv-shows
+    summary: Discovery+ original shows.
+  Most Popular On Discovery+:
+    template: {name: Basic, poster: streaming-discovery-popular.jpg, sec: "02", num: "20", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Discovery+.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0834810&sort=user_rating,desc
+      limit: 1000
+
+############################
+##     Recomendations     ##
+############################
+  Certified Fresh:
+    template: {name: Basic, sec: "03", num: "01", poster: recommend-certified-fresh.jpg, order: custom, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/certifiedfreshshows?sort=score&sortorder=desc
+    summary: Certified Fresh shows, sorted by user rating.
+  Common Sense Selections:
+    template: {name: Basic, sec: "03", num: "02", poster: recommend-css.jpg, order: custom, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/cssfamiliesshows?sort=score&sortorder=desc
+    summary: Common Sense recognizes outstanding entertainment with an official seal for quality and impact. Common Sense Selections include age-appropriate media with the potential to spark family conversations. Sorted by user rating.
+  Best TV Shows of the Last Six Months:
+    template: {name: Basic, poster: recommend-best-last-6.jpg, order: release.desc, sec: "03", num: "04", library: true, shared: true}
+    summary: TV Shows rated 7 or higher on IMDb, released in the past 12 months.
+    plex_search:
+      audience_rating.gte: 7.0
+      release: 360
+  Popular Documentaries on IMDB:
+    Popular on IMDB:
+    template: {name: Basic, poster: recommend-hot-docs.jpg, sort: release.desc, limit: 100, num: "03", sec: "05", library: true, shared: true}
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=tv_series,tv_movie,tv_miniseries,documentary&genres=documentary&explore=title_type,genres
+      limit: 5000
+    summary: Popular docuseries sorted by release date.
+
+#############################
+##     Decades & Years     ##
+#############################
+  Best TV Shows of the 2000's:
+    template: {name: BestOfTimePeriod, summary: "2000's", start: 2000, end: 2009, poster: best-2000s.jpg, sec: "04", num: "01", library: true, shared: true}
+  Best TV Shows of the 2010's:
+    template: {name: BestOfTimePeriod, summary: "2010's", start: 2010, end: 2019, poster: best-2010s.jpg, sec: "04", num: "02", library: true, shared: true}
+  Best TV Shows of the 2020's:
+    template: {name: BestOfTimePeriod, summary: "2020's", start: 2020, end: 2029, poster: best-2020s.jpg, sec: "04", num: "03", library: true, shared: true}
+  Best TV Shows of the Last Five Years:
+    template: {name: BestOfTimePeriod, summary: "last five years", start: 2017, end: 2023, poster: best-5-years.jpg, sec: "04", num: "04", library: true, shared: true}
+
+#########################
+##     Award Shows     ##
+#########################
+  Award Winning TV Shows:
+    template: {name: Basic, poster: award-winners.jpg, sec: "05", num: "01", order: release.desc, library: true, shared: true}
+    summary: Emmy and Golden Globe award winners.
+    imdb_list:
+      - url: https://www.imdb.com/search/title/?groups=emmy_winner
+        limit: 2500
+      - url: https://www.imdb.com/search/title/?groups=golden_globe_winner
+        limit: 2500
+
+#########################
+##     Collections     ##
+#########################
+  Based on Books:
+    template: {name: Basic, poster: collection-based-on-books.jpg, sec: "06", num: "01", order: release.desc, library: true, shared: true}
+    summary: TV Shows based on books or novels.
+    tmdb_keyword: 818
+  Based on Video Games:
+    template: {name: Basic, poster: collection-based-on-videogames.jpg, sec: "06", num: "02", order: release.desc, library: true, shared: true}
+    summary: TV Shows based on video games.
+    tmdb_keyword: 41645
+  Based on Comic Books:
+    template: {name: Basic, poster: collection-based-on-comics.jpg, sec: "06", num: "03", order: release.desc, library: true, shared: true}
+    summary: TV Shows based on comic books.
+    tmdb_keyword:
+      - 9717
+      - 18712
+  Based on True Events:
+    template: {name: Basic, poster: collection-based-on-true-events.jpg, sec: "06", num: "04", order: release.desc, library: true, shared: true}
+    summary: TV Shows based on true events.
+    tmdb_keyword: 9672
+  DC Comics:
+    template: {name: Basic, poster: collection-dc.jpg, sort: release.desc, sec: "06", num: "11", library: true, shared: true}
+    trakt_list:
+     - https://trakt.tv/users/darkman1498/lists/dc-series?sort=rank,desc
+  Marvel Cinematic Universe:
+    template: {name: Basic, sort: release.desc, poster: collection-MCU.jpg, sec: "06", num: "14", library: true, shared: true}
+    trakt_list:
+     https://trakt.tv/users/28stieren/lists/mcu-movies-series?sort=released,asc
+  Middle Earth:
+    template: {name: Basic, poster: collection-middle-earth.jpg, sort: release.desc, sec: "06", num: "15", library: true, shared: true}
+    trakt_list:
+     - https://trakt.tv/users/lutgnature/lists/lord-of-the-rings-hobbit
+  Star Wars Universe:
+    template: {name: Basic, poster: collection-starwars.jpg, sort: release.desc, sec: "06", num: "16", library: true, shared: true}
+    trakt_list:
+     - https://trakt.tv/users/julienicoletv/lists/star-wars-universe?sort=rank,asc
+  Star Trek:
+    template: {name: Basic, poster: collection-star-trek.jpg, sort: release.desc, sec: "06", num: "17", library: true, shared: true}
+    trakt_list:
+     - https://trakt.tv/users/buzdekay/lists/star-trek?sort=released,asc
+  Wizarding World:
+    template: {name: Basic, poster: collection-wizarding-world.jpg, sort: release.desc, sec: "06", num: "18", library: true, shared: true}
+    trakt_list:
+     - https://trakt.tv/users/bubbles-prior/lists/wizarding-world?sort=rank,asc
+
+##############################
+##     Top Episodes         ##
+##############################
+  The Best Episodes of Futurama: #150
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "01", home: true, shared: true, showName: "Futurama", imdb_series: tt0149460, limit: 100}
+  The Best Episodes of It's Always Sunny: #165
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "02", home: true, shared: true, showName: "It's Always Sunny in Philadelphia", imdb_series: tt0472954, limit: 75}
+  The Best Episodes of Modern Family: #250
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "03", home: true, shared: true, showName: "Modern Family", imdb_series: tt1442437, limit: 100}
+  The Best Episodes of Bob's Burgers: #245
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "04", home: true, shared: true, showName: "Bob's Burgers", imdb_series: tt1561755, limit: 100}
+  The Best Episodes of Rick & Morty: #61
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "05", home: true, shared: true, showName: "Rick & Morty", imdb_series: tt2861424, limit: 30}
+  The Best Episodes of Impractical Jokers: #267
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "06", home: true, shared: true, showName: "Impractical Jokers", imdb_series: tt2100976, limit: 100}
+  The Best Episodes of Naked & Afraid: #182
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "07", home: true, shared: true, showName: "Naked & Afraid", imdb_series: tt3007640, limit: 100}
+  The Best Episodes of Parks & Rec: #124
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "08", home: true, shared: true, showName: "Parks & Rec", imdb_series: tt1266020, limit: 75}
+  The Best Episodes of House: #176
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "09", home: true, shared: true, showName: "House", imdb_series: tt0412142, limit: 100}
+  The Best Episodes of Schitt's Creek: #80
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "10", home: true, shared: true, showName: "Schitt's Creek", imdb_series: tt3526078, limit: 40}
+  The Best Episodes of Letterkenny: #68
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "11", home: true, shared: true, showName: "Letterkenny", imdb_series: tt4647692, limit: 30}
+  The Best Episodes of South Park: #320
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "12", home: true, shared: true, showName: "South Park", imdb_series: tt0121955, limit: 100}
+  The Best Episodes of Family Guy: #397
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "13", home: true, shared: true, showName: "Family Guy", imdb_series: tt0182576, limit: 100}
+  The Best Episodes of Community: #110
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "14", home: true, shared: true, showName: "Community", imdb_series: tt1439629, limit: 50}
+  The Best Episodes of The Office: #188
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "15", home: true, shared: true, showName: "The Office", imdb_series: tt0386676, limit: 100}
+  The Best Episodes of Brooklyn Nine-Nine: #153
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "16", home: true, shared: true, showName: "Brooklyn Nine-Nine", imdb_series: tt2467372, limit: 100}
+  The Best Episodes of Friends: #235
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "17", home: true, shared: true, showName: "Friends", imdb_series: tt0108778, limit: 100}
+  The Best Episodes of Scrubs: #182
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "18", home: true, shared: true, showName: "Scrubs", imdb_series: tt0285403, limit: 100}
+  The Best Episodes of Superstore: #113
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "19", home: true, shared: true, showName: "Superstore", imdb_series: tt4477976, limit: 100}
+  The Best Episodes of Weeds: #102
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "20", home: true, shared: true, showName: "Weeds", imdb_series: tt0439100, limit: 50}
+  The Best Episodes of Workaholics: #86
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "21", home: true, shared: true, showName: "Workaholics", imdb_series: tt1610527, limit: 40}
+  The Best Episodes of 30 Rock: #138
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "22", home: true, shared: true, showName: "30 Rock", imdb_series: tt0496424, limit: 100}
+  The Best Episodes of Robbot Chicken: #227
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "23", home: true, shared: true, showName: "Robbot Chicken", imdb_series: tt0437745, limit: 100}
+  The Best Episodes of Glee: #121
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "24", home: true, shared: true, showName: "Glee", imdb_series: tt1327801, limit: 60}
+  The Best Episodes of Reno 911!: #124
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "25", home: true, shared: true, showName: "Reno 911!", imdb_series: tt0370194, limit: 60}
+  The Best Episodes of Archer: #135
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "26", home: true, shared: true, showName: "Archer", imdb_series: tt1486217, limit: 70}
+  The Best Episodes of That 70's Show: #200
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "27", home: true, shared: true, showName: "That 70's Show", imdb_series: tt0165598, limit: 100}
+  The Best Episodes of How I Met Your Mother: #208
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "28", home: true, shared: true, showName: "How I Met Your Mother", imdb_series: tt0460649, limit: 100}
+  The Best Episodes of The Goldbergs: #215
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "29", home: true, shared: true, showName: "The Goldbergs", imdb_series: tt2712740, limit: 100}
+  The Best Episodes of The Big Bang Theory: #280
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "30", home: true, shared: true, showName: "The Big Bang Theory", imdb_series: tt0898266, limit: 100}
+  The Best Episodes of Star Trek - Voyager: #168
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "31", home: true, shared: true, showName: "Star Trek - Voyager", imdb_series: tt0112178, limit: 100}
+  The Best Episodes of Star Trek - Deep Space Nine: #173
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "32", home: true, shared: true, showName: "Star Trek - Deep Space Nine", imdb_series: tt0106145, limit: 100}
+  The Best Episodes of Star Trek - The Next Generation: #177
+    template: { name: IMDB-Best-Episodes, sec: "08", num: "33", home: true, shared: true, showName: "Star Trek - The Next Generation", imdb_series: tt0092455, limit: 100}
+
+
+
+
