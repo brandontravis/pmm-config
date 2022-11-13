@@ -43,7 +43,7 @@ collections:
 ##     Charts     ##
 ####################
   Trending Movies Right Now:
-    template: {name: Basic, poster: chart-trakt-trending-right-now.jpg, limit: 150, sec: "01", num: "01", order: release.desc, home: true, library: true, shared: true}
+    template: {name: Basic, poster: chart-trakt-trending.jpg, limit: 150, sec: "01", num: "01", order: release.desc, home: true, library: true, shared: true}
     summary: Hot and trending movies from across the internet.
     trakt_trending: 250
     tmdb_trending_daily: 100
@@ -73,17 +73,17 @@ collections:
       list_size: 60
       list_buffer: 60
   Best Movies of the Last Six Months:
-    template: {name: Basic, order: release.desc, sec: "01", num: "06", poster: recommend-best-last-6.jpg, library: true, shared: true}
+    template: {name: Basic, order: release.desc, sec: "01", num: "06", poster: chart-imdb-best-six-months.jpg, library: true, shared: true}
     summary: Movies rated 7 or higher on IMDb, released in the past 6 months.
     plex_search:
       audience_rating.gte: 7.0
       release: 180
   Certified Fresh:
-    template: {name: Basic, sec: "01", num: "07", order: custom, poster: recommend-certified-fresh.jpg, library: true, shared: true, limit: 150}
+    template: {name: Basic, sec: "01", num: "07", order: custom, poster: chart-certified-fresh.jpg, library: true, shared: true, limit: 150}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/certifiedfreshmovies?sort=score&sortorder=desc
     summary: Certified Fresh movies, sorted by user rating.
   Quick Flicks:
-    template: {name: Basic, order: release.desc, num: "01", sec: "08", poster: recommend-quickflicks.jpg, library: true, shared: true, limit: 150}
+    template: {name: Basic, order: release.desc, num: "01", sec: "08", poster: chart-quick-flicks.jpg, library: true, shared: true, limit: 150}
     summary: Movies 90 minutes or less.
     plex_search:
       duration.lte: 90
@@ -399,7 +399,7 @@ collections:
     template: {name: Basic, sort: release.desc, poster: collection-wizarding-world.jpg, sec: "09", num: "18", library: true, shared: true}
     trakt_list:
      - https://trakt.tv/users/bubbles-prior/lists/wizarding-world?sort=rank,asc
-  X-Men:
+  Mutant Collection:
     template: {name: Basic, sort: release.desc, poster: collection-xmen.jpg, sec: "09", num: "19", library: true, shared: true}
     trakt_list:
      - https://trakt.tv/users/bertjj/lists/x-men?sort=released,desc
