@@ -209,6 +209,7 @@ collections:
       - https://trakt.tv/users/jarvis-1144833/lists/stoner-movies
       - https://trakt.tv/users/dough13/lists/stoner-movies
       - https://trakt.tv/users/idealbrandon/lists/holiday-4-20?sort=rank,asc
+      - https://trakt.tv/users/idealbrandon/lists/holiday-4-20
     imdb_list:
      - https://www.imdb.com/list/ls075204988/
   Never Forget:
@@ -258,6 +259,7 @@ collections:
     summary: Movies based on true events.
     tmdb_keyword: 9672
     # trakt_list: https://trakt.tv/users/hdlists/lists/based-on-or-inspired-by-a-true-story
+    trakt-list: https://trakt.tv/users/idealbrandon/lists/based-on-true-events
   Movies to See Before You Die:
     template: {name: Basic, sort: release.desc, poster: collection-see-before-you-die.jpg, sec: "05", num: "05", library: true, shared: true}
     trakt_list:

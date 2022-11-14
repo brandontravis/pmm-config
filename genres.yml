@@ -1,7 +1,7 @@
 templates:
   PlexGenre:
     sort_title: +<<sec>>_<<num>>-<<collection_name>>
-    url_poster: url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
+    url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
     sync_mode: sync
     collection_order: <<order>>
     smart_label: <<label>>
@@ -29,7 +29,7 @@ templates:
       - m
   ManualGenre:
     sort_title: +<<sec>>_<<num>>-<<collection_name>>
-    url_poster: url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
+    url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
     sync_mode: sync
     collection_order: <<order>>
     smart_label: <<label>>
@@ -55,7 +55,7 @@ templates:
       - m
   BestOfIMDB:
     sort_title: +<<sec>>_<<collection_name>>
-    url_poster: url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
+    url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
     sync_mode: sync
     collection_order: release.desc
     collection_mode: hide
@@ -81,16 +81,16 @@ collections:
 ##     Plex Genres     ##
 #########################
   Action:
-    template: {name: PlexGenre, genre: Action, poster: https://theposterdb.com/api/assets/52018, sec: "07", poster: genre-action.jpg}
+    template: {name: PlexGenre, genre: Action,sec: "07", poster: genre-action.jpg}
     summary: Action film is a genre wherein physical action takes precedence in the storytelling. The film will often have continuous motion and action including physical stunts, chases, fights, battles, and races. The story usually revolves around a hero that has a goal, but is facing incredible odds to obtain it.
   Adventure:
-    template: {name: PlexGenre, genre: Adventure, poster: https://theposterdb.com/api/assets/52218, sec: "07", poster: genre-adventure.jpg}
+    template: {name: PlexGenre, genre: Adventure, sec: "07", poster: genre-adventure.jpg}
     summary: Adventure film is a genre that revolves around the conquests and explorations of a protagonist. The purpose of the conquest can be to retrieve a person or treasure, but often the main focus is simply the pursuit of the unknown. These films generally take place in exotic locations and play on historical myths. Adventure films incorporate suspenseful puzzles and intricate obstacles that the protagonist must overcome in order to achieve the end goal.
   Animation:
-    template: {name: PlexGenre, genre: Animation, poster: https://theposterdb.com/api/assets/120090, sec: "07", poster: genre-animation.jpg}
+    template: {name: PlexGenre, genre: Animation, sec: "07", poster: genre-animation.jpg}
     summary: Animated film is a collection of illustrations that are photographed frame-by-frame and then played in a quick succession. Since its inception, animation has had a creative and imaginative tendency. Being able to bring animals and objects to life, this genre has catered towards fairy tales and children’s stories. However, animation has long been a genre enjoyed by all ages. As of recent, there has even been an influx of animation geared towards adults. Animation is commonly thought of as a technique, thus it’s ability to span over many different genres.
   Biography:
-    template: {name: PlexGenre, genre: Biography, poster: https://theposterdb.com/api/assets/60369, sec: "07", poster: genre-biography.jpg}
+    template: {name: PlexGenre, genre: Biography, sec: "07", poster: genre-biography.jpg}
     summary: A collection of Biography movies
   Children:
     template: {name: PlexGenre, genre: Children, sec: "07", poster: genre-children.jpg}
@@ -162,6 +162,7 @@ collections:
     template: {name: ManualGenre, sec: "07", poster: genre-disaster.jpg}
     imdb_list:
       - "https://www.imdb.com/search/keyword/?title_type=movie&keywords=disaster-film"
+    trakt_list: https://trakt.tv/users/idealbrandon/lists/disasters
     summary: A disaster movie is a film genre that has an impending or ongoing disaster as its subject and primary plot device. Such disasters may include natural disasters, accidents, military/terrorist attacks or global catastrophes such as a pandemic.
   Dystopian:
     template: { name: ManualGenre, sec: "07", poster: genre-dystopian.jpg}
@@ -175,6 +176,7 @@ collections:
     trakt_list:
     - https://trakt.tv/users/outtherek/lists/queer
     - https://trakt.tv/users/igiorgis/lists/lgbt-lesbian-gay-bisexual-transgender-movies-tv-shows-the-biggest-list-on-trakt
+    - https://trakt.tv/users/idealbrandon/lists/el-jibbity
     imdb_list:
     - https://www.imdb.com/list/ls062688328/
     - https://www.imdb.com/list/ls81657710/
@@ -289,6 +291,7 @@ collections:
       - https://trakt.tv/users/tkreimark91/lists/true-crime-91
       - https://trakt.tv/users/bagpussthe2nd/lists/the-ultimate-true-crime-documentaries-list
       - https://trakt.tv/users/hdlists/lists/true-crime-documentaries
+      - https://trakt.tv/users/idealbrandon/lists/true-crime-documentaries
     summary: True Crime documentaries.
   Zombies:
     template: { name: ManualGenre, sec: "07", poster: genre-zombies.jpg}
@@ -297,7 +300,16 @@ collections:
       - https://trakt.tv/users/almj24/lists/zombies
       - https://trakt.tv/users/mraniki/lists/zombie
     summary: Zombies!
+  News & Politics:
+    template: { name: ManualGenre, sec: "07", poster: genre-news.jpg}
+    trakt_list:
+      - https://trakt.tv/users/idealbrandon/lists/cultural-political-docs?sort=rank,asc
+    summary: News, politics & current events.
   World War II:
+    template: { name: ManualGenre, sec: "07", poster: genre-ww2.jpg}
+    trakt_list:
+      - https://trakt.tv/users/idealbrandon/lists/ww2
+    summary: Based around or during World War II.
 
 
 #############################
