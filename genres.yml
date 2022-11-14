@@ -3,15 +3,11 @@ templates:
     sort_title: +<<sec>>_<<num>>-<<collection_name>>
     url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
     sync_mode: sync
-    collection_order: <<order>>
-    smart_label: <<label>>
+    smart_label: release.desc
     collection_mode: hide
     visible_library: <<library>>
     visible_home: <<home>>
     visible_shared: <<shared>>
-    radarr_add: <<a>>
-    radarr_search: <<s>>
-    radarr_monitor: <<m>>
     limit: <<limit>>
     plex_search:
       genre: <<genre>> ## CAN I EXCLUDE ANIMATION
@@ -24,23 +20,19 @@ templates:
       - order
       - label
       - limit
-      - a
-      - s
-      - m
-  ManualGenre:
+  HighestRatedGenre:
     sort_title: +<<sec>>_<<num>>-<<collection_name>>
     url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
     sync_mode: sync
-    collection_order: <<order>>
-    smart_label: <<label>>
     collection_mode: hide
     visible_library: <<library>>
     visible_home: <<home>>
     visible_shared: <<shared>>
-    radarr_add: <<a>>
-    radarr_search: <<s>>
-    radarr_monitor: <<m>>
-    limit: <<limit>>
+    smart_filter:
+      all:
+        label: <<label>>
+        audience_rating.gte: 6.5
+      sort_by: audience_rating.desc
     optional:
       - num
       - poster
@@ -50,9 +42,24 @@ templates:
       - order
       - label
       - limit
-      - a
-      - s
-      - m
+  ManualGenre:
+    sort_title: +<<sec>>_<<num>>-<<collection_name>>
+    url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
+    sync_mode: sync
+    smart_label: release.desc
+    collection_mode: hide
+    visible_library: <<library>>
+    visible_home: <<home>>
+    visible_shared: <<shared>>
+    optional:
+      - num
+      - poster
+      - library
+      - home
+      - shared
+      - order
+      - label
+      - limit
   BestOfIMDB:
     sort_title: +<<sec>>_<<collection_name>>
     url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
@@ -81,98 +88,100 @@ collections:
 ##     Plex Genres     ##
 #########################
   Action:
-    template: {name: PlexGenre, genre: Action,sec: "07", poster: genre-action.jpg}
+    template: {name: PlexGenre, genre: Action, sec: "06", poster: genre-action.jpg}
     summary: Action film is a genre wherein physical action takes precedence in the storytelling. The film will often have continuous motion and action including physical stunts, chases, fights, battles, and races. The story usually revolves around a hero that has a goal, but is facing incredible odds to obtain it.
   Adventure:
-    template: {name: PlexGenre, genre: Adventure, sec: "07", poster: genre-adventure.jpg}
+    template: {name: PlexGenre, genre: Adventure, sec: "06", poster: genre-adventure.jpg}
     summary: Adventure film is a genre that revolves around the conquests and explorations of a protagonist. The purpose of the conquest can be to retrieve a person or treasure, but often the main focus is simply the pursuit of the unknown. These films generally take place in exotic locations and play on historical myths. Adventure films incorporate suspenseful puzzles and intricate obstacles that the protagonist must overcome in order to achieve the end goal.
   Animation:
-    template: {name: PlexGenre, genre: Animation, sec: "07", poster: genre-animation.jpg}
+    template: {name: PlexGenre, genre: Animation, sec: "06", poster: genre-animation.jpg}
     summary: Animated film is a collection of illustrations that are photographed frame-by-frame and then played in a quick succession. Since its inception, animation has had a creative and imaginative tendency. Being able to bring animals and objects to life, this genre has catered towards fairy tales and children’s stories. However, animation has long been a genre enjoyed by all ages. As of recent, there has even been an influx of animation geared towards adults. Animation is commonly thought of as a technique, thus it’s ability to span over many different genres.
   Biography:
-    template: {name: PlexGenre, genre: Biography, sec: "07", poster: genre-biography.jpg}
+    template: {name: PlexGenre, genre: Biography, sec: "06", poster: genre-biography.jpg}
     summary: A collection of Biography movies
   Children:
-    template: {name: PlexGenre, genre: Children, sec: "07", poster: genre-children.jpg}
+    template: {name: PlexGenre, genre: Children, sec: "06", poster: genre-children.jpg}
     summary: A children's film, or family film, is a film genre that contains children or relates to them in the context of home and family. Children's films are made specifically for children and not necessarily for the general audience, while family films are made for a wider appeal with a general audience in mind.
   Comedy:
-    template: {name: PlexGenre, genre: Comedy, sec: "07", poster: genre-comedy.jpg}
+    template: {name: PlexGenre, genre: Comedy, sec: "06", poster: genre-comedy.jpg}
     summary: Comedy is a genre of film that uses humor as a driving force. The aim of a comedy film is to illicit laughter from the audience through entertaining stories and characters. Although the comedy film may take on some serious material, most have a happy ending. Comedy film has the tendency to become a hybrid sub-genre because humor can be incorporated into many other genres. Comedies are more likely than other films to fall back on the success and popularity of an individual star.
   Crime:
-    template: {name: PlexGenre, genre: Crime, sec: "07", poster: genre-crime.jpg}
+    template: {name: PlexGenre, genre: Crime, sec: "06", poster: genre-crime.jpg}
     summary: Crime film is a genre that revolves around the action of a criminal mastermind. A Crime film will often revolve around the criminal himself, chronicling his rise and fall. Some Crime films will have a storyline that follows the criminal's victim, yet others follow the person in pursuit of the criminal. This genre tends to be fast paced with an air of mystery – this mystery can come from the plot or from the characters themselves.
   Documentary:
-    template: {name: PlexGenre, genre: Documentary, sec: "07", poster: genre-documentary.jpg}
+    template: {name: PlexGenre, genre: Documentary, sec: "06", poster: genre-documentary.jpg}
     summary: Documentary film is a non-fiction genre intended to document reality primarily for the purposes of instruction, education, or maintaining a historical record.
   Drama:
-    template: {name: PlexGenre, genre: Drama, sec: "07", poster: genre-drama.jpg}
+    template: {name: PlexGenre, genre: Drama, sec: "06", poster: genre-drama.jpg}
     summary: Drama film is a genre that relies on the emotional and relational development of realistic characters. While Drama film relies heavily on this kind of development, dramatic themes play a large role in the plot as well. Often, these dramatic themes are taken from intense, real life issues. Whether heroes or heroines are facing a conflict from the outside or a conflict within themselves, Drama film aims to tell an honest story of human struggles.
   Family:
-    template: {name: PlexGenre, genre: Family, sec: "07", poster: genre-family.jpg}
+    template: {name: PlexGenre, genre: Family, sec: "06", poster: genre-family.jpg}
     summary: Fantasy film is a genre that incorporates imaginative and fantastic themes. These themes usually involve magic, supernatural events, or fantasy worlds. Although it is its own distinct genre, these films can overlap into the horror and science fiction genres. Unlike science fiction, a fantasy film does not need to be rooted in fact. This element allows the audience to be transported into a new and unique world. Often, these films center on an ordinary hero in an extraordinary situation.
   Fantasy:
-    template: {name: PlexGenre, genre: Fantasy, sec: "07", poster: genre-fantasy.jpg}
+    template: {name: PlexGenre, genre: Fantasy, sec: "06", poster: genre-fantasy.jpg}
     summary: Fantasy films are a genre that incorporates imaginative and fantastic themes. These themes usually involve magic, supernatural events, or fantasy worlds. Although it is its own distinct genre, these films can overlap into the horror and science fiction genres. Unlike science fiction, a fantasy film does not need to be rooted in fact. This element allows the audience to be transported into a new and unique world. Often, these films center on an ordinary hero in an extraordinary situation.
   History:
-    template: {name: PlexGenre, genre: History, sec: "07", poster: genre-history.jpg}
+    template: {name: PlexGenre, genre: History, sec: "06", poster: genre-history.jpg}
     summary: History film is a genre that takes historical events and people and interprets them in a larger scale. Historical accuracy is not the main focus, but rather the telling of a grandiose story. The drama of an History film is often accentuated by a sweeping musical score, lavish costumes, and high production value.
   Horror:
-    template: {name: PlexGenre, genre: Horror, sec: "07", poster: genre-horror.jpg}
+    template: {name: PlexGenre, genre: Horror, sec: "06", poster: genre-horror.jpg}
     summary: Horror film is a genre that aims to create a sense of fear, panic, alarm, and dread for the audience. These films are often unsettling and rely on scaring the audience through a portrayal of their worst fears and nightmares. Horror films usually center on the arrival of an evil force, person, or event. Many Horror films include mythical creatures such as ghosts, vampires, and zombies. Traditionally, Horror films incorporate a large amount of violence and gore into the plot. Though it has its own style, Horror film often overlaps into Fantasy, Thriller, and Science-Fiction genres.
   Music:
-    template: {name: PlexGenre, genre: Music, sec: "07", poster: genre-music.jpg}
+    template: {name: PlexGenre, genre: Music, sec: "06", poster: genre-music.jpg}
     summary: Music films are genre that revolves around music being an integral part of the characters lives.
   Musical:
-    template: {name: PlexGenre, genre: Musical, sec: "07", poster: genre-musical.jpg}
+    template: {name: PlexGenre, genre: Musical, sec: "06", poster: genre-musical.jpg}
     summary: A Musical interweaves vocal and dance performances into the narrative of the film. The songs of a film can either be used to further the story or simply enhance the experience of the audience. These films are often done on a grand scale and incorporate lavish costumes and sets. Traditional musicals center on a well-known star, famous for their dancing or singing skills (i.e. Fred Astaire, Gene Kelly, Judy Garland). These films explore concepts such are love and success, allowing the audience to escape from reality.
   Mystery:
-    template: {name: PlexGenre, genre: Mystery, sec: "07", poster: genre-mystery.jpg}
+    template: {name: PlexGenre, genre: Mystery, sec: "06", poster: genre-mystery.jpg}
     summary: A Mystery film centers on a person of authority, usually a detective, that is trying to solve a mysterious crime. The main protagonist uses clues, investigation, and logical reasoning. The biggest element in these films is a sense of “whodunit” suspense, usually created through visual cues and unusual plot twists.
   Romance:
-    template: {name: PlexGenre, genre: Romance, sec: "07", poster: genre-romance.jpg}
+    template: {name: PlexGenre, genre: Romance, sec: "06", poster: genre-romance.jpg}
     summary: "Romance film can be defined as a genre wherein the plot revolves around the love between two protagonists. This genre usually has a theme that explores an issue within love, including but not limited to: love at first sight, forbidden love, love triangles, and sacrificial love. The tone of Romance film can vary greatly. Whether the end is happy or tragic, Romance film aims to evoke strong emotions in the audience."
   Science Fiction:
-    template: {name: PlexGenre, genre: Science Fiction, sec: "07", poster: genre-sci-fi.jpg}
+    template: {name: PlexGenre, genre: Science Fiction, sec: "06", poster: genre-sci-fi.jpg}
     summary: Science Fiction (Sci-Fi) film is a genre that incorporates hypothetical, science-based themes into the plot of the film. Often, this genre incorporates futuristic elements and technologies to explore social, political, and philosophical issues. The film itself is usually set in the future, either on earth or in space. Traditionally, a Science Fiction film will incorporate heroes, villains, unexplored locations, fantastical quests, and advanced technology.
   Sports:
-    template: {name: PlexGenre, genre: Sport, sec: "07", poster: genre-sports.jpg}
+    template: {name: PlexGenre, genre: Sport, sec: "06", poster: genre-sports.jpg}
     summary: A Sport Film revolves around a sport setting, event, or an athlete. Often, these films will center on a single sporting event that carries significant importance. Sports films traditionally have a simple plot that builds up to the significant sporting event. This genre is known for incorporating film techniques to build anticipation and intensity. Sport films have a large range of sub-genres, from comedies to dramas, and are more likely than other genres to be based true-life events.
   Suspense:
-    template: {name: PlexGenre, genre: Suspense, sec: "07", poster: genre-suspense.jpg}
+    template: {name: PlexGenre, genre: Suspense, sec: "06", poster: genre-suspense.jpg}
     summary: Suspense films is a broad film genre that evokes excitement and suspense in the audience. The suspense element found in most films' plots is particularly exploited by the filmmaker in this genre.
   Thriller:
-    template: {name: PlexGenre, genre: Thriller, sec: "07", poster: genre-thriller.jpg}
+    template: {name: PlexGenre, genre: Thriller, sec: "06", poster: genre-thriller.jpg}
     summary: Thriller Film is a genre that revolves around anticipation and suspense. The aim for Thrillers is to keep the audience alert and on the edge of their seats. The protagonist in these films is set against a problem – an escape, a mission, or a mystery. No matter what sub-genre a Thriller film falls into, it will emphasize the danger that the protagonist faces. The tension with the main problem is built on throughout the film and leads to a highly stressful climax.
   War:
-    template: {name: PlexGenre, genre: War, sec: "07", poster: genre-war.jpg}
+    template: {name: PlexGenre, genre: War, sec: "06", poster: genre-war.jpg}
     summary: War Film is a genre that looks at the reality of war on a grand scale. They often focus on landmark battles as well as political issues within war. This genre usually focuses on a main character and his team of support, giving the audience an inside look into the gritty reality of war.
   Western:
-    template: {name: PlexGenre, genre: Western, sec: "07", poster: genre-western.jpg}
+    template: {name: PlexGenre, genre: Western, sec: "06", poster: genre-western.jpg}
     summary: "Western Film is a genre that revolves around stories primarily set in the late 19th century in the American Old West. Most Westerns are set between the American Civil War (1865) and the early 1900s. Common themes within Western Film include: the conquest of the wild west, the cultural separation of the East and the West, the West’s resistance to modern change, the conflict between Cowboys and Indians, outlaws, and treasure/gold hunting. American Western Film usually revolves around a stoic hero and emphasizes the importance of honor and sacrifice."
 
 ###########################
 ##     Manual Genres     ##
 ###########################
   Competition:
-    template: {name: ManualGenre, sec: "07", poster: genre-competition.jpg}
+    template: {name: ManualGenre, sec: "06", poster: genre-competition.jpg}
     imdb_list:
-      - "https://www.imdb.com/search/keyword/?title_type=movie&keywords=competition"
+      url: https://www.imdb.com/search/keyword/?title_type=movie&keywords=competition
+      limit: 1000
     summary: "Competition is a rivalry where two or more parties strive for a common goal which cannot be shared: where one's gain is the other's loss."
   Disaster:
-    template: {name: ManualGenre, sec: "07", poster: genre-disaster.jpg}
+    template: {name: ManualGenre, sec: "06", poster: genre-disaster.jpg}
     imdb_list:
-      - "https://www.imdb.com/search/keyword/?title_type=movie&keywords=disaster-film"
+      url: https://www.imdb.com/search/keyword/?title_type=movie&keywords=disaster-film
+      limit: 1000
     trakt_list: https://trakt.tv/users/idealbrandon/lists/disasters
     summary: A disaster movie is a film genre that has an impending or ongoing disaster as its subject and primary plot device. Such disasters may include natural disasters, accidents, military/terrorist attacks or global catastrophes such as a pandemic.
   Dystopian:
-    template: { name: ManualGenre, sec: "07", poster: genre-dystopian.jpg}
+    template: { name: ManualGenre, sec: "06", poster: genre-dystopian.jpg}
     trakt_list:
       - https://trakt.tv/users/mezuror/lists/dystopian
       - https://trakt.tv/users/remontant/lists/dystopian-movies
       - https://trakt.tv/users/vagnerr/lists/dystopia
     summary: A dystopia, or cacotopia, is a speculated ideal society with minimal crime, violence and poverty that is undesirable or frightening.
   El Jibbity:
-    template: { name: ManualGenre, sec: "07", poster: genre-lgbt.jpg}
+    template: { name: ManualGenre, sec: "06", poster: genre-lgbt.jpg}
     trakt_list:
     - https://trakt.tv/users/outtherek/lists/queer
     - https://trakt.tv/users/igiorgis/lists/lgbt-lesbian-gay-bisexual-transgender-movies-tv-shows-the-biggest-list-on-trakt
@@ -183,12 +192,13 @@ collections:
     - https://www.imdb.com/list/ls006306218/
     summary: LGBTQ+ film is a genre of films where the characters depict lesbian, gay, bisexual, transgender, queer and intersex people.
   Espionage:
-    template: {name: ManualGenre, sec: "07", poster: genre-spy.jpg}
+    template: {name: ManualGenre, sec: "06", poster: genre-spy.jpg}
     imdb_list:
-      - "https://www.imdb.com/search/keyword/?title_type=movie&keywords=spy,espionage"
+      url: https://www.imdb.com/search/keyword/?title_type=movie&keywords=spy,espionage
+      limit: 1000
     summary: The spy film genre, also known sometimes as an espionage film, deals with the subject of fictional espionage, either in a realistic way.
   Gangster:
-    template: {name: ManualGenre, sec: "07", poster: genre-gangster.jpg}
+    template: {name: ManualGenre, sec: "06", poster: genre-gangster.jpg}
     trakt_list:
       - https://trakt.tv/users/jjjonesjr33/lists/the-complete-list-of-mafia-gangsters-movies
       - https://trakt.tv/users/jjjonesjr33/lists/the-top-250-greatest-organized-crime-gangster-movies-of-all-time
@@ -196,16 +206,16 @@ collections:
       - https://www.imdb.com/list/ls026270180/
       - https://www.imdb.com/list/ls000093502/
     summary: Gangster films are a sub-genre of crime films that center on organized crime or the mafia. Often the plot revolves around the rise and fall of an organized crime leader. Many Gangster films explore the destructive nature of organized crime, while others attempt to show the humanity of the individual characters.
-  Heist Movies:
-    template: { name: ManualGenre, sec: "07", poster: genre-heist.jpg}
+  Heists:
+    template: { name: ManualGenre, sec: "06", poster: genre-heist.jpg}
     imdb_list:
     - https://www.imdb.com/list/ls068224634/
     - https://www.imdb.com/list/ls009794682/
   Outer Space:
-    template: { name: ManualGenre, sec: "07", poster: genre-outer-space.jpg}
+    template: { name: ManualGenre, sec: "06", poster: genre-outer-space.jpg}
     trakt_list: https://trakt.tv/users/hdlists/lists/outer-space-space-exploration-movies
   Pandemic:
-    template: {name: ManualGenre, sec: "07", poster: genre-pandemic.jpg}
+    template: {name: ManualGenre, sec: "06", poster: genre-pandemic.jpg}
     trakt_list:
       - https://trakt.tv/users/jjjonesjr33/lists/pandemic-virus-survival-guide
     imdb_list:
@@ -215,26 +225,28 @@ collections:
       - url: https://www.imdb.com/list/ls092321048/
     summary: A Pandemic film resolves around widespread viruses, plagues, and diseases.
   Paranormal:
-    template: { name: ManualGenre, sec: "07", poster: genre-paranormal.jpg}
+    template: { name: ManualGenre, sec: "06", poster: genre-paranormal.jpg}
     trakt_list: https://trakt.tv/users/codedone/lists/paranormal
   Romantic Comedy:
-    template: { name: ManualGenre, sec: "07", poster: genre-romcom.jpg}
+    template: { name: ManualGenre, sec: "06", poster: genre-romcom.jpg}
     imdb_list:
-      - "https://www.imdb.com/search/title/?title_type=movie,&user_rating=5.0,10.0&num_votes=1000,&genres=romance,comedy"
+      url: https://www.imdb.com/search/title/?title_type=movie,&user_rating=5.0,10.0&num_votes=1000,&genres=romance,comedy
+      limit: 1000
     summary: "Romantic Comedy is a genre that attempts to catch the viewer’s heart with the combination of love and humor. This sub-genre is light-hearted and usually places the two protagonists in humorus situation. Romantic-Comedy film revolves around a romantic ideal, such as true love. In the end, the ideal triumphs over the situation or obstacle, thus creating a happy ending."
     filters:
       genre: Comedy
   Romantic Drama:
-    template: { name: ManualGenre, sec: "07", poster: genre-romdrama.jpg}
+    template: { name: ManualGenre, sec: "06", poster: genre-romdrama.jpg}
     imdb_list:
-      - "https://www.imdb.com/search/title/?title_type=movie,&user_rating=5.0,10.0&num_votes=1000,&genres=romance,drama"
+      url: https://www.imdb.com/search/title/?title_type=movie,&user_rating=5.0,10.0&num_votes=1000,&genres=romance,drama
+      limit: 1000
     summary: "Romantic Drama films are a genre that explores the complex side of love. The plot usually centers around an obstacle that is preventing love between two people. The obstacles in Romantic Drama film can range from a family's disapproval, to forbidden love, to one's own psychological restraints. Many Romantic Dramas end with the lovers separating because of the enormity of the obstacle, the realization of incompatibility, or simply because of fate."
     filters:
       genre: Drama
   Slasher:
-    template: {name: ManualGenre, sec: "07", poster: genre-slasher.jpg}
+    template: {name: ManualGenre, sec: "06", poster: genre-slasher.jpg}
     imdb_list:
-      - "https://www.imdb.com/search/keyword/?title_type=movie&keywords=slasher"
+      - https://www.imdb.com/search/keyword/?title_type=movie&keywords=slasher
       - https://www.imdb.com/list/ls053988992/
       - https://www.imdb.com/list/ls029703473/
       - https://www.imdb.com/list/ls002540370/
@@ -243,7 +255,7 @@ collections:
     - https://trakt.tv/users/hdlists/lists/80s-slasher-movies
     summary: A Slasher films are a subgenre of horror films involving a killer murdering a group of people, usually by use of bladed tools.
   Stand Up Comedy:
-    template: {name: ManualGenre, sec: "07", poster: genre-stand-up.jpg}
+    template: {name: ManualGenre, sec: "06", poster: genre-stand-up.jpg}
     trakt_list:
       - https://trakt.tv/users/jjjonesjr33/lists/stand-up-comedy
       - https://trakt.tv/users/lish408/lists/stand-up-comedy-specials
@@ -261,17 +273,17 @@ collections:
       - https://www.imdb.com/list/ls049792208/
     summary: Stand-up comedy is a comedic style in which a comedian performs in front of a live audience, speaking directly to them through a microphone. Comedians give the illusion that they are dialoguing, but in actuality, they are monologuing a grouping of humorous stories, jokes and one-liners, typically called a shtick, routine, act, or set. Some stand-up comedians use props, music or magic tricks to enhance their acts. Stand-up comedians perform quasi-autobiographical and fictionalized extensions of their offstage selves.
   Superhero:
-    template: {name: ManualGenre, sec: "07", poster: genre-superhero.jpg}
+    template: {name: ManualGenre, sec: "06", poster: genre-superhero.jpg}
     imdb_list:
-      - "https://www.imdb.com/search/keyword/?keywords=superhero&title_type=movie"
+      url: https://www.imdb.com/search/keyword/?keywords=superhero&title_type=movie
     summary: "A superhero film (or superhero movie) is a film that focuses on the actions of superheroes: individuals who usually possess extraordinary – generally superhuman – abilities and are dedicated to protecting the public."
   Sword & Sorcery:
-    template: {name: ManualGenre, sec: "07", poster: genre-sword.jpg}
+    template: {name: ManualGenre, sec: "06", poster: genre-sword.jpg}
     trakt_list:
       - https://trakt.tv/users/jjjonesjr33/lists/sword-and-sorcery-movies
     summary: Sword and Sorcery films are a sub-genre of Fantasy that tend to be more plot-driven. These films rely on heavy action and battle scenes. Common themes in Sword and Sorcery films include a rescue mission, saving a princess, and battling a fantastical monster. The worlds and characters in these films are often much less developed than in other fantasy sub-genres. Of all the Fantasy sub-genres, Sword and Sorcery is most likely to be geared towards a younger audience, as many of these films are animated.
   Time Travel:
-    template: { name: ManualGenre, sec: "07", poster: genre-time-travel.jpg}
+    template: { name: ManualGenre, sec: "06", poster: genre-time-travel.jpg}
     trakt_list:
       - https://trakt.tv/users/vagnerr/lists/time-travel
       - https://trakt.tv/lists/3940186
@@ -284,7 +296,7 @@ collections:
       - https://www.imdb.com/list/ls068617191/
       - https://www.imdb.com/list/ls004426453/
   True Crime:
-    template: { name: ManualGenre, sec: "07", poster: genre-true-crime.jpg}
+    template: { name: ManualGenre, sec: "06", poster: genre-true-crime.jpg}
     trakt_list:
       - https://trakt.tv/users/lish408/lists/true-crime-documentary-series-film
       - https://trakt.tv/users/billy-shakes/lists/essential-true-crime
@@ -294,73 +306,165 @@ collections:
       - https://trakt.tv/users/idealbrandon/lists/true-crime-documentaries
     summary: True Crime documentaries.
   Zombies:
-    template: { name: ManualGenre, sec: "07", poster: genre-zombies.jpg}
+    template: { name: ManualGenre, sec: "06", poster: genre-zombies.jpg}
     trakt_list:
       - https://trakt.tv/users/ld667/lists/the-most-epic-zombie-films-since-2000
       - https://trakt.tv/users/almj24/lists/zombies
       - https://trakt.tv/users/mraniki/lists/zombie
     summary: Zombies!
   News & Politics:
-    template: { name: ManualGenre, sec: "07", poster: genre-news.jpg}
+    template: { name: ManualGenre, sec: "06", poster: genre-news.jpg}
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/cultural-political-docs?sort=rank,asc
     summary: News, politics & current events.
   World War II:
-    template: { name: ManualGenre, sec: "07", poster: genre-ww2.jpg}
+    template: { name: ManualGenre, sec: "06", poster: genre-ww2.jpg}
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/ww2
     summary: Based around or during World War II.
 
+#####################################
+##.    Best Of Audience Rating.    ##
+#####################################
 
-#############################
-##     Best of on IMDB     ##
-#############################
-  Best Action Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: action, summary: action, poster: genre-action-best.jpg}
-  Best Adventure Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: adventure, summary: adventure, poster: genre-adventure-best.jpg}
-  Best Biopic Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: biography, summary: biopics, poster: genre-biography-best.jpg}
-  Best Comedy Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: comedy, summary: comedies, poster: genre-comedy-best.jpg}
-  Best Crime Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: crime, summary: crime, poster: genre-crime-best.jpg}
-  Best Documentaries on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: documentary, summary: documentaries, poster: genre-documentary-best.jpg}
-  Best Drama Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: drama, summary: dramas, poster: genre-drama-best.jpg}
-  Best Family Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: family, summary: "family movies", poster: genre-family-best.jpg}
-  Best Fantasy Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: fantasy, summary: fantasies, poster: genre-fantasy-best.jpg}
-  Best Historical Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: history, summary: "historical movies", poster: genre-history-best.jpg}
-  Best Horror Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: horror, summary: horror, poster: genre-horror-best.jpg}
-  Best Musicals on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: musical, summary: musicals, poster: genre-musicals-best.jpg}
-  Best Mystery Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: mystery, summary: mysteries, poster: genre-mystery-best.jpg}
-  # Best Pandemic Movies on IMDB:
-  #   trakt_list: https://trakt.tv/users/caspian024/lists/virus-epidemic?sort=popularity,asc
-  #   template: {name: Genre, genre: pandemic, poster: genre-pandemic-best.jpg}
-  Best Romance Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: romance, summary: "romance movies", poster: genre-romance-best.jpg}
-  Best Romantic Comedies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: "romance,comedy", summary: "romantic comedies", poster: genre-romcom-best.jpg}
-    filters:
-      genre: comedy
-  Best Romantic Dramas on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: "romance,drama", summary: "romantic dramas", poster: genre-romdrama-best.jpg}
-    filters:
-      genre: drama
-  Best Sci-Fi Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: science fiction, summary: "scii-f movies", poster: genre-sci-fi-best.jpg}
-  Best Sports Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: sports, summary: "sports movies", poster: genre-sports-best.jpg}
-  Best Thriller Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: thriller, summary: thrillers, poster: genre-thriller-best.jpg}
-  Best War Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: war, summary: "war movies", poster: genre-war-best.jpg}
-  Best Western Movies on IMDB:
-    template: {name: BestOfIMDB, limit: 100, sec: "06", genre: western, summary: westerns, poster: genre-western-best.jpg}
+  Best Of Action:
+    template: {name: HighestRatedGenre, label: "Action", poster: genre-action-best.jpg, sec: "07"}
+  Best Of Adventure:
+    template: {name: HighestRatedGenre, label: "Adventure", poster: genre-adventure-best.jpg, sec: "07"}
+  Best Of Animation:
+    template: {name: HighestRatedGenre, label: "Animation", poster: genre-animation-best.jpg, sec: "07"}
+  Best Of Biography:
+    template: {name: HighestRatedGenre, label: "Biography", poster: genre-biography-best.jpg, sec: "07"}
+  Best Of Children:
+    template: {name: HighestRatedGenre, label: "Children", poster: genre-children-best.jpg, sec: "07"}
+  Best Of Comedy:
+    template: {name: HighestRatedGenre, label: "Comedy", poster: genre-comedy-best.jpg, sec: "07"}
+  Best Of Competition:
+    template: {name: HighestRatedGenre, label: "Competition", poster: genre-competition-best.jpg, sec: "07"}
+  Best Of Crime:
+    template: {name: HighestRatedGenre, label: "Crime", poster: genre-crime-best.jpg, sec: "07"}
+  Best Of Disaster:
+    template: {name: HighestRatedGenre, label: "Disaster", poster: genre-disaster-best.jpg, sec: "07"}
+  Best Of Documentary:
+    template: {name: HighestRatedGenre, label: "Documentary", poster: genre-documentary-best.jpg, sec: "07"}
+  Best Of Drama:
+    template: {name: HighestRatedGenre, label: "Drama", poster: genre-drama-best.jpg, sec: "07"}
+  Best Of Dystopian:
+    template: {name: HighestRatedGenre, label: "Dystopian", poster: genre-dystopian-best.jpg, sec: "07"}
+  Best Of El Jibbity:
+    template: {name: HighestRatedGenre, label: "El Jibbity", poster: genre-lgbt-best.jpg, sec: "07"}
+  Best Of Espionage:
+    template: {name: HighestRatedGenre, label: "Espionage", poster: genre-spy-best.jpg, sec: "07"}
+  Best Of Family:
+    template: {name: HighestRatedGenre, label: "Family", poster: genre-family-best.jpg, sec: "07"}
+  Best Of Fantasy:
+    template: {name: HighestRatedGenre, label: "Fantasy", poster: genre-fantasy-best.jpg, sec: "07"}
+  Best Of Gangster:
+    template: {name: HighestRatedGenre, label: "Gangster", poster: genre-gangster-best.jpg, sec: "07"}
+  Best Of Heists:
+    template: {name: HighestRatedGenre, label: "Heists", poster: genre-heist-best.jpg, sec: "07"}
+  Best Of History:
+    template: {name: HighestRatedGenre, label: "History", poster: genre-history-best.jpg, sec: "07"}
+  Best Of Horror:
+    template: {name: HighestRatedGenre, label: "Horror", poster: genre-horror-best.jpg, sec: "07"}
+  Best Of Music:
+    template: {name: HighestRatedGenre, label: "Music", poster: genre-music-best.jpg, sec: "07"}
+  Best Of Musical:
+    template: {name: HighestRatedGenre, label: "Musical", poster: genre-musical-best.jpg, sec: "07"}
+  Best Of Mystery:
+    template: {name: HighestRatedGenre, label: "Mystery", poster: genre-mystery-best.jpg, sec: "07"}
+  Best Of News & Politics:
+    template: {name: HighestRatedGenre, label: "News", poster: genre-news-best.jpg, sec: "07"}
+  Best Of Outer Space:
+    template: {name: HighestRatedGenre, label: "Outer Space", poster: genre-outer-space-best.jpg, sec: "07"}
+  Best Of Pandemic:
+    template: {name: HighestRatedGenre, label: "Pandemic", poster: genre-pandemic-best.jpg, sec: "07"}
+  Best Of Paranormal:
+    template: {name: HighestRatedGenre, label: "Paranormal", poster: genre-paranormal-best.jpg, sec: "07"}
+  Best Of Romance:
+    template: {name: HighestRatedGenre, label: "Romance", poster: genre-romance-best.jpg, sec: "07"}
+  Best Of Romantic Comedy:
+    template: {name: HighestRatedGenre, label: "Romantic Comedy", poster: genre-romcom-best.jpg, sec: "07"}
+  Best Of Romantic Drama:
+    template: {name: HighestRatedGenre, label: "Romantic Drama", poster: genre-romdrama-best.jpg, sec: "07"}
+  Best Of Science Fiction:
+    template: {name: HighestRatedGenre, label: "Science Fiction", poster: genre-sci-fi-best.jpg, sec: "07"}
+  Best Of Sports:
+    template: {name: HighestRatedGenre, label: "Sports", poster: genre-sports-best.jpg, sec: "07"}
+  Best Of Slasher:
+    template: {name: HighestRatedGenre, label: "Slasher", poster: genre-slasher-best.jpg, sec: "07"}
+  Best Of Stand Up Comedy:
+    template: {name: HighestRatedGenre, label: "Stand Up Comedy", poster: genre-stand-up-best.jpg, sec: "07"}
+  Best Of Superhero:
+    template: {name: HighestRatedGenre, label: "Superhero", poster: genre-superhero-best.jpg, sec: "07"}
+  Best Of Suspense:
+    template: {name: HighestRatedGenre, label: "Suspense", poster: genre-suspense-best.jpg, sec: "07"}
+  Best Of Sword & Sorcery:
+    template: {name: HighestRatedGenre, label: "Sword & Sorcery", poster: genre-sword-best.jpg, sec: "07"}
+  Best Of Thriller:
+    template: {name: HighestRatedGenre, label: "Thriller", poster: genre-thrille-best.jpg, sec: "07"}
+  Best Of Time Travel:
+    template: {name: HighestRatedGenre, label: "Time Travel", poster: genre-time-travel-best.jpg, sec: "07"}
+  Best Of True Crime:
+    template: {name: HighestRatedGenre, label: "True Crime", poster: genre-true-crime-best.jpg, sec: "07"}
+  Best Of War:
+    template: {name: HighestRatedGenre, label: "War", poster: genre-war-best.jpg, sec: "07"}
+  Best Of World War II:
+    template: {name: HighestRatedGenre, label: "World War II", poster: genre-ww2-best.jpg, sec: "07"}
+  Best Of Western:
+    template: {name: HighestRatedGenre, label: "Western", poster: genre-western-best.jpg, sec: "07"}
+  Best Of Zombies:
+    template: {name: HighestRatedGenre, label: "Zombies", poster: genre-zombies-best.jpg, sec: "07"}
+
+# #############################
+# ##     Best of on IMDB     ##
+# #############################
+#   Best Action Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: action, summary: action, poster: genre-action-best.jpg}
+#   Best Adventure Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: adventure, summary: adventure, poster: genre-adventure-best.jpg}
+#   Best Biopic Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: biography, summary: biopics, poster: genre-biography-best.jpg}
+#   Best Comedy Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: comedy, summary: comedies, poster: genre-comedy-best.jpg}
+#   Best Crime Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: crime, summary: crime, poster: genre-crime-best.jpg}
+#   Best Documentaries on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: documentary, summary: documentaries, poster: genre-documentary-best.jpg}
+#   Best Drama Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: drama, summary: dramas, poster: genre-drama-best.jpg}
+#   Best Family Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: family, summary: "family movies", poster: genre-family-best.jpg}
+#   Best Fantasy Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: fantasy, summary: fantasies, poster: genre-fantasy-best.jpg}
+#   Best Historical Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: history, summary: "historical movies", poster: genre-history-best.jpg}
+#   Best Horror Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: horror, summary: horror, poster: genre-horror-best.jpg}
+#   Best Musicals on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: musical, summary: musicals, poster: genre-musicals-best.jpg}
+#   Best Mystery Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: mystery, summary: mysteries, poster: genre-mystery-best.jpg}
+#   # Best Pandemic Movies on IMDB:
+#   #   trakt_list: https://trakt.tv/users/caspian024/lists/virus-epidemic?sort=popularity,asc
+#   #   template: {name: Genre, genre: pandemic, poster: genre-pandemic-best.jpg}
+#   Best Romance Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: romance, summary: "romance movies", poster: genre-romance-best.jpg}
+#   Best Romantic Comedies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: "romance,comedy", summary: "romantic comedies", poster: genre-romcom-best.jpg}
+#     filters:
+#       genre: comedy
+#   Best Romantic Dramas on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: "romance,drama", summary: "romantic dramas", poster: genre-romdrama-best.jpg}
+#     filters:
+#       genre: drama
+#   Best Sci-Fi Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: science fiction, summary: "scii-f movies", poster: genre-sci-fi-best.jpg}
+#   Best Sports Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: sports, summary: "sports movies", poster: genre-sports-best.jpg}
+#   Best Thriller Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: thriller, summary: thrillers, poster: genre-thriller-best.jpg}
+#   Best War Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: war, summary: "war movies", poster: genre-war-best.jpg}
+#   Best Western Movies on IMDB:
+#     template: {name: BestOfIMDB, limit: 100, sec: "06", genre: western, summary: westerns, poster: genre-western-best.jpg}

@@ -93,8 +93,13 @@ collections:
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=tv_series,tv_miniseries&num_votes=20000,&sort=user_rating,desc
       limit: 1000
+  Because You Watched (TV):
+    template: {name: Basic, poster: chart-plex-because-you-watched-tv.jpg, sec: "01", num: "05", order: release.desc, home: true, library: true, shared: true}
+    summary: Recommendations based off of recently watched movies (provided by couchmoney.tv)
+    trakt-list:
+      - https://trakt.tv/users/idealbrandon/lists/tv-based-on-recently-watched-couchmoney-tv?sort=rank,asc
   Our Most Watched TV Shows:
-    template: {name: Basic, poster: chart-plex-most-watched.jpg, limit: 100, sec: "01", num: "05", order: release.desc, home: true, library: true, shared: true}
+    template: {name: Basic, poster: chart-plex-most-watched.jpg, limit: 100, sec: "01", num: "06", order: release.desc, home: true, library: true, shared: true}
     summary: Our most watch TV shows on Plex.
     tautulli_popular:
       list_days: 180
@@ -105,11 +110,11 @@ collections:
       list_size: 60
       list_buffer: 60
   Recently Added Shows:
-    template: { name: Basic, sec: "01", num: "06", poster: chart-plex-recently-added.jpg, library: true, home: true, shared: true}
+    template: { name: Basic, sec: "01", num: "07", poster: chart-plex-recently-added.jpg, library: true, home: true, shared: true}
     plex_search:
       added: 90
   Recently Released Shows:
-    template: { name: Basic, sec: "01", num: "07", poster: chart-plex-new-release.jpg, order: release.desc, library: true, home: true, shared: true}
+    template: { name: Basic, sec: "01", num: "08", poster: chart-plex-new-release.jpg, order: release.desc, library: true, home: true, shared: true}
     plex_search:
       release: 180
 
