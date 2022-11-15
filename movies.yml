@@ -73,7 +73,7 @@ collections:
   #     audience_rating.gte: 7.0
   #     release: 180
   Because You Watched (Movies):
-    template: {name: Basic, poster: chart-plex-because-you-watched-movies.jpg, sec: "01", num: "07", order: release.desc, home: true, library: true, shared: true}
+    template: {name: Basic, poster: chart-plex-you-watched-movies.jpg, sec: "01", num: "07", order: release.desc, home: true, library: true, shared: true}
     summary: Recommendations based off of recently watched movies (provided by couchmoney.tv)
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/movies-based-on-recently-watched-couchmoney-tv?sort=rank,asc
