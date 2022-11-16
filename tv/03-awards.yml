@@ -1,0 +1,17 @@
+external_templates:
+  file: config/collections/templates
+  template_variables:
+    collection_section: "03"
+
+collections:
+#########################
+##     Award Shows     ##
+#########################
+  Award Winning TV Shows:
+    template: {name: Basic, poster: award-winners.jpg, num: "01", order: release.desc, library: true, shared: true}
+    summary: Emmy and Golden Globe award winners.
+    imdb_list:
+      - url: https://www.imdb.com/search/title/?groups=emmy_winner
+        limit: 2500
+      - url: https://www.imdb.com/search/title/?groups=golden_globe_winner
+        limit: 2500

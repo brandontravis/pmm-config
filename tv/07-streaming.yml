@@ -1,0 +1,109 @@
+external_templates:
+  file: config/collections/templates
+  template_variables:
+    collection_section: "07"
+
+collections:
+#######################
+##     Originals     ##
+#######################
+  Netflix Originals:
+    template: {name: Basic, poster: streaming-netflix-originals.jpg, num: "01", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/netflix-shows
+    summary: Netflix original shows.
+  Most Popular On Netflix:
+    template: {name: Basic, poster: streaming-netflix-popular.jpg, num: "02", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Netflix.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0144901&sort=user_rating,desc
+      limit: 1000
+  Apple TV+ Originals:
+    template: {name: Basic, poster: streaming-atv-originals.jpg, num: "03", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/appletv-shows
+    summary: Apple TV+ original shows.
+  Most Popular On Apple TV+:
+    template: {name: Basic, poster: streaming-atv-popular.jpg, num: "04", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Apple TV+
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0546168&sort=user_rating,desc
+      limit: 1000
+  Disney+ Originals:
+    template: {name: Basic, poster: streaming-disney-originals.jpg, num: "05", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/disney-shows
+    summary: Disney+ original shows.
+  Most Popular On Disney+:
+    template: {name: Basic, poster: streaming-disney-popular.jpg, num: "06", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Disney+
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0721120&sort=user_rating,desc
+      limit: 1000
+  Hulu Originals:
+    template: {name: Basic, poster: streaming-hulu-originals.jpg, num: "07", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/hulu-shows
+    summary: Hulu original shows.
+  Most Popular On Hulu:
+    template: {name: Basic, poster: streaming-hulu-popular.jpg, num: "08", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Hulu.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0218858&sort=user_rating,desc
+      limit: 1000
+  HBO Max Originals:
+    template: {name: Basic, poster: streaming-hbo-originals.jpg, num: "09", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/hbomax-shows
+    summary: HBO Max original shows.
+  Most Popular On HBO Max:
+    template: {name: Basic, poster: streaming-hbo-popular.jpg, num: "10", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on HBO Max.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0754095&sort=user_rating,desc
+      limit: 1000
+  Peacock Originals:
+    template: {name: Basic, poster: streaming-peacock-originals.jpg, num: "11", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/peacock-shows
+    summary: Peacock original shows.
+  Most Popular On Peacock:
+    template: {name: Basic, poster: streaming-peacock-popular.jpg, num: "12", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Peacock.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0764707&sort=user_rating,desc
+      limit: 1000
+  Prime Video Originals:
+    template: {name: Basic, poster: streaming-amazon-originals.jpg, num: "13", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/amazon-shows
+    summary: Prime Video original shows.
+  Most Popular On Prime Video:
+    template: {name: Basic, poster: streaming-amazon-popular.jpg, num: "14", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Prime Video.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0476953&sort=user_rating,desc
+      limit: 1000
+  Paramount+ Originals:
+    template: {name: Basic, poster: streaming-paramount-originals.jpg, num: "15", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/paramount-shows
+    summary: Paramount original shows.
+  Most Popular On Paramount+:
+    template: {name: Basic, poster: streaming-paramount-popular.jpg, num: "16", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Paramount+.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0820547&sort=user_rating,desc
+      limit: 1000
+  Showtime Originals:
+    template: {name: Basic, poster: streaming-showtime-originals.jpg, num: "17", order: alpha, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/showtime-shows
+    summary: Showtime original shows.
+  Most Popular On Showtime:
+    template: {name: Basic, poster: streaming-showtime-popular.jpg, num: "18", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Showtime.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0052980&sort=user_rating,desc
+      limit: 1000
+  Discovery+ Originals:
+    template: {name: Basic, poster: streaming-discovery-originals.jpg, num: "19", order: custom, library: true, shared: true}
+    mdblist_list: https://mdblist.com/lists/hdlists/discovery-original-tv-shows
+    summary: Discovery+ original shows.
+  Most Popular On Discovery+:
+    template: {name: Basic, poster: streaming-discovery-popular.jpg, num: "20", order: custom, library: true, shared: true, limit: 100}
+    summary: Most popular TV Shows on Discovery+.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0834810&sort=user_rating,desc
+      limit: 1000

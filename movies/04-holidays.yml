@@ -1,0 +1,100 @@
+external_templates:
+  file: config/collections/templates
+  template_variables:
+    collection_section: "04"
+
+collections:
+#####################
+##    Holidays     ##
+#####################
+  "'Tis the Season":
+    template: {name: Basic, poster: holiday-christmas.jpg, num: "01", order: release.desc, library: true, shared: true}
+    summary: Winter holiday favorites.
+    visible_home: range(11/01-12/31)
+    visible_shared: range(11/01-12/31)
+    # schedule: range(12/01-12/31)
+    trakt_list:
+      - https://trakt.tv/users/jjjonesjr33/lists/christmas
+      - https://trakt.tv/users/jjjonesjr33/lists/christmas-static-list
+      - https://trakt.tv/users/movistapp/lists/christmas-movies
+      - https://trakt.tv/users/pualani78/lists/christmas-2020
+      - https://trakt.tv/users/veninjak/lists/complete-christmas-2021-copy
+      - https://trakt.tv/users/idealbrandon/lists/holiday-christmas?sort=title,asc
+    imdb_list:
+      - https://www.imdb.com/list/ls000096828/
+      - https://www.imdb.com/list/ls025976544/
+      - https://www.imdb.com/list/ls003863000/
+      - https://www.imdb.com/list/ls027454200/
+      - https://www.imdb.com/list/ls027886673/
+      - https://www.imdb.com/list/ls097998599/
+  Beware the Witching Hour:
+    template: {name: Basic, poster: holiday-halloween.jpg, num: "02", order: release.desc, library: true, shared: true}
+    summary: Spooky films to celebrate Halloween.
+    visible_home: range(10/01-10/31)
+    visible_shared: range(10/01-10/31)
+    #schedule: range(10/01-10/31)
+    imdb_list:
+      - https://www.imdb.com/list/ls023118929/
+    trakt_list:
+      - https://trakt.tv/users/jjjonesjr33/lists/halloween
+      - https://trakt.tv/users/29zombies/lists/halloween
+      - https://trakt.tv/users/galacticboy/lists/not-so-spooky-halloween
+      - https://trakt.tv/users/triadcool/lists/halloween?sort=released,asc
+      - https://trakt.tv/users/evil-vin/lists/halloween-2021?sort=released,asc
+      - https://trakt.tv/users/kairbear08/lists/halloween
+      - https://trakt.tv/users/mybicycle/lists/halloween
+      - https://trakt.tv/users/idealbrandon/lists/holiday-halloween?sort=rank,asc
+  Love is in the Air:
+    template: {name: Basic, poster: holiday-valentines.jpg, num: "03", order: release.desc, library: true, shared: true}
+    summary: Valentine's day films.
+    visible_home: range(01/15-02/14)
+    visible_shared: range(01/15-02/14)
+    #schedule: range(02/01-02/14)
+    imdb_list:
+      - https://www.imdb.com/list/ls000094398/
+      - https://www.imdb.com/list/ls057783436/
+      - https://www.imdb.com/list/ls064427905/
+    trakt_list:
+      - https://trakt.tv/users/triadcool/lists/valentine
+      - https://trakt.tv/users/movie-pal/lists/valentine-s-day
+      - https://trakt.tv/users/barsaky/lists/den-svateho-valentina-valent
+      - https://trakt.tv/users/idealbrandon/lists/holiday-valentines?sort=rank,asc
+  Don't Panic! It's Organic:
+    template: {name: Basic, num: "04", poster: holiday-420.jpg, order: release.desc, library: true, shared: true}
+    summary: Keep calm and burn one.
+    visible_home: range(04/01-04/30)
+    visible_shared: range(04/01-04/30)
+    #schedule: range(02/01-02/14)
+    trakt_list:
+      - https://trakt.tv/users/pikota/lists/best-stoner-movies
+      - https://trakt.tv/users/chipmantech/lists/stoner-movies
+      - https://trakt.tv/users/jarvis-1144833/lists/stoner-movies
+      - https://trakt.tv/users/dough13/lists/stoner-movies
+      - https://trakt.tv/users/idealbrandon/lists/holiday-4-20?sort=rank,asc
+      - https://trakt.tv/users/idealbrandon/lists/holiday-4-20
+    imdb_list:
+     - https://www.imdb.com/list/ls075204988/
+  Never Forget:
+    template: {name: Basic, num: "05", poster: holiday-911.jpg, order: release.desc, library: true, shared: true}
+    summary: Remebering 9/11.
+    visible_home: range(08/01-09/11)
+    visible_shared: range(08/01-09/11)
+    #schedule: range(02/01-02/14)
+    trakt_list:
+      - https://trakt.tv/users/idealbrandon/lists/holiday-9-11?sort=rank,asc
+  Steak & Blowjob Day:
+    template: {name: Basic, num: "06", poster: holiday-fathers.jpg, order: release.desc, library: true, shared: true}
+    summary: Because it's well deserved.
+    visible_home: range(05/15-06/20)
+    visible_shared: range(05/15-06/20)
+    #schedule: range(02/01-02/14)
+    trakt_list:
+      - https://trakt.tv/users/idealbrandon/lists/holiday-father-mothers?sort=rank,asc
+  Alone Time is Overrated:
+    template: {name: Basic, num: "07", poster: holiday-mothers-day.jpg, order: release.desc, library: true, shared: true}
+    summary: Because it's well deserved.
+    visible_home: range(04/15-05/15)
+    visible_shared: range(04/15-05/15)
+    #schedule: range(02/01-02/14)
+    trakt_list:
+      - https://trakt.tv/users/idealbrandon/lists/holiday-father-mothers?sort=rank,asc

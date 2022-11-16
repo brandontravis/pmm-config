@@ -1,0 +1,147 @@
+templates:
+  Basic:
+    sort_title: +<<collection_section>>_<<num>>-<<collection_name>>
+    url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
+    sync_mode: sync
+    collection_order: <<order>>
+    smart_label: <<label>>
+    collection_mode: hide
+    visible_library: <<library>>
+    visible_home: <<home>>
+    visible_shared: <<shared>>
+    radarr_add: <<a>>
+    radarr_search: <<s>>
+    radarr_monitor: <<m>>
+    limit: <<limit>>
+    optional:
+      - poster
+      - library
+      - home
+      - shared
+      - order
+      - label
+      - limit
+      - a
+      - s
+      - m
+  BestOfTimePeriod:
+    sync_mode: sync
+    sort_title: +<<collection_section>>_<<num>>-<<collection_name>>
+    url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
+    collection_order: custom
+    collection_mode: hide
+    visible_home: true
+    visible_shared: true
+    limit: 150
+    summary: Top rated films from the <<summary>>.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&release_date=<<start>>-01-01,<<end>>-12-31&num_votes=10000,&sort=user_rating,desc
+      limit: 2000
+  PlexGenre:
+    sort_title: +<<collection_section>>_<<collection_name>>
+    url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
+    sync_mode: sync
+    smart_label: release.desc
+    collection_mode: hide
+    visible_library: <<library>>
+    visible_home: <<home>>
+    visible_shared: <<shared>>
+    limit: <<limit>>
+    plex_search:
+      genre: <<genre>> ## CAN I EXCLUDE ANIMATION
+    optional:
+      - num
+      - poster
+      - library
+      - home
+      - shared
+      - order
+      - label
+      - limit
+  HighestRatedGenre:
+    sort_title: +<<collection_section>>_<<collection_name>>
+    url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
+    sync_mode: sync
+    collection_mode: hide
+    visible_library: <<library>>
+    visible_home: <<home>>
+    visible_shared: <<shared>>
+    smart_filter:
+      all:
+        label: <<label>>
+        audience_rating.gte: 6.5
+      sort_by: audience_rating.desc
+    optional:
+      - num
+      - poster
+      - library
+      - home
+      - shared
+      - order
+      - label
+      - limit
+  ManualGenre:
+    sort_title: +<<collection_section>>_<<collection_name>>
+    url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
+    sync_mode: sync
+    smart_label: release.desc
+    collection_mode: hide
+    visible_library: <<library>>
+    visible_home: <<home>>
+    visible_shared: <<shared>>
+    optional:
+      - num
+      - poster
+      - library
+      - home
+      - shared
+      - order
+      - label
+      - limit
+  BestOfIMDB:
+    sort_title: +<<collection_section>>_<<collection_name>>
+    url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
+    sync_mode: sync
+    collection_order: release.desc
+    collection_mode: hide
+    visible_library: <<library>>
+    visible_home: <<home>>
+    visible_shared: <<shared>>
+    limit: <<limit>>
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,tv_series,tv_episode,tv_special,tv_miniseries,documentary&genres=<<genre>>&user_rating=5.0,10.0
+      limit: 1500
+    summary: Popular <<summary>> sorted by release date.
+    optional:
+      - poster
+      - library
+      - home
+      - shared
+      - order
+      - label
+      - limit
+  IMDB-Best-Episodes:
+    sort_title: +<<collection_section>>_<<num>>-<<collection_name>>
+    url_poster: <<poster>>
+    sync_mode: sync
+    collection_order: custom
+    collection_mode: hide
+    visible_library: <<library>>
+    visible_home: <<home>
+    visible_shared: <<shared>>
+    radarr_add: <<a>>
+    radarr_search: <<s>>
+    radarr_monitor: <<m>>
+    summary: The best episodes of <<showName>>, sorted by IMDB audience rating.
+    collection_level: episode
+    imdb_list:
+      url: https://www.imdb.com/search/title/?series=<<imdb_series>>&sort=user_rating,desc
+      limit: 100
+    optional:
+      - poster
+      - library
+      - home
+      - shared
+      - a
+      - s
+      - m

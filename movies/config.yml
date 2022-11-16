@@ -1,0 +1,155 @@
+## This file is a template remove the .template to use the file
+
+#################################
+##          Version 2          ##
+#################################
+
+libraries: # Library mappings must have a colon (:) placed after them
+  Movies:
+    library_name: Movies
+    metadata_path:
+      # - /config/collections/01-charts.yml
+      # - /config/collections/02-decades.yml
+      # - /config/collections/03-awards.yml
+      # - /config/collections/04-holidays.yml
+      # - /config/collections/05-collections.yml
+      # - /config/collections/06-genres.yml
+      # - /config/collections/07-genres-best.yml
+      # - /config/collections/08-streaming.yml
+      # - /config/collections/09-studios.yml
+    overlay_path:
+      - remove_overlays: false
+      - reapply_overlays: true
+      - pmm: resolution
+      - pmm: mediastinger
+      - pmm: ratings
+        template_variables:
+          rating1: user
+          rating1_image: rt_tomato
+          rating1_font: config/custom_fonts/Adlib.ttf
+          rating1_font_Size: 63
+
+          rating2: critic
+          rating2_image: imdb
+          rating2_font: config/custom_fonts/Impact.ttf
+          rating2_font_size: 70
+
+          rating3: audience
+          rating3_image: tmdb
+          rating3_font: config/custom_fonts/Avenir_95_Black.ttf
+          rating3_fontsize: 70
+
+          horizontal_postion: right
+      - pmm: streaming
+      - pmm: ribbon
+    settings:
+      missing_path: config/missing
+      asset_directory:
+       - config/assets/
+       #- config/assets/movies
+       #- config/assets/awards
+       #- config/assets/collections
+       #- config/assets/decades
+       #- config/assets/genres
+       #- config/assets/holidays
+       #- config/assets/studios
+       #- config/assets/suggestions
+    operations:
+      assets_for_all: false
+      split_duplicates: false
+      delete_unmanaged_collections: false
+      mass_user_rating_update: mdb_tomatoes
+      mass_critic_rating_update: imdb
+      mass_audience_rating_update: tmdb
+settings: # Can be individually specified per library as well
+  cache: true
+  cache_expiration: 60
+  asset_folders: true
+  asset_depth: 3
+  create_asset_folders: true
+  create_asset_directories: true
+  dimensional_asset_rename: true
+  sync_mode: sync
+  delete_below_minimum: true
+  delete_not_scheduled: false
+  run_again_delay: 2
+  missing_only_released: true
+  only_filter_missing: false
+  show_unmanaged: true
+  show_filtered: true
+  show_options: true
+  show_missing: false
+  show_missing_assets: false
+  show_missing_season_assets: false
+  save_missing: false
+  tvdb_language: eng
+  ignore_ids:
+  ignore_imdb_ids:
+  minimum_items: 1
+  default_collection_order:
+  download_url_assets: true
+  verify_ssl: true
+  item_refresh_delay: 0
+  asset_directory: config/assets
+  missing_path: config/missing
+  playlist_sync_to_users: all
+  show_missing_episode_assets: true
+  show_asset_not_needed: true
+  custom_repo:
+  prioritize_assets: false
+  playlist_report: true
+  check_nightly: false
+webhooks:
+  error:
+  run_start:
+  run_end:
+  changes:
+  version:
+plex: # REQUIRED - see https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes
+  url: http://192.168.50.108:32400
+  token: DKVvtErnsVD7YkQyum-g
+  timeout: 360
+  clean_bundles: true
+  empty_trash: true
+  optimize: false
+tmdb:  # REQUIRED for the script to run - to get a key you must follow https://developers.themoviedb.org/3/getting-started/introduction
+  apikey: 8eb7acf987a785b4919695e12956cb52
+  language: en
+  cache_expiration: 60
+  region:
+tautulli: # Can be individually specified per library as well
+  url: http://192.168.50.108:8181
+  apikey: DzR2sWssuxbMiXdetm-zATAyLWDR0iBw
+omdb:
+  apikey:
+  cache_expiration: 60
+mdblist:
+  apikey: lj3vkgrg39jiatl4fpom94q6n
+  cache_expiration: 60
+notifiarr:
+  apikey:
+radarr: # Can be individually specified per library as well
+  url: http://192.168.1.2:7878/
+  token:
+  add_missing: ture
+  add_existing: false
+  root_folder_path: /media/movies
+  monitor: true
+  availability: released
+  quality_profile: 1080p
+  tag:
+  search: true
+  radarr_path:
+  plex_path:
+  upgrade_existing: false
+trakt:
+  client_id: e54fd9d2cf5239364ae082cd724501a64b78cfa4bd3db9589ac82350ea3b9df6
+  client_secret: 217c8a02fbd4afd129f1f28962cc7f637b4490b8114481e44f34240e13645aef
+  pin: CCA22D3F
+  authorization:
+    access_token: f6a5fa86f3a2179e6758e8d3b216c1db369617c1badbf38e20ec58a7d74d80cb
+    token_type: Bearer
+    expires_in: 7889237
+    refresh_token: 4afdd08024e023f727f48d3ed19372b816624afff531e5783d77b82d31fe8cfb
+    scope: public
+    created_at: 1667269278

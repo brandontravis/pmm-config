@@ -1,0 +1,78 @@
+external_templates:
+  file: config/collections/templates
+  template_variables:
+    collection_section: "08"
+
+collections:
+##############################
+##     Top Episodes         ##
+##############################
+  The Best Episodes of Futurama: #150
+    template: { name: IMDB-Best-Episodes, num: "01", home: true, shared: true, showName: "Futurama", imdb_series: tt0149460, limit: 100}
+  The Best Episodes of It's Always Sunny: #165
+    template: { name: IMDB-Best-Episodes, num: "02", home: true, shared: true, showName: "It's Always Sunny in Philadelphia", imdb_series: tt0472954, limit: 75}
+  The Best Episodes of Modern Family: #250
+    template: { name: IMDB-Best-Episodes, num: "03", home: true, shared: true, showName: "Modern Family", imdb_series: tt1442437, limit: 100}
+  The Best Episodes of Bob's Burgers: #245
+    template: { name: IMDB-Best-Episodes, num: "04", home: true, shared: true, showName: "Bob's Burgers", imdb_series: tt1561755, limit: 100}
+  The Best Episodes of Rick & Morty: #61
+    template: { name: IMDB-Best-Episodes, num: "05", home: true, shared: true, showName: "Rick & Morty", imdb_series: tt2861424, limit: 30}
+  The Best Episodes of Impractical Jokers: #267
+    template: { name: IMDB-Best-Episodes, num: "06", home: true, shared: true, showName: "Impractical Jokers", imdb_series: tt2100976, limit: 100}
+  The Best Episodes of Naked & Afraid: #182
+    template: { name: IMDB-Best-Episodes, num: "07", home: true, shared: true, showName: "Naked & Afraid", imdb_series: tt3007640, limit: 100}
+  The Best Episodes of Parks & Rec: #124
+    template: { name: IMDB-Best-Episodes, num: "08", home: true, shared: true, showName: "Parks & Rec", imdb_series: tt1266020, limit: 75}
+  The Best Episodes of House: #176
+    template: { name: IMDB-Best-Episodes, num: "09", home: true, shared: true, showName: "House", imdb_series: tt0412142, limit: 100}
+  The Best Episodes of Schitt's Creek: #80
+    template: { name: IMDB-Best-Episodes, num: "10", home: true, shared: true, showName: "Schitt's Creek", imdb_series: tt3526078, limit: 40}
+  The Best Episodes of Letterkenny: #68
+    template: { name: IMDB-Best-Episodes, num: "11", home: true, shared: true, showName: "Letterkenny", imdb_series: tt4647692, limit: 30}
+  The Best Episodes of South Park: #320
+    template: { name: IMDB-Best-Episodes, num: "12", home: true, shared: true, showName: "South Park", imdb_series: tt0121955, limit: 100}
+  The Best Episodes of Family Guy: #397
+    template: { name: IMDB-Best-Episodes, num: "13", home: true, shared: true, showName: "Family Guy", imdb_series: tt0182576, limit: 100}
+  The Best Episodes of Community: #110
+    template: { name: IMDB-Best-Episodes, num: "14", home: true, shared: true, showName: "Community", imdb_series: tt1439629, limit: 50}
+  The Best Episodes of The Office: #188
+    template: { name: IMDB-Best-Episodes, num: "15", home: true, shared: true, showName: "The Office", imdb_series: tt0386676, limit: 100}
+  The Best Episodes of Brooklyn Nine-Nine: #153
+    template: { name: IMDB-Best-Episodes, num: "16", home: true, shared: true, showName: "Brooklyn Nine-Nine", imdb_series: tt2467372, limit: 100}
+  The Best Episodes of Friends: #235
+    template: { name: IMDB-Best-Episodes, num: "17", home: true, shared: true, showName: "Friends", imdb_series: tt0108778, limit: 100}
+  The Best Episodes of Scrubs: #182
+    template: { name: IMDB-Best-Episodes, num: "18", home: true, shared: true, showName: "Scrubs", imdb_series: tt0285403, limit: 100}
+  The Best Episodes of Superstore: #113
+    template: { name: IMDB-Best-Episodes, num: "19", home: true, shared: true, showName: "Superstore", imdb_series: tt4477976, limit: 100}
+  The Best Episodes of Weeds: #102
+    template: { name: IMDB-Best-Episodes, num: "20", home: true, shared: true, showName: "Weeds", imdb_series: tt0439100, limit: 50}
+  The Best Episodes of Workaholics: #86
+    template: { name: IMDB-Best-Episodes, num: "21", home: true, shared: true, showName: "Workaholics", imdb_series: tt1610527, limit: 40}
+  The Best Episodes of 30 Rock: #138
+    template: { name: IMDB-Best-Episodes, num: "22", home: true, shared: true, showName: "30 Rock", imdb_series: tt0496424, limit: 100}
+  The Best Episodes of Robbot Chicken: #227
+    template: { name: IMDB-Best-Episodes, num: "23", home: true, shared: true, showName: "Robbot Chicken", imdb_series: tt0437745, limit: 100}
+  The Best Episodes of Glee: #121
+    template: { name: IMDB-Best-Episodes, num: "24", home: true, shared: true, showName: "Glee", imdb_series: tt1327801, limit: 60}
+  The Best Episodes of Reno 911!: #124
+    template: { name: IMDB-Best-Episodes, num: "25", home: true, shared: true, showName: "Reno 911!", imdb_series: tt0370194, limit: 60}
+  The Best Episodes of Archer: #135
+    template: { name: IMDB-Best-Episodes, num: "26", home: true, shared: true, showName: "Archer", imdb_series: tt1486217, limit: 70}
+  The Best Episodes of That 70's Show: #200
+    template: { name: IMDB-Best-Episodes, num: "27", home: true, shared: true, showName: "That 70's Show", imdb_series: tt0165598, limit: 100}
+  The Best Episodes of How I Met Your Mother: #208
+    template: { name: IMDB-Best-Episodes, num: "28", home: true, shared: true, showName: "How I Met Your Mother", imdb_series: tt0460649, limit: 100}
+  The Best Episodes of The Goldbergs: #215
+    template: { name: IMDB-Best-Episodes, num: "29", home: true, shared: true, showName: "The Goldbergs", imdb_series: tt2712740, limit: 100}
+  The Best Episodes of The Big Bang Theory: #280
+    template: { name: IMDB-Best-Episodes, num: "30", home: true, shared: true, showName: "The Big Bang Theory", imdb_series: tt0898266, limit: 100}
+  The Best Episodes of Star Trek - Voyager: #168
+    template: { name: IMDB-Best-Episodes, num: "31", home: true, shared: true, showName: "Star Trek - Voyager", imdb_series: tt0112178, limit: 100}
+  The Best Episodes of Star Trek - Deep Space Nine: #173
+    template: { name: IMDB-Best-Episodes, num: "32", home: true, shared: true, showName: "Star Trek - Deep Space Nine", imdb_series: tt0106145, limit: 100}
+  The Best Episodes of Star Trek - The Next Generation: #177
+    template: { name: IMDB-Best-Episodes, num: "33", home: true, shared: true, showName: "Star Trek - The Next Generation", imdb_series: tt0092455, limit: 100}
+
+
+

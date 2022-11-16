@@ -1,0 +1,118 @@
+## This file is a template remove the .template to use the file
+
+libraries: # Library mappings must have a colon (:) placed after them
+  TV Shows:
+    library_name: TV Shows
+    metadata_path:
+    - /config/collections/01-charts.yml
+    - /config/collections/02-decades.yml
+    - /config/collections/03-awards.yml
+    - /config/collections/04-collections.yml
+    - /config/collections/05-genres.yml
+    - /config/collections/06-genres-best.yml
+    - /config/collections/07-streaming.yml
+    - /config/collections/08-top-episodes.yml
+    - /config/metadata/futurama.yml
+    settings:
+      missing_path: config/missing
+      asset_directory:
+       - config/assets/
+      # - config/assets/kids
+      # - config/assets/networks
+      # - config/assets/suggestions
+    operations:
+      assets_for_all: false
+      split_duplicates: false
+      delete_unmanaged_collections: false
+settings: # Can be individually specified per library as well
+  cache: true
+  cache_expiration: 60
+  asset_folders: true
+  asset_depth: 3
+  create_asset_folders: true
+  create_asset_directories: true
+  dimensional_asset_rename: true
+  sync_mode: sync
+  delete_below_minimum: true
+  delete_not_scheduled: false
+  run_again_delay: 2
+  missing_only_released: true
+  only_filter_missing: false
+  show_unmanaged: true
+  show_filtered: true
+  show_options: true
+  show_missing: false
+  show_missing_assets: false
+  show_missing_season_assets: false
+  save_missing: false
+  tvdb_language: eng
+  ignore_ids:
+  ignore_imdb_ids:
+  minimum_items: 1
+  default_collection_order:
+  download_url_assets: true
+  verify_ssl: true
+  item_refresh_delay: 0
+  asset_directory: config/assets
+  missing_path: config/missing
+  playlist_sync_to_users: all
+  show_missing_episode_assets: true
+  show_asset_not_needed: true
+  custom_repo:
+  prioritize_assets: false
+  playlist_report: true
+  check_nightly: false
+webhooks:
+  error:
+  run_start:
+  run_end:
+  changes:
+  version:
+plex: # REQUIRED - see https://github.com/meisnate12/Plex-Meta-Manager/wiki/Plex-Attributes
+  url: http://192.168.50.108:32400
+  token: DKVvtErnsVD7YkQyum-g
+  timeout: 360
+  clean_bundles: true
+  empty_trash: true
+  optimize: false
+tmdb:  # REQUIRED for the script to run - to get a key you must follow https://developers.themoviedb.org/3/getting-started/introduction
+  apikey: 8eb7acf987a785b4919695e12956cb52
+  language: en
+  cache_expiration: 60
+  region:
+tautulli: # Can be individually specified per library as well
+  url: http://192.168.50.108:8181
+  apikey: DzR2sWssuxbMiXdetm-zATAyLWDR0iBw
+omdb:
+  apikey:
+  cache_expiration: 60
+mdblist:
+  apikey:
+  cache_expiration: 60
+notifiarr:
+  apikey:
+radarr: # Can be individually specified per library as well
+  url: http://192.168.1.2:7878/
+  token:
+  add_missing: ture
+  add_existing: false
+  root_folder_path: /media/movies
+  monitor: true
+  availability: released
+  quality_profile: 1080p
+  tag:
+  search: true
+  radarr_path:
+  plex_path:
+  upgrade_existing: false
+trakt:
+  client_id: ee8d7c31810089344826ada07d1cf0a59942bec5491bb69eb74d3307283203a6
+  client_secret: ccb2b8724f05fff5b4d1ea9d9aa5268528852301bbe5ad1e01807cce0ff65f48
+  pin:
+  authorization:
+    access_token: bb4172a62f65819e9be19dfb58b8a65a756bf24727d6940becf7ef6da65e248d
+    token_type: Bearer
+    expires_in: 7889237
+    refresh_token: 3403841aef395eb8f725b5d34984fae6ec10e3609f60aca7bc3a9e2f89083669
+    scope: public
+    created_at: 1667589261

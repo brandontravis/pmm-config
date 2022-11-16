@@ -1,0 +1,37 @@
+external_templates:
+  file: config/collections/templates
+  template_variables:
+    collection_section: "03"
+
+collections:
+#########################
+##     Award Shows     ##
+#########################
+  Award Winning Movies:
+    template: {name: Basic, poster: award-winners.jpg, num: "01", order: release.desc, library: true, shared: true}
+    summary: Oscar, Emmy, and Golden Globe award winners.
+    imdb_list:
+      - url: https://www.imdb.com/search/title/?groups=oscar_winner
+        limit: 1000
+      - url: https://www.imdb.com/search/title/?groups=emmy_winner
+        limit: 1000
+      - url: https://www.imdb.com/search/title/?groups=golden_globe_winner
+        limit: 1000
+  Best Picture Winners:
+    template: {name: Basic, poster: award-best-picture-winners.jpg, num: "02", order: release.desc, library: true, shared: true}
+    summary: Best Picture winning movies sorted by release date.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?groups=best_picture_winner
+      limit: 1000
+  Best Director Winners:
+    template: {name: Basic, poster: award-best-director-winners.jpg, num: "03", order: release.desc, library: true, shared: true}
+    summary: Best Director winning films sorted by release date.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?groups=best_director_winner
+      limit: 1000
+  Razzie Winning Movies:
+    template: {name: Basic, poster: award-razzie-winners.jpg, num: "04", order: release.desc, library: true, shared: true}
+    summary: Razzie Award Winners sorted by release date.
+    imdb_list:
+      url: https://www.imdb.com/search/title/?groups=razzie_winner
+      limit: 1000
