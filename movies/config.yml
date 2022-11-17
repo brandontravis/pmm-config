@@ -3,64 +3,26 @@
 #################################
 ##          Version 2          ##
 #################################
-
-libraries: # Library mappings must have a colon (:) placed after them
-  Movies:
-    library_name: Movies
-    metadata_path:
-      # - /config/collections/01-charts.yml
-      # - /config/collections/02-decades.yml
-      # - /config/collections/03-awards.yml
-      # - /config/collections/04-holidays.yml
-      # - /config/collections/05-collections.yml
-      # - /config/collections/06-genres.yml
-      # - /config/collections/07-genres-best.yml
-      # - /config/collections/08-streaming.yml
-      # - /config/collections/09-studios.yml
+libraries:                                      # This is called out once within the config.yml file                                       
+  Movies:                                       # Each library must match the Plex library name
+    # metadata_path:
+    #   - file: config/Movies.yml                 # This is a local file on the system
+    #   - folder: config/Movies/                  # This is a local directory on the system
+    #   - pmm: basic                              # This is a file within the defaults folder in the Repository
+    #   - pmm: imdb                               # This is a file within the defaults folder in the Repository
     overlay_path:
-      - remove_overlays: false
-      - reapply_overlays: true
-      - pmm: resolution
-      - pmm: mediastinger
-      - pmm: ratings
-        template_variables:
-          rating1: user
-          rating1_image: rt_tomato
-          rating1_font: config/custom_fonts/Adlib.ttf
-          rating1_font_Size: 63
-
-          rating2: critic
-          rating2_image: imdb
-          rating2_font: config/custom_fonts/Impact.ttf
-          rating2_font_size: 70
-
-          rating3: audience
-          rating3_image: tmdb
-          rating3_font: config/custom_fonts/Avenir_95_Black.ttf
-          rating3_fontsize: 70
-
-          horizontal_postion: right
-      - pmm: streaming
-      - pmm: ribbon
+      - remove_overlays: false                  # Set this to true to remove all overlays
+      - pmm: ribbon                             # This is a file within the defaults folder in the Repository
     settings:
-      missing_path: config/missing
       asset_directory:
-       - config/assets/
-       #- config/assets/movies
-       #- config/assets/awards
-       #- config/assets/collections
-       #- config/assets/decades
-       #- config/assets/genres
-       #- config/assets/holidays
-       #- config/assets/studios
-       #- config/assets/suggestions
+      - config/assets
     operations:
       assets_for_all: false
       split_duplicates: false
       delete_unmanaged_collections: false
-      mass_user_rating_update: mdb_tomatoes
-      mass_critic_rating_update: imdb
-      mass_audience_rating_update: tmdb
+      # mass_user_rating_update: mdb_tomatoes
+      # mass_critic_rating_update: imdb
+      # mass_audience_rating_update: tmdb
 settings: # Can be individually specified per library as well
   cache: true
   cache_expiration: 60
