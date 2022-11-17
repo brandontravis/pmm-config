@@ -96,5 +96,6 @@ collections:
     visible_home: range(04/15-05/15)
     visible_shared: range(04/15-05/15)
     #schedule: range(02/01-02/14)
+    # https://www.imdb.com/list/ls072551197/ # PMM List
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/holiday-father-mothers?sort=rank,asc

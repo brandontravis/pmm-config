@@ -1,7 +1,9 @@
 metadata:
   Futurama:
+    url_poster: "https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/futurama-nicholson6699.jpg"
     seasons:
       1:
+        url_poster: "https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/futurama-nicholson6699-season1.jpg"
         episodes:
           1:
             title: "Space Pilot 3000"
@@ -56,6 +58,7 @@ metadata:
             originally_available: 1999-11-14
             summary: "When Fry wins a free tour of the Slurm soda factory, he and his friends split off from the tour group and make a horrifying discovery concerning the \"secret ingredient\" that makes Slurm so addictive."
       2:
+        url_poster: "https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/futurama-nicholson6699-season2.jpg"
         episodes:
           1:
             title: "I Second That Emotion"
@@ -134,6 +137,7 @@ metadata:
             originally_available: 2000-12-03
             summary: "Fry, Leela, and Bender all lose their jobs at Planet Express, and they endeavor to return to their old jobs. Due to a mix-up of their career chips, Fry becomes a career counselor at Applied Cryogenics, where he meets up with a familiar defrostee - his girlfriend from the 20th century, Michelle."
       3:
+        url_poster: "https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/futurama-nicholson6699-season3.jpg"
         episodes:
           1:
             title: "Amazon Women in the Mood"
@@ -224,6 +228,7 @@ metadata:
             originally_available: 2002-04-14
             summary: "Bender receives culinary lessons from the great chef Helmut Spargle, and puts his skills to the test on national television when he competes against Elzar on \"Iron Cook\". Meanwhile, Dr. Zoidberg accidentally destroys Professor Farnsworth's ship-in-a-bottle and pins the deed on Fry, only to be struck with remorse afterwards."
       4:
+        url_poster: "https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/futurama-nicholson6699-season4.jpg"
         episodes:
           1:
             title: "Kif Gets Knocked Up a Notch"
@@ -298,6 +303,7 @@ metadata:
             originally_available: 2003-08-10
             summary: "Desperate to learn how to play the holophonor in order to impress Leela, Fry swaps hands with the Robot Devil. He goes on to become a skilled holophonor player, winning Leela's heart and penning an opera about her life story, but the Robot Devil still has a trick or two up his sleeve."
       5:
+        url_poster: "https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/futurama-nicholson6699-season5.jpg"
         episodes:
           1:
             title: "Bender's Big Score (1)"
@@ -364,6 +370,7 @@ metadata:
             originally_available: 2009-02-12
             summary: "Leela and the Feministas stand trial for trying to save the Violet Star."
       6:
+        url_poster: "https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/futurama-nicholson6699-season6.jpg"
         episodes:
           1:
             title: "Rebirth"
@@ -470,6 +477,7 @@ metadata:
             originally_available: 2011-09-08
             summary: "An episode featuring 3 different segments, in the same vein as episodes such as \"Anthology of Interest I\" and \"The Futurama Holiday Spectacular\". Each segment showcases a different style of animation. The first segment will be animated in \"a black-and-white Fleischer style\", the second segment will be in the style of a low-resolution video game, and the third drawn in the style of anime. The episode is not be canon, and is the final episode of the sixth season of Futurama."
       7:
+        url_poster: "https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/futurama-nicholson6699-season7.jpg"
         episodes:
           1:
             title: "The Bots and the Bees"
@@ -575,3 +583,6 @@ metadata:
             title: "Meanwhile"
             originally_available: 2013-09-04
             summary: "Professor Farnsworth invents a button that can take a person 10 seconds back in time, inadvertently causing major consequences."
+
+      8:
+        url_poster: "https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/futurama-nicholson6699-season8.jpg"

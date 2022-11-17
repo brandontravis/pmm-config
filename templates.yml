@@ -120,3 +120,29 @@ templates:
       - order
       - label
       - limit
+
+  IMDB-Best-Episodes:
+    sort_title: +<<collection_section>>_<<num>>-<<collection_name>>
+    url_poster: <<poster>>
+    sync_mode: sync
+    collection_order: custom
+    collection_mode: hide
+    visible_library: <<library>>
+    visible_home: <<home>
+    visible_shared: <<shared>>
+    radarr_add: <<a>>
+    radarr_search: <<s>>
+    radarr_monitor: <<m>>
+    summary: The best episodes of <<showName>>, sorted by IMDB audience rating.
+    collection_level: episode
+    imdb_list:
+      url: https://www.imdb.com/search/title/?series=<<imdb_series>>&sort=user_rating,desc
+      limit: 100
+    optional:
+      - poster
+      - library
+      - home
+      - shared
+      - a
+      - s
+      - m
