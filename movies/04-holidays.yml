@@ -71,7 +71,6 @@ collections:
       - https://trakt.tv/users/jarvis-1144833/lists/stoner-movies
       - https://trakt.tv/users/dough13/lists/stoner-movies
       - https://trakt.tv/users/idealbrandon/lists/holiday-4-20?sort=rank,asc
-      - https://trakt.tv/users/idealbrandon/lists/holiday-4-20
     imdb_list:
      - https://www.imdb.com/list/ls075204988/
   Never Forget:
@@ -82,20 +81,46 @@ collections:
     #schedule: range(02/01-02/14)
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/holiday-9-11?sort=rank,asc
-  Steak & Blowjob Day:
+  Steak & You Know What Day:
     template: {name: Basic, num: "06", poster: holiday-fathers.jpg, order: release.desc, library: true, shared: true}
     summary: Because it's well deserved.
     visible_home: range(05/15-06/20)
     visible_shared: range(05/15-06/20)
     #schedule: range(02/01-02/14)
     trakt_list:
-      - https://trakt.tv/users/idealbrandon/lists/holiday-father-mothers?sort=rank,asc
+      - https://trakt.tv/users/idealbrandon/lists/holiday-father-day?sort=rank,asc
   Alone Time is Overrated:
-    template: {name: Basic, num: "07", poster: holiday-mothers-day.jpg, order: release.desc, library: true, shared: true}
+    template: {name: Basic, num: "07", poster: holiday-mothers.jpg, order: release.desc, library: true, shared: true}
     summary: Because it's well deserved.
     visible_home: range(04/15-05/15)
     visible_shared: range(04/15-05/15)
     #schedule: range(02/01-02/14)
     # https://www.imdb.com/list/ls072551197/ # PMM List
     trakt_list:
-      - https://trakt.tv/users/idealbrandon/lists/holiday-father-mothers?sort=rank,asc
+      - https://trakt.tv/users/idealbrandon/lists/holiday-mothers-day?sort=rank,asc
+  And The World Will Know!:
+    template: {name: Basic, num: "08", poster: holiday-labor.jpg, order: release.desc, library: true, shared: true}
+    summary: Labor! Labor! Labor!.
+    visible_home: range(08/10-09/05)
+    visible_shared: range(08/10-09/05)
+    #schedule: range(02/01-02/14)
+    trakt_list:
+      - https://trakt.tv/users/idealbrandon/lists/holiday-labor-day?sort=rank,asc
+  Honoring our Heroes:
+    template: {name: Basic, num: "09", poster: holiday-memorial.jpg, order: release.desc, library: true, shared: true}
+    summary: For those we've lost.
+    visible_home: range(05/01-05/31)
+    visible_shared: range(05/01-05/31)
+    #schedule: range(02/01-02/14)
+    trakt_list:
+      - https://trakt.tv/users/idealbrandon/lists/holiday-memorial-day?sort=rank,asc
+  Home of the Brave:
+    template: {name: Basic, num: "10", poster: holiday-july4.jpg, order: release.desc, library: true, shared: true}
+    summary: We the People of the United States, in Order to form a more perfect Union...
+    visible_home: range(06/15-07/05)
+    visible_shared: range(06/15-07/05)
+    #schedule: range(02/01-02/14)
+    trakt_list:
+      - https://trakt.tv/users/idealbrandon/lists/holiday-july-4?sort=rank,asc
+
+

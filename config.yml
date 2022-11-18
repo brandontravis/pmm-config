@@ -3,48 +3,45 @@
 #################################
 ##          Version 2          ##
 #################################
-libraries:                                      # This is called out once within the config.yml file                                       
+libraries:                                      # This is called out once within the config.yml file
   Movies:                                       # Each library must match the Plex library name
     metadata_path:
-    - /config/collections/movies/01-charts.yml
-    - /config/collections/movies/02-decades.yml
-    - /config/collections/movies/03-awards.yml
-    - /config/collections/movies/04-holidays.yml
-    - /config/collections/movies/05-collections.yml
-    - /config/collections/movies/06-genres.yml
-    - /config/collections/movies/07-genres-best.yml
-    - /config/collections/movies/08-streaming.yml
-    - /config/collections/movies/09-studios.yml
+      - /config/collections/movies/01-charts.yml
+      - /config/collections/movies/02-decades.yml
+      - /config/collections/movies/03-awards.yml
+      - /config/collections/movies/04-holidays.yml
+      - /config/collections/movies/05-collections.yml
+      - /config/collections/movies/06-genres.yml
+      - /config/collections/movies/07-genres-best.yml
+      - /config/collections/movies/08-streaming.yml
+      - /config/collections/movies/09-studios.yml
     overlay_path:
-    - remove_overlays: false
-    - reapply_overlays: false
-    - pmm: resolution
-    - pmm: mediastinger
-    - pmm: flixpatrol
-      template_variables:
-        position: left
-    - pmm: ratings
-      template_variables:
-        rating1: user
-        rating1_image: rt_tomato
-        rating1_font: config/custom_fonts/Adlib.ttf
-        rating1_font_size: 63
-
-        rating2: critic
-        rating2_image: imdb
-        rating2_font: config/custom_fonts/Impact.ttf
-        rating2_font_size: 70
-
-        rating3: audience
-        rating3_image: tmdb
-        rating3_font: config/custom_fonts/Avenir_95_Black.ttf
-        rating3_font_size: 70
-
-        horizontal_position: right
-    - pmm: streaming
-      template_variables:
-        vertical_offset: 15
-    - pmm: ribbon                               # This is a file within the defaults folder in the Repository
+      - remove_overlays: false
+      - reapply_overlays: false
+      - pmm: resolution
+      - pmm: mediastinger
+      - pmm: flixpatrol
+        template_variables:
+          position: left
+      - pmm: ratings
+        template_variables:
+          rating1: user
+          rating1_image: rt_tomato
+          rating1_font: config/custom_fonts/Adlib.ttf
+          rating1_font_size: 63
+          rating2: critic
+          rating2_image: imdb
+          rating2_font: config/custom_fonts/Impact.ttf
+          rating2_font_size: 70
+          rating3: audience
+          rating3_image: tmdb
+          rating3_font: config/custom_fonts/Avenir_95_Black.ttf
+          rating3_font_size: 70
+          horizontal_position: right
+      - pmm: streaming
+        template_variables:
+          vertical_offset: 15
+      - pmm: ribbon                               # This is a file within the defaults folder in the Repository
     settings:
       asset_directory:
       - config/assets
@@ -58,22 +55,49 @@ libraries:                                      # This is called out once within
   TV Shows:
     library_name: TV Shows
     metadata_path:
-    - /config/collections/tv/01-charts.yml
-    # - /config/collections/tv/02-decades.yml
-    # - /config/collections/tv/03-awards.yml
-    # - /config/collections/tv/04-collections.yml
-    # - /config/collections/tv/05-genres.yml
-    # - /config/collections/tv/06-genres-best.yml
-    # - /config/collections/tv/07-streaming.yml
-    # - /config/collections/tv/08-top-episodes.yml
-    # - /config/metadata/tv/futurama.yml
-    settings:
-      asset_directory:
-       - config/assets/
+      - /config/collections/tv/01-charts.yml
+      - /config/collections/tv/02-decades.yml
+      - /config/collections/tv/03-awards.yml
+      - /config/collections/tv/04-collections.yml
+      - /config/collections/tv/05-genres.yml
+      - /config/collections/tv/06-genres-best.yml
+      - /config/collections/tv/07-streaming.yml
+      - /config/collections/tv/08-top-episodes.yml
+      - /config/metadata/tv/futurama.yml
+    overlay_path:
+      - remove_overlays: false
+      - reapply_overlay: false
+      - pmm: resolution                                                    # 1
+      - pmm: mediastinger                                                  # 3
+      - pmm: ratings                                                       # 4, 5, 6
+        template_variables:
+          rating1: user                                                    # 4 as this is user and mass_user_rating_update: mdb_tomatoes
+          rating1_image: rt_tomato                                         # 4 as this is user and mass_user_rating_update: mdb_tomatoes
+          rating1_font: config/custom_fonts/Adlib.ttf                      # 4 local font accessible to PMM
+          rating1_font_size: 63                                            # 4 adjusted font size to fit rating
+          rating2: critic                                                  # 5 as this is critic and mass_critic_rating_update: imdb
+          rating2_image: imdb                                              # 5 as this is critic and mass_critic_rating_update: imdb
+          rating2_font: config/custom_fonts/Impact.ttf                     # 5 local font accessible to PMM
+          rating2_font_size: 70                                            # 5 adjusted font size to fit rating
+          rating3: audience                                                # 6 as this is audience and mass_audience_rating_update: tmdb
+          rating3_image: tmdb                                              # 6 as this is audience and mass_audience_rating_update: tmdb
+          rating3_font: config/custom_fonts/Avenir_95_Black.ttf            # 6 local font accessible to PMM
+          rating3_font_size: 70                                            # 6 adjusted font size to fit rating
+          horizontal_position: right                                       # the set of ratings is on the right of the poster
+      - pmm: streaming                                                     # 7
+        template_variables:
+          vertical_offset: 15
+      - pmm: ribbon                                                        # 10, 11 Bottom right sash is used by more than one overlay so a weight for priority can be applied 
     operations:
       assets_for_all: false
       split_duplicates: false
       delete_unmanaged_collections: false
+      # mass_user_rating_update: mdb_tomatoes                              # 4 This operation will update the user rating in plex with Rotten Tomatoes ratings information
+      # mass_critic_rating_update: imdb                                    # 5 This operation will update the critic rating in plex with IMDb ratings information
+      # mass_audience_rating_update: tmdb
+    settings:
+      asset_directory:
+       - config/assets/
 settings: # Can be individually specified per library as well
   cache: true
   cache_expiration: 60

@@ -11,7 +11,7 @@ collections:
     template: {name: Basic, poster: chart-brandon-curated.jpg, num: "01", order: custom, home: true, library: true, shared: true}
     summary: Brandon's favorites.
     trakt_list:
-      - https://trakt.tv/users/idealbrandon/lists/the-brandon-collection?sort=released,asc
+      - https://trakt.tv/users/idealbrandon/lists/the-curated-collection?sort=rank,asc
   Trending TV Shows Right Now:
     template: {name: Basic, poster: chart-trakt-trending.jpg, limit: 100, num: "02", order: release.desc, library: true, home: true, shared: true}
     summary: Hot and trending tv shows from across the internet.
