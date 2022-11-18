@@ -23,21 +23,14 @@ libraries:                                      # This is called out once within
       - pmm: flixpatrol
         template_variables:
           position: left
-      - pmm: ratings
+      - file: config/overlays/ratings.yml
         template_variables:
           rating1: user
           rating1_image: rt_tomato
-          rating1_font: config/custom_fonts/Adlib.ttf
-          rating1_font_size: 63
           rating2: critic
           rating2_image: imdb
-          rating2_font: config/custom_fonts/Impact.ttf
-          rating2_font_size: 70
           rating3: audience
           rating3_image: tmdb
-          rating3_font: config/custom_fonts/Avenir_95_Black.ttf
-          rating3_font_size: 70
-          horizontal_position: right
       - pmm: streaming
         template_variables:
           vertical_offset: 15
@@ -49,9 +42,9 @@ libraries:                                      # This is called out once within
       assets_for_all: false
       split_duplicates: false
       delete_unmanaged_collections: false
-      # mass_user_rating_update: mdb_tomatoes
-      # mass_critic_rating_update: imdb
-      # mass_audience_rating_update: tmdb
+      mass_user_rating_update: mdb_tomatoes
+      mass_critic_rating_update: imdb
+      mass_audience_rating_update: tmdb
   TV Shows:
     library_name: TV Shows
     metadata_path:
@@ -69,21 +62,14 @@ libraries:                                      # This is called out once within
       - reapply_overlay: false
       - pmm: resolution                                                    # 1
       - pmm: mediastinger                                                  # 3
-      - pmm: ratings                                                       # 4, 5, 6
+      - file: config/overlays/ratings.yml
         template_variables:
-          rating1: user                                                    # 4 as this is user and mass_user_rating_update: mdb_tomatoes
-          rating1_image: rt_tomato                                         # 4 as this is user and mass_user_rating_update: mdb_tomatoes
-          rating1_font: config/custom_fonts/Adlib.ttf                      # 4 local font accessible to PMM
-          rating1_font_size: 63                                            # 4 adjusted font size to fit rating
-          rating2: critic                                                  # 5 as this is critic and mass_critic_rating_update: imdb
-          rating2_image: imdb                                              # 5 as this is critic and mass_critic_rating_update: imdb
-          rating2_font: config/custom_fonts/Impact.ttf                     # 5 local font accessible to PMM
-          rating2_font_size: 70                                            # 5 adjusted font size to fit rating
-          rating3: audience                                                # 6 as this is audience and mass_audience_rating_update: tmdb
-          rating3_image: tmdb                                              # 6 as this is audience and mass_audience_rating_update: tmdb
-          rating3_font: config/custom_fonts/Avenir_95_Black.ttf            # 6 local font accessible to PMM
-          rating3_font_size: 70                                            # 6 adjusted font size to fit rating
-          horizontal_position: right                                       # the set of ratings is on the right of the poster
+          rating1: user
+          rating1_image: rt_tomato
+          rating2: critic
+          rating2_image: imdb
+          rating3: audience
+          rating3_image: tmdb
       - pmm: streaming                                                     # 7
         template_variables:
           vertical_offset: 15
@@ -92,9 +78,9 @@ libraries:                                      # This is called out once within
       assets_for_all: false
       split_duplicates: false
       delete_unmanaged_collections: false
-      # mass_user_rating_update: mdb_tomatoes                              # 4 This operation will update the user rating in plex with Rotten Tomatoes ratings information
-      # mass_critic_rating_update: imdb                                    # 5 This operation will update the critic rating in plex with IMDb ratings information
-      # mass_audience_rating_update: tmdb
+      mass_user_rating_update: mdb_tomatoes                              # 4 This operation will update the user rating in plex with Rotten Tomatoes ratings information
+      mass_critic_rating_update: imdb                                    # 5 This operation will update the critic rating in plex with IMDb ratings information
+      mass_audience_rating_update: tmdb
     settings:
       asset_directory:
        - config/assets/

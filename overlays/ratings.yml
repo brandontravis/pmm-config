@@ -1,0 +1,276 @@
+#############################################################
+#                      Ratings Overlay                      #
+#         Created by Yozora, Bullmoose20, & Sohjiro         #
+#            Credit to Magic815 for base images             #
+#############################################################
+#  Call this from your config.yml (Movie or Show):          #
+#  If nothing is specified nothing will show up at least    #
+#  one rating# must be set                                  #
+#                                                           #
+#    overlay_path:                                          #
+#      - git: PMM/overlays/ratings                          #
+#        template_variables:                                #
+#                                                           #
+#          # Set rating type for rating1, rating2, and/or   #
+#                rating3                                    #
+#          # Rating Types: critic, audience, user           #
+#                                                           #
+#          rating1: critic                                  #
+#          rating2: audience                                #
+#          rating3: user                                    #
+#                                                           #
+#          # Set rating image for rating1, rating2, and/or  #
+#                rating3                                    #
+#          # Rating Images: anidb, imdb, letterboxd, tmdb,  #
+#                metacritic, rt_popcorn, rt_tomato, trakt,  #
+#                mal                                        #
+#                                                           #
+#          rating1_image: imdb                              #
+#          rating2_image: rt_popcorn                        #
+#          rating3_image: tmdb                              #
+#                                                           #
+#          # Sets the position to display the ratings       #
+#          # horizontal_position: left, right, center       #
+#          # vertical_position: top, bottom, center         #
+#                                                           #
+#          horizontal_position: left                        #
+#          vertical_position: center                        #
+#                                                           #
+#          # Sets the alignment to display the ratings      #
+#          # rating_alignment: horizontal, vertical         #
+#                                                           #
+#          rating_alignment: vertical                       #
+#                                                           #
+#          # Set as 'episode' to overlay episodes           #
+#                                                           #
+#          overlay_level:                                   #
+#                                                           #
+#  Movies:                                                  #
+#    overlay_path:                                          #
+#      - git: PMM/overlays/ratings                          #
+#        template_variables:                                #
+#          rating1: critic                                  #
+#          rating2: audience                                #
+#          rating3: user                                    #
+#          rating1_image: imdb                              #
+#          rating2_image: rt_popcorn                        #
+#          rating3_image: tmdb                              #
+#    operations:                                            #
+#      mass_critic_rating_update: imdb                      #
+#      mass_audience_rating_update: mdb_tomatoesaudience    #
+#      mass_user_rating_update: tmdb                        #
+#  TV Shows:                                                #
+#    overlay_path:                                          #
+#      - git: PMM/overlays/ratings                          #
+#        template_variables:                                #
+#          rating1: critic                                  #
+#          rating2: audience                                #
+#          rating3: user                                    #
+#          rating1_image: imdb                              #
+#          rating2_image: rt_popcorn                        #
+#          rating3_image: tmdb                              #
+#      - git: PMM/overlays/ratings                          #
+#        template_variables:                                #
+#          rating1: critic                                  #
+#          rating2: audience                                #
+#          rating1_image: imdb                              #
+#          rating2_image: tmdb                              #
+#    operations:                                            #
+#      mass_critic_rating_update: imdb                      #
+#      mass_audience_rating_update: mdb_tomatoesaudience    #
+#      mass_user_rating_update: tmdb                        #
+#      mass_episode_critic_rating_update: imdb              #
+#      mass_episode_audience_rating_update: tmdb            #
+#############################################################
+
+templates:
+  Rating:
+    optional:
+      - overlay_level
+    default:
+      font: config/custom_fonts/Adlib.ttf
+      font_size: 63
+      weight: 100
+      side: left
+      horizontal_position: left
+      vertical_position: bottom
+      rating_alignment: horizontal
+      rating<<rating_num>>: none
+    conditionals:
+      run_this:
+        default: true
+        conditions:
+          - image_level: Top
+            rating<<rating_num>>_image: [anidb, letterboxd, rt_popcorn, tmdb, trakt, mal]
+            value: false
+          - image_level: Top
+            overlay_level: episode
+            value: false
+          - rating<<rating_num>>: none
+            value: false
+      rating<<rating_num>>_style:
+        default: ""
+        conditions:
+          - rating<<rating_num>>_image: [rt_popcorn, rt_tomato, tmdb]
+            value: "%"
+          - rating<<rating_num>>_image: metacritic
+            value: "0"
+      image_extra:
+        default: ""
+        conditions:
+          - rating<<rating_num>>_image: [imdb, rt_tomato, metacritic]
+            image_level: Top
+            value: Top
+          - rating<<rating_num>>_image: [rt_popcorn, rt_tomato]
+            value: <<image_level>>
+      rating<<rating_num>>_image_url:
+        conditions:
+          - rating<<rating_num>>_image: anidb
+            value: Anidb
+          - rating<<rating_num>>_image: imdb
+            value: IMDb
+          - rating<<rating_num>>_image: letterboxd
+            value: Letterboxd
+          # - rating<<rating_num>>_image: mdblist
+          #   value: MDBList
+          - rating<<rating_num>>_image: metacritic
+            value: Metacritic
+          - rating<<rating_num>>_image: rt_popcorn
+            value: RT-Aud-
+          - rating<<rating_num>>_image: rt_tomato
+            value: RT-Crit-
+          - rating<<rating_num>>_image: tmdb
+            value: TMDb
+          - rating<<rating_num>>_image: trakt
+            value: Trakt
+          - rating<<rating_num>>_image: mal
+            value: MAL
+      gte:
+        default: 0.0
+        conditions:
+          - image_level: Fresh
+            value: 6.0
+      lte:
+        default: 6.0
+        conditions:
+          - image_level: Fresh
+            value: 10.0
+      gsuffix:
+        conditions:
+          - rating<<rating_num>>: [critic, audience, user]
+            image_level: [Fresh, Rotten]
+            value: gte
+      lsuffix:
+        conditions:
+          - rating<<rating_num>>: [critic, audience, user]
+            image_level: Fresh
+            value: lte
+          - rating<<rating_num>>: [critic, audience, user]
+            image_level: Rotten
+            value: lt
+    plex_search:
+      all:
+        <<rating<<rating_num>>>>_rating.<<gsuffix>>: <<gte>>
+        <<rating<<rating_num>>>>_rating.<<lsuffix>>: <<lte>>
+    collection_level: <<overlay_level>>
+    allowed_library_types: <<run_this>>
+    ignore_blank_results: true
+    overlay:
+      name: text(<<text>>)
+      horizontal_offset: 30
+      horizontal_align: left
+      vertical_offset: <<v_offset>>
+      vertical_align: bottom
+      group: rating<<rating_num>>_group
+      weight: <<weight>>
+      font: <<font>>
+      font_size: <<font_size>>
+      # file: config/overlays/images4/<<rating<<rating_num>>_image_url>><<image_extra>>.png
+      # file: config/overlays/images4/<<image_name>>.png
+      file: config/overlays/images4/<<rating<<rating_num>>_image_url>><<image_extra>>.png
+      back_color: "#00000099"
+      back_padding: 20
+      back_radius: 30
+      addon_offset: 30
+      back_width: 300
+
+overlays:
+  Rating1Rotten:
+    template:
+      name: Rating
+      rating_num: "1"
+      image_level: Rotten
+      v_offset: 300
+      text: user_rating%
+      image_name: RT-Crit-Rotten
+  Rating1Fresh:
+    template:
+      name: Rating
+      rating_num: "1"
+      image_level: Fresh
+      v_offset: 300
+      text: user_rating%
+      image_name: RT-Crit-Fresh
+  Rating1Top:
+    template:
+      name: Rating
+      weight: 110
+      rating_num: "1"
+      image_level: Top
+      v_offset: 300
+      text: user_rating%
+      image_name: RT-Crit-Fresh
+
+
+  Rating2Rotten:
+    template:
+      name: Rating
+      rating_num: "2"
+      image_level: Rotten
+      v_offset: 165
+      text: critic_rating
+      image_name: IMDb
+  Rating2Fresh:
+    template:
+      name: Rating
+      rating_num: "2"
+      image_level: Fresh
+      v_offset: 165
+      text: critic_rating
+      image_name: IMDb
+  Rating2Top:
+    template:
+      name: Rating
+      weight: 110
+      rating_num: "2"
+      image_level: Top
+      v_offset: 165
+      text: critic_rating
+      image_name: IMDb
+
+
+  Rating3Rotten:
+    template:
+      name: Rating
+      rating_num: "3"
+      image_level: Rotten
+      v_offset: 30
+      text: audience_rating%
+      image_name: TMDb
+  Rating3Fresh:
+    template:
+      name: Rating
+      rating_num: "3"
+      image_level: Fresh
+      v_offset: 30
+      text: audience_rating%
+      image_name: TMDb
+  Rating3Top:
+    template:
+      name: Rating
+      weight: 110
+      rating_num: "3"
+      image_level: Top
+      v_offset: 30
+      text: audience_rating%
+      image_name: TMDb

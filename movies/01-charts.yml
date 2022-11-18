@@ -53,13 +53,19 @@ collections:
       list_days: 180
       list_size: 60
       list_buffer: 60
+  Unwatched from Our Watchlist:
+    template: {name: Basic, poster: chart-plex-unwatched-movies.jpg, num: "09", order: release.desc, home: true, library: true, shared: true}
+    summary: Unwatched movies from our watchlist, sorted by release date.
+    plex_watchlist: release.desc
+    filters:
+      plays.lt: 1
   Quick Flicks:
-    template: {name: Basic, order: release.desc, num: "09", poster: chart-quick-flicks.jpg, library: true, shared: true, limit: 150}
+    template: {name: Basic, order: release.desc, num: "10", poster: chart-quick-flicks.jpg, library: true, shared: true, limit: 150}
     summary: Movies 90 minutes or less.
     plex_search:
       duration.lte: 90
       genre.not: Animation
   Certified Fresh:
-    template: {name: Basic, num: "10", order: custom, poster: chart-certified-fresh.jpg, library: true, shared: true, limit: 150}
+    template: {name: Basic, num: "11", order: custom, poster: chart-certified-fresh.jpg, library: true, shared: true, limit: 150}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/certifiedfreshmovies?sort=score&sortorder=desc
     summary: Certified Fresh movies, sorted by user rating.

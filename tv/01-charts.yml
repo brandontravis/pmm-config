@@ -64,7 +64,13 @@ collections:
     summary: TV Shows released in the last six months.
     plex_search:
       release: 180
+  Unwatched from Our Watchlist:
+    template: {name: Basic, poster: chart-plex-unwatched-tv.jpg,  num: "10", order: release.desc, home: true, library: true, shared: true}
+    summary: Unwatched TV Shows from our watchlist, sorted by release date.
+    plex_watchlist: release.desc
+    filters:
+      plays.lt: 1
   Certified Fresh:
-    template: {name: Basic, num: "10", order: custom, poster: chart-certified-fresh.jpg, library: true, shared: true, limit: 100}
+    template: {name: Basic, num: "11", order: custom, poster: chart-certified-fresh.jpg, library: true, shared: true, limit: 100}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/certifiedfreshshows
     summary: Certified Fresh TV Shows, sorted by user rating.
