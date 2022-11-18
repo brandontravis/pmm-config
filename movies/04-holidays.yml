@@ -81,7 +81,7 @@ collections:
     #schedule: range(02/01-02/14)
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/holiday-9-11?sort=rank,asc
-  Steak & You Know What Day:
+  Steak & Y'know ...:
     template: {name: Basic, num: "06", poster: holiday-fathers.jpg, order: release.desc, library: true, shared: true}
     summary: Because it's well deserved.
     visible_home: range(05/15-06/20)

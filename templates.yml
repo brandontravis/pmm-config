@@ -67,6 +67,7 @@ templates:
     visible_home: <<home>>
     visible_shared: <<shared>>
     smart_filter:
+      limit: <<limit>>
       all:
         label: <<label>>
         audience_rating.gte: 6.5
