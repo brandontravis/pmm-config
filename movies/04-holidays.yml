@@ -8,7 +8,7 @@ collections:
 ##    Holidays     ##
 #####################
   "'Tis the Season":
-    template: {name: Basic, poster: holiday-christmas.jpg, num: "01", order: release.desc, library: true, shared: true}
+    template: {name: Basic, poster: holiday-christmas.jpg, num: "01", order: release.desc, home: true, library: true, shared: true}
     summary: Winter holiday favorites.
     visible_home: range(11/01-12/31)
     visible_shared: range(11/01-12/31)
@@ -28,7 +28,7 @@ collections:
       - https://www.imdb.com/list/ls027886673/
       - https://www.imdb.com/list/ls097998599/
   Beware the Witching Hour:
-    template: {name: Basic, poster: holiday-halloween.jpg, num: "02", order: release.desc, library: true, shared: true}
+    template: {name: Basic, poster: holiday-halloween.jpg, num: "02", order: release.desc, home: true, library: true, shared: true}
     summary: Spooky films to celebrate Halloween.
     visible_home: range(10/01-10/31)
     visible_shared: range(10/01-10/31)
@@ -45,7 +45,7 @@ collections:
       - https://trakt.tv/users/mybicycle/lists/halloween
       - https://trakt.tv/users/idealbrandon/lists/holiday-halloween?sort=rank,asc
   Love is in the Air:
-    template: {name: Basic, poster: holiday-valentines.jpg, num: "03", order: release.desc, library: true, shared: true}
+    template: {name: Basic, poster: holiday-valentines.jpg, num: "03", order: release.desc, home: true, library: true, shared: true}
     summary: Valentine's day films.
     visible_home: range(01/15-02/14)
     visible_shared: range(01/15-02/14)
@@ -60,7 +60,7 @@ collections:
       - https://trakt.tv/users/barsaky/lists/den-svateho-valentina-valent
       - https://trakt.tv/users/idealbrandon/lists/holiday-valentines?sort=rank,asc
   Don't Panic! It's Organic:
-    template: {name: Basic, num: "04", poster: holiday-420.jpg, order: release.desc, library: true, shared: true}
+    template: {name: Basic, num: "04", poster: holiday-420.jpg, order: release.desc, home: true, library: true, shared: true}
     summary: Keep calm and burn one.
     visible_home: range(04/01-04/30)
     visible_shared: range(04/01-04/30)
@@ -74,7 +74,7 @@ collections:
     imdb_list:
      - https://www.imdb.com/list/ls075204988/
   Never Forget:
-    template: {name: Basic, num: "05", poster: holiday-911.jpg, order: release.desc, library: true, shared: true}
+    template: {name: Basic, num: "05", poster: holiday-911.jpg, order: release.desc, home: true, library: true, shared: true}
     summary: Remebering 9/11.
     visible_home: range(08/01-09/11)
     visible_shared: range(08/01-09/11)
@@ -82,7 +82,7 @@ collections:
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/holiday-9-11?sort=rank,asc
   Steak & Y'know ...:
-    template: {name: Basic, num: "06", poster: holiday-fathers.jpg, order: release.desc, library: true, shared: true}
+    template: {name: Basic, num: "06", poster: holiday-fathers.jpg, order: release.desc, home: true, library: true, shared: true}
     summary: Because it's well deserved.
     visible_home: range(05/15-06/20)
     visible_shared: range(05/15-06/20)
@@ -90,7 +90,7 @@ collections:
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/holiday-father-day?sort=rank,asc
   Alone Time is Overrated:
-    template: {name: Basic, num: "07", poster: holiday-mothers.jpg, order: release.desc, library: true, shared: true}
+    template: {name: Basic, num: "07", poster: holiday-mothers.jpg, order: release.desc, home: true, library: true, shared: true}
     summary: Because it's well deserved.
     visible_home: range(04/15-05/15)
     visible_shared: range(04/15-05/15)
@@ -99,7 +99,7 @@ collections:
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/holiday-mothers-day?sort=rank,asc
   And The World Will Know!:
-    template: {name: Basic, num: "08", poster: holiday-labor.jpg, order: release.desc, library: true, shared: true}
+    template: {name: Basic, num: "08", poster: holiday-labor.jpg, order: release.desc, home: true, library: true, shared: true}
     summary: Labor! Labor! Labor!.
     visible_home: range(08/10-09/05)
     visible_shared: range(08/10-09/05)
@@ -107,7 +107,7 @@ collections:
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/holiday-labor-day?sort=rank,asc
   Honoring our Heroes:
-    template: {name: Basic, num: "09", poster: holiday-memorial.jpg, order: release.desc, library: true, shared: true}
+    template: {name: Basic, num: "09", poster: holiday-memorial.jpg, order: release.desc, home: true, library: true, shared: true}
     summary: For those we've lost.
     visible_home: range(05/01-05/31)
     visible_shared: range(05/01-05/31)
@@ -115,7 +115,7 @@ collections:
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/holiday-memorial-day?sort=rank,asc
   Home of the Brave:
-    template: {name: Basic, num: "10", poster: holiday-july4.jpg, order: release.desc, library: true, shared: true}
+    template: {name: Basic, num: "10", poster: holiday-july4.jpg, order: release.desc, home: true, library: true, shared: true}
     summary: We the People of the United States, in Order to form a more perfect Union...
     visible_home: range(06/15-07/05)
     visible_shared: range(06/15-07/05)

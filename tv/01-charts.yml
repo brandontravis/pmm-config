@@ -7,8 +7,8 @@ collections:
 ####################
 ##     Charts     ##
 ####################
-  The Curated Collection:
-    template: {name: Basic, poster: chart-brandon-curated.jpg, num: "01", order: custom, home: true, library: true, shared: true}
+  The Curated TV Shows Collection:
+    template: {name: Basic, poster: chart-brandon-curated.jpg, num: "01", order: release.desc, home: true, library: true, shared: true}
     summary: Brandon's favorites.
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/the-curated-collection?sort=rank,asc
@@ -64,7 +64,7 @@ collections:
     summary: TV Shows released in the last six months.
     plex_search:
       release: 180
-  Unwatched from Our Watchlist:
+  Unwatched TV Shows From Our Watchlist:
     template: {name: Basic, poster: chart-plex-unwatched-tv.jpg,  num: "10", order: release.desc, home: true, library: true, shared: true}
     summary: Unwatched TV Shows from our watchlist, sorted by release date.
     plex_watchlist: release.desc

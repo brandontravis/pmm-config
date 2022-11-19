@@ -7,8 +7,8 @@ collections:
 ####################
 ##     Charts     ##
 ####################
-  The Curated Collection:
-    template: {name: Basic, poster: chart-brandon-curated.jpg, num: "01", order: custom, home: true, library: true, shared: true}
+  The Curated Movies Collection:
+    template: {name: Basic, poster: chart-brandon-curated.jpg, num: "01", order: release.desc, home: true, library: true, shared: true}
     summary: Brandon's favorites.
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/the-curated-collection?sort=rank,asc
@@ -32,7 +32,7 @@ collections:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,short&num_votes=20000,&sort=user_rating,desc
       limit: 1000
   Best Movies of the Last Six Months:
-    template: {name: Basic, order: release.desc, num: "06", poster: chart-imdb-best-six-months.jpg, library: true, shared: true}
+    template: {name: Basic, order: release.desc, num: "06", poster: chart-imdb-best-six-months.jpg, home: true, library: true, shared: true}
     summary: Movies rated 7 or higher on IMDb, released in the past 6 months.
     plex_search:
       audience_rating.gte: 7.0
@@ -53,7 +53,7 @@ collections:
       list_days: 180
       list_size: 60
       list_buffer: 60
-  Unwatched from Our Watchlist:
+  Unwatched Movies from Our Watchlist:
     template: {name: Basic, poster: chart-plex-unwatched-movies.jpg, num: "09", order: release.desc, home: true, library: true, shared: true}
     summary: Unwatched movies from our watchlist, sorted by release date.
     plex_watchlist: release.desc

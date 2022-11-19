@@ -12,7 +12,7 @@ collections:
     mdblist_list: https://mdblist.com/lists/plexmetamanager/netflix-movies
     summary: Netflix original movies.
   Most Popular On Netflix:
-    template: {name: Basic, poster: streaming-netflix-popular.jpg, num: "02", order: custom, library: true, shared: true, limit: 100}
+    template: {name: Basic, poster: streaming-netflix-popular.jpg, num: "02", order: custom, library: false, shared: false, limit: 100}
     summary: Most popular movies on Netflix.
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0144901&sort=user_rating,desc
@@ -40,7 +40,7 @@ collections:
     mdblist_list: https://mdblist.com/lists/plexmetamanager/disney-movies
     summary: Disney+ original movies.
   Most Popular On Disney+:
-    template: {name: Basic, poster: streaming-disney-popular.jpg, num: "07", order: custom, library: true, shared: true, limit: 100}
+    template: {name: Basic, poster: streaming-disney-popular.jpg, num: "07", order: custom, library: false, shared: false, limit: 100}
     summary: Most popular movies on Disney+
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0721120&sort=user_rating,desc
@@ -58,7 +58,7 @@ collections:
     mdblist_list: https://mdblist.com/lists/plexmetamanager/hulu-movies
     summary: Hulu original movies.
   Most Popular On Hulu:
-    template: {name: Basic, poster: streaming-hulu-popular.jpg, num: "10", order: custom, library: true, shared: true, limit: 100}
+    template: {name: Basic, poster: streaming-hulu-popular.jpg, num: "10", order: custom, library: false, shared: false, limit: 100}
     summary: Most popular movies on Hulu.
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0218858&sort=user_rating,desc
@@ -76,7 +76,7 @@ collections:
     mdblist_list: https://mdblist.com/lists/plexmetamanager/hbomax-movies
     summary: HBO Max original movies.
   Most Popular On HBO Max:
-    template: {name: Basic, poster: streaming-hbo-popular.jpg, num: "13", order: custom, library: true, shared: true, limit: 100}
+    template: {name: Basic, poster: streaming-hbo-popular.jpg, num: "13", order: custom, library: false, shared: false, limit: 100}
     summary: Most popular movies on HBO Max.
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0754095&sort=user_rating,desc
@@ -104,7 +104,7 @@ collections:
     mdblist_list: https://mdblist.com/lists/plexmetamanager/amazon-movies
     summary: Prime Video original movies.
   Most Popular On Prime Video:
-    template: {name: Basic, poster: streaming-amazon-popular.jpg, num: "18", order: custom, library: true, shared: true, limit: 100}
+    template: {name: Basic, poster: streaming-amazon-popular.jpg, num: "18", order: custom, library: false, shared: false, limit: 100}
     summary: Most popular movies on Prime Video.
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0476953&sort=user_rating,desc
@@ -122,7 +122,7 @@ collections:
     mdblist_list: https://mdblist.com/lists/plexmetamanager/paramount-movies
     summary: Paramount original movies.
   Most Popular On Paramount+:
-    template: {name: Basic, poster: streaming-paramount-popular.jpg, num: "21", order: custom, library: true, shared: true, limit: 100}
+    template: {name: Basic, poster: streaming-paramount-popular.jpg, num: "21", order: custom, library: false, shared: false, limit: 100}
     summary: Most popular movies on Paramount+.
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0820547&sort=user_rating,desc

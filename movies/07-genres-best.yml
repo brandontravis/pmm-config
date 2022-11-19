@@ -1,7 +1,7 @@
 external_templates:
   file: config/collections/templates
   template_variables:
-    collection_section: "08"
+    collection_section: "06"
 
 collections:
 #####################################
