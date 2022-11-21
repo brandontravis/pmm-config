@@ -7,34 +7,42 @@ libraries:                                      # This is called out once within
   Movies:                                       # Each library must match the Plex library name
     metadata_path:
       - /config/collections/movies/01-charts.yml
-      # - /config/collections/movies/02-decades.yml
-      # - /config/collections/movies/03-awards.yml
-      # - /config/collections/movies/04-holidays.yml
-      # - /config/collections/movies/05-collections.yml
-      # - /config/collections/movies/06-genres.yml
-      # - /config/collections/movies/07-genres-best.yml
-      # - /config/collections/movies/08-streaming.yml
-      # - /config/collections/movies/09-studios.yml
-    # overlay_path:
-    #   - remove_overlays: false
-    #   - reapply_overlays: false
-    #   - pmm: resolution
-    #   - pmm: mediastinger
-    #   - pmm: flixpatrol
-    #     template_variables:
-    #       position: left
-    #   - file: config/overlays/ratings.yml
-    #     template_variables:
-    #       rating1: user
-    #       rating1_image: rt_tomato
-    #       rating2: critic
-    #       rating2_image: imdb
-    #       rating3: audience
-    #       rating3_image: tmdb
-    #   - pmm: streaming
-    #     template_variables:
-    #       vertical_offset: 15
-    #   - pmm: ribbon                               # This is a file within the defaults folder in the Repository
+      - /config/collections/movies/02-decades.yml
+      - /config/collections/movies/03-awards.yml
+      - /config/collections/movies/04-holidays.yml
+      - /config/collections/movies/05-collections.yml
+      - /config/collections/movies/06-genres.yml
+      - /config/collections/movies/07-genres-best.yml
+      - /config/collections/movies/08-streaming.yml
+      - /config/collections/movies/09-studios.yml
+    overlay_path:
+      - remove_overlays: false
+      - reapply_overlays: false
+      - pmm: resolution
+      - pmm: mediastinger
+        template_variables:
+          horizontal_align: left
+          vertical_align: top
+          horizontal_offset: 15
+          vertical_offset: 135
+      - pmm: audio_codec
+        template_variables:
+          position: left
+      - file: config/overlays/ratings.yml
+        template_variables:
+          rating1: user
+          rating1_image: rt_tomato
+          rating2: critic
+          rating2_image: imdb
+          # rating3: audience
+          # rating3_image: tmdb
+      - pmm: streaming
+        template_variables:
+          horizontal_align: right
+          vertical_align: top
+          vertical_offset: 15
+          horizontal_offset: 15
+      # - pmm: ribbon                               # This is a file within the defaults folder in the Repository
     settings:
       asset_directory:
       - config/assets
@@ -45,35 +53,46 @@ libraries:                                      # This is called out once within
       # mass_user_rating_update: mdb_tomatoes
       # mass_critic_rating_update: imdb
       # mass_audience_rating_update: tmdb
-  # TV Shows:
-  #   library_name: TV Shows
-  #   metadata_path:
-  #     - /config/collections/tv/01-charts.yml
-  #     - /config/collections/tv/02-decades.yml
-  #     - /config/collections/tv/03-awards.yml
-  #     - /config/collections/tv/04-collections.yml
-  #     - /config/collections/tv/05-genres.yml
-  #     - /config/collections/tv/06-genres-best.yml
-  #     - /config/collections/tv/07-streaming.yml
-  #     - /config/collections/tv/08-top-episodes.yml
-  #     - /config/metadata/tv/futurama.yml
-    # overlay_path:
-    #   - remove_overlays: false
-    #   - reapply_overlay: false
-    #   - pmm: resolution                                                    # 1
-    #   - pmm: mediastinger                                                  # 3
-    #   - file: config/overlays/ratings.yml
-    #     template_variables:
-    #       rating1: user
-    #       rating1_image: rt_tomato
-    #       rating2: critic
-    #       rating2_image: imdb
-    #       rating3: audience
-    #       rating3_image: tmdb
-    #   - pmm: streaming                                                     # 7
-    #     template_variables:
-    #       vertical_offset: 15
-    #   - pmm: ribbon                                                        # 10, 11 Bottom right sash is used by more than one overlay so a weight for priority can be applied 
+  TV Shows:
+    library_name: TV Shows
+    metadata_path:
+      - /config/collections/tv/01-charts.yml
+      - /config/collections/tv/02-decades.yml
+      - /config/collections/tv/03-awards.yml
+      - /config/collections/tv/04-collections.yml
+      - /config/collections/tv/05-genres.yml
+      - /config/collections/tv/06-genres-best.yml
+      - /config/collections/tv/07-streaming.yml
+      - /config/collections/tv/08-top-episodes.yml
+      - /config/metadata/tv/futurama.yml
+    overlay_path:
+      - remove_overlays: false
+      - reapply_overlays: false
+      - pmm: resolution
+      - pmm: mediastinger
+        template_variables:
+          horizontal_align: left
+          vertical_align: top
+          horizontal_offset: 15
+          vertical_offset: 135
+      - pmm: audio_codec
+        template_variables:
+          position: left
+      - file: config/overlays/ratings.yml
+        template_variables:
+          rating1: user
+          rating1_image: rt_tomato
+          rating2: critic
+          rating2_image: imdb
+          # rating3: audience
+          # rating3_image: tmdb
+      - pmm: streaming
+        template_variables:
+          horizontal_align: right
+          vertical_align: top
+          vertical_offset: 15
+          horizontal_offset: 15
+      # - pmm: ribbon                               # This is a file within the defaults folder in the Repository
     operations:
       assets_for_all: false
       split_duplicates: false

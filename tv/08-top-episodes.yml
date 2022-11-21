@@ -73,6 +73,8 @@ collections:
     template: { name: IMDB-Best-Episodes, num: "32", home: true, shared: true, showName: "Star Trek - Deep Space Nine", imdb_series: tt0106145, limit: 100}
   The Best Episodes of Star Trek - The Next Generation: #177
     template: { name: IMDB-Best-Episodes, num: "33", home: true, shared: true, showName: "Star Trek - The Next Generation", imdb_series: tt0092455, limit: 100}
+  The Best Episodes of Top Gear: #326
+    template: { name: IMDB-Best-Episodes, num: "34", home: true, shared: true, showName: "Top Gear", imdb_series: tt1628033, limit: 100}
 
 
 

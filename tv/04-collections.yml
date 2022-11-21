@@ -47,7 +47,7 @@ collections:
   Marvel Cinematic Universe:
     template: {name: Basic, sort: release.desc, poster: collection-MCU.jpg, num: "14", library: true, shared: true}
     trakt_list:
-     - https://trakt.tv/users/tetharion/lists/marvel-cinematic-universe?sort=rank,asc
+     - https://trakt.tv/users/28stieren/lists/mcu-movies-series?sort=released,asc
   Middle Earth:
     template: {name: Basic, sort: release.desc, poster: collection-middle-earth.jpg, num: "15", library: true, shared: true}
     trakt_list:

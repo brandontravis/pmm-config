@@ -187,7 +187,7 @@ templates:
       font_size: <<font_size>>
       # file: config/overlays/images4/<<rating<<rating_num>>_image_url>><<image_extra>>.png
       # file: config/overlays/images4/<<image_name>>.png
-      file: config/overlays/images4/<<rating<<rating_num>>_image_url>><<image_extra>>.png
+      file: config/overlays/images/<<rating<<rating_num>>_image_url>><<image_extra>>.png
       back_color: "#00000099"
       back_padding: 20
       back_radius: 30
@@ -200,7 +200,7 @@ overlays:
       name: Rating
       rating_num: "1"
       image_level: Rotten
-      v_offset: 300
+      v_offset: 30 #300
       text: user_rating%
       image_name: RT-Crit-Rotten
   Rating1Fresh:
@@ -208,7 +208,7 @@ overlays:
       name: Rating
       rating_num: "1"
       image_level: Fresh
-      v_offset: 300
+      v_offset: 30 #300
       text: user_rating%
       image_name: RT-Crit-Fresh
   Rating1Top:
@@ -217,7 +217,7 @@ overlays:
       weight: 110
       rating_num: "1"
       image_level: Top
-      v_offset: 300
+      v_offset: 30 #300
       text: user_rating%
       image_name: RT-Crit-Fresh
 
@@ -227,7 +227,7 @@ overlays:
       name: Rating
       rating_num: "2"
       image_level: Rotten
-      v_offset: 165
+      v_offset: 30 #165
       text: critic_rating
       image_name: IMDb
   Rating2Fresh:
@@ -235,7 +235,7 @@ overlays:
       name: Rating
       rating_num: "2"
       image_level: Fresh
-      v_offset: 165
+      v_offset: 30 #165
       text: critic_rating
       image_name: IMDb
   Rating2Top:
@@ -244,7 +244,7 @@ overlays:
       weight: 110
       rating_num: "2"
       image_level: Top
-      v_offset: 165
+      v_offset: 30 #165
       text: critic_rating
       image_name: IMDb
 
