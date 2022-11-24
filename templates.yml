@@ -49,6 +49,7 @@ templates:
     limit: <<limit>>
     plex_search:
       genre: <<genre>> ## CAN I EXCLUDE ANIMATION
+      sort_by: release.desc
     optional:
       - num
       - poster

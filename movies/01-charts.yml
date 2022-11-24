@@ -13,11 +13,11 @@ collections:
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/the-curated-collection?sort=rank,asc
   Trending Movies Right Now:
-    template: {name: Basic, poster: chart-trakt-trending.jpg, limit: 150, num: "02", order: release.desc, home: true, library: true, shared: true}
+    template: {name: Basic, poster: chart-trakt-trending.jpg, limit: 150, num: "02", order: custom, home: true, library: true, shared: true}
     summary: Hot and trending movies from across the internet.
-    trakt_trending: 250
-    tmdb_trending_daily: 100
-    tmdb_trending_weekly: 150
+    trakt_trending: 300
+    # tmdb_trending_daily: 100
+    # tmdb_trending_weekly: 150
   Most Popular Movies This Week on Trakt:
     template: {name: Basic, poster: chart-trakt-most-popular-this-week.jpg, limit: 100, num: "03", order: custom, home: true, library: true, shared: true}
     summary: The most watched movies in the last week.

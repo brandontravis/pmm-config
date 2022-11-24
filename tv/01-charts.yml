@@ -13,20 +13,20 @@ collections:
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/the-curated-collection?sort=rank,asc
   Trending TV Shows Right Now:
-    template: {name: Basic, poster: chart-trakt-trending.jpg, limit: 100, num: "02", order: release.desc, library: true, home: true, shared: true}
+    template: {name: Basic, poster: chart-trakt-trending.jpg, limit: 100, num: "02", order: custom, library: true, home: true, shared: true}
     summary: Hot and trending tv shows from across the internet.
     trakt_trending: 150
-    tmdb_trending_daily: 50
-    tmdb_trending_weekly: 150
+    # tmdb_trending_daily: 50
+    # tmdb_trending_weekly: 150
   Most Popular TV Shows This Week on Trakt:
-    template: {name: Basic, poster: chart-trakt-most-popular-this-week.jpg, limit: 100, num: "03", order: release.desc, home: true, library: true, shared: true}
+    template: {name: Basic, poster: chart-trakt-most-popular-this-week.jpg, limit: 100, num: "03", order: custom, home: true, library: true, shared: true}
     summary: The most watched TV shows for the last seven days. Sorted by number of unique watchers.
     trakt_chart:
       chart: watched
       time_period: weekly
       limit: 1000
   Most Popular TV Shows This Year on Trakt:
-    template: {name: Basic, poster: chart-trakt-most-popular-this-year.jpg, limit: 100, num: "04", order: release.desc, home: true, library: true, shared: true}
+    template: {name: Basic, poster: chart-trakt-most-popular-this-year.jpg, limit: 100, num: "04", order: custom, home: true, library: true, shared: true}
     summary: The most watched TV shows for the last year. Sorted by number of unique watchers.
     trakt_chart:
       chart: watched
@@ -55,7 +55,7 @@ collections:
       list_size: 60
       list_buffer: 60
   Recently Added Shows:
-    template: { name: Basic, num: "08", poster: chart-plex-recently-added.jpg, library: true, home: true, shared: true}
+    template: { name: Basic, num: "08", poster: chart-plex-recently-added.jpg, library: true, home: true, shared: true, order: added.desc}
     summary: TV Shows added within the last three months.
     plex_search:
       added: 90

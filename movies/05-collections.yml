@@ -56,41 +56,41 @@ collections:
     template: {name: Basic, sort: release.desc, poster: collection-cult-classics-90s.jpg, num: "10", library: true, shared: true}
     imdb_list: https://www.imdb.com/list/ls002348409/
   DC Comics:
-    template: {name: Basic, sort: alpha, poster: collection-dc.jpg, num: "11", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-dc.jpg, num: "11", library: true, shared: true}
     imdb_list:
      - https://www.imdb.com/list/ls021326258/
   Marvel Comics:
-    template: {name: Basic, sort: alpha, poster: collection-marvel-comics.jpg, num: "12", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-marvel-comics.jpg, num: "12", library: true, shared: true}
     trakt_list:
      - https://trakt.tv/users/ishalioh/lists/marvel-non-mcu-live-action?sort=released,asc
     imdb_list:
      - https://www.imdb.com/list/ls000024621/
   DC Extended Universe:
-    template: {name: Basic, sort: alpha, poster: collection-DCEU.png, num: "13", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-DCEU.png, num: "13", library: true, shared: true}
     trakt_list:
      - https://trakt.tv/users/donxy/lists/dc-extended-universe
   Marvel Cinematic Universe:
-    template: {name: Basic, sort: alpha, poster: collection-MCU.jpg, num: "14", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-MCU.jpg, num: "14", library: true, shared: true}
     trakt_list:
      - https://trakt.tv/users/tetharion/lists/marvel-cinematic-universe?sort=rank,asc
   Middle Earth:
-    template: {name: Basic, sort: alpha, poster: collection-middle-earth.jpg, num: "15", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-middle-earth.jpg, num: "15", library: true, shared: true}
     trakt_list:
      - https://trakt.tv/users/lutgnature/lists/lord-of-the-rings-hobbit
   Star Wars Universe:
-    template: {name: Basic, sort: alpha, poster: collection-star-wars.jpg, num: "16", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-star-wars.jpg, num: "16", library: true, shared: true}
     trakt_list:
      - https://trakt.tv/users/julienicoletv/lists/star-wars-universe?sort=rank,asc
   Star Trek:
-    template: {name: Basic, sort: alpha, poster: collection-star-trek.jpg, num: "17", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-star-trek.jpg, num: "17", library: true, shared: true}
     trakt_list:
      - https://trakt.tv/users/buzdekay/lists/star-trek?sort=released,asc
   The Wizarding World:
-    template: {name: Basic, sort: alpha, poster: collection-wizarding-world.jpg, num: "18", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-wizarding-world.jpg, num: "18", library: true, shared: true}
     trakt_list:
      - https://trakt.tv/users/bubbles-prior/lists/wizarding-world?sort=rank,asc
   The Mutant Collection:
-    template: {name: Basic, sort: alpha, poster: collection-mutant.jpg, num: "19", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-mutant.jpg, num: "19", library: true, shared: true}
     trakt_list:
      - https://trakt.tv/users/bertjj/lists/x-men?sort=released,desc
   The Common Sense Selection:

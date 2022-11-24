@@ -8,7 +8,7 @@ collections:
 ##     Originals     ##
 #######################
   Netflix Originals:
-    template: {name: Basic, poster: streaming-netflix-originals.jpg, num: "01", order: alpha, library: true, shared: true}
+    template: {name: Basic, poster: streaming-netflix-originals.jpg, num: "01", order: release.desc, library: true, shared: true}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/netflix-shows
     summary: Netflix original shows.
   Most Popular On Netflix:
@@ -26,7 +26,7 @@ collections:
       time_window: this_month
       limit: 20
   Apple TV+ Originals:
-    template: {name: Basic, poster: streaming-atv-originals.jpg, num: "04", order: alpha, library: true, shared: true}
+    template: {name: Basic, poster: streaming-atv-originals.jpg, num: "04", order: release.desc, library: true, shared: true}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/appletv-shows
     summary: Apple TV+ original shows.
   Most Popular On Apple TV+:
@@ -36,7 +36,7 @@ collections:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0546168&sort=user_rating,desc
       limit: 1000
   Disney+ Originals:
-    template: {name: Basic, poster: streaming-disney-originals.jpg, num: "06", order: alpha, library: true, shared: true}
+    template: {name: Basic, poster: streaming-disney-originals.jpg, num: "06", order: release.desc, library: true, shared: true}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/disney-shows
     summary: Disney+ original shows.
   Most Popular On Disney+:
@@ -54,7 +54,7 @@ collections:
       time_window: this_month
       limit: 20
   Hulu Originals:
-    template: {name: Basic, poster: streaming-hulu-originals.jpg, num: "09", order: alpha, library: true, shared: true}
+    template: {name: Basic, poster: streaming-hulu-originals.jpg, num: "09", order: release.desc, library: true, shared: true}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/hulu-shows
     summary: Hulu original shows.
   Most Popular On Hulu:
@@ -72,7 +72,7 @@ collections:
       time_window: this_month
       limit: 20
   HBO Max Originals:
-    template: {name: Basic, poster: streaming-hbo-originals.jpg, num: "12", order: alpha, library: true, shared: true}
+    template: {name: Basic, poster: streaming-hbo-originals.jpg, num: "12", order: release.desc, library: true, shared: true}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/hbomax-shows
     summary: HBO Max original shows.
   Most Popular On HBO Max:
@@ -90,7 +90,7 @@ collections:
       time_window: this_month
       limit: 20
   Peacock Originals:
-    template: {name: Basic, poster: streaming-peacock-originals.jpg, num: "15", order: alpha, library: true, shared: true}
+    template: {name: Basic, poster: streaming-peacock-originals.jpg, num: "15", order: release.desc, library: true, shared: true}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/peacock-shows
     summary: Peacock original shows.
   Most Popular On Peacock:
@@ -100,7 +100,7 @@ collections:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&genres=!animation&countries=us&languages=en&sort=release_date,desc&companies=co0764707&sort=user_rating,desc
       limit: 1000
   Prime Video Originals:
-    template: {name: Basic, poster: streaming-amazon-originals.jpg, num: "17", order: alpha, library: true, shared: true}
+    template: {name: Basic, poster: streaming-amazon-originals.jpg, num: "17", order: release.desc, library: true, shared: true}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/amazon-shows
     summary: Prime Video original shows.
   Most Popular On Prime Video:
@@ -118,7 +118,7 @@ collections:
       time_window: this_month
       limit: 20
   Paramount+ Originals:
-    template: {name: Basic, poster: streaming-paramount-originals.jpg, num: "20", order: alpha, library: true, shared: true}
+    template: {name: Basic, poster: streaming-paramount-originals.jpg, num: "20", order: release.desc, library: true, shared: true}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/paramount-shows
     summary: Paramount original shows.
   Most Popular On Paramount+:
@@ -136,7 +136,7 @@ collections:
       time_window: this_month
       limit: 20
   Showtime Originals:
-    template: {name: Basic, poster: streaming-showtime-originals.jpg, num: "23", order: alpha, library: true, shared: true}
+    template: {name: Basic, poster: streaming-showtime-originals.jpg, num: "23", order: release.desc, library: true, shared: true}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/showtime-shows
     summary: Showtime original shows.
   Most Popular On Showtime:
