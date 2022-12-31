@@ -2,7 +2,7 @@ templates:
   Basic:
     sort_title: +<<collection_section>>_<<num>>-<<collection_name>>
     url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
-    sync_mode: sync
+    sync_mode: <<sync_mode>>
     collection_order: <<order>>
     smart_label: <<label>>
     collection_mode: hide
@@ -24,6 +24,7 @@ templates:
       - a
       - s
       - m
+      - sync_mode
   BestOfTimePeriod:
     sync_mode: sync
     sort_title: +<<collection_section>>_<<num>>-<<collection_name>>

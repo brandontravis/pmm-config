@@ -17,14 +17,14 @@ collections:
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0144901&sort=user_rating,desc
       limit: 1000
-  Top 20 on Netflix:
-    template: {name: Basic, num: "03", order: release.desc, library: true, shared: true, poster: streaming-netflix-flix.jpg}
-    summary: Up to the top 20 movies this month on Netflix according to Flixpatrol.
-    flixpatrol_top:
-      platform: netflix
-      location: united_states
-      time_window: this_month
-      limit: 20
+  # Top 20 on Netflix:
+  #   template: {name: Basic, num: "03", order: release.desc, library: true, shared: true, poster: streaming-netflix-flix.jpg}
+  #   summary: Up to the top 20 movies this month on Netflix according to Flixpatrol.
+  #   flixpatrol_top:
+  #     platform: netflix
+  #     location: united_states
+  #     time_window: this_month
+  #     limit: 20
   Apple TV+ Originals:
     template: {name: Basic, poster: streaming-atv-originals.jpg, num: "04", order: release.desc, library: true, shared: true}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/appletv-movies
@@ -45,14 +45,14 @@ collections:
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0721120&sort=user_rating,desc
       limit: 1000
-  Top 20 on Disney+:
-    template: {name: Basic, num: "08", order: release.desc, library: true, shared: true, poster: streaming-disney-flix.jpg}
-    summary: Up to the top 20 movies this month on Disney+ according to Flixpatrol.
-    flixpatrol_top:
-      platform: disney
-      location: united_states
-      time_window: this_month
-      limit: 20
+  # Top 20 on Disney+:
+  #   template: {name: Basic, num: "08", order: release.desc, library: true, shared: true, poster: streaming-disney-flix.jpg}
+  #   summary: Up to the top 20 movies this month on Disney+ according to Flixpatrol.
+  #   flixpatrol_top:
+  #     platform: disney
+  #     location: united_states
+  #     time_window: this_month
+  #     limit: 20
   Hulu Originals:
     template: {name: Basic, poster: streaming-hulu-originals.jpg, num: "09", order: release.desc, library: true, shared: true}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/hulu-movies
@@ -63,14 +63,14 @@ collections:
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0218858&sort=user_rating,desc
       limit: 1000
-  Top 20 on Hulu:
-    template: {name: Basic, num: "11", order: release.desc, library: true, shared: true, poster: streaming-hulu-flix.jpg}
-    summary: Up to the top 20 movies this month on Hulu according to Flixpatrol.
-    flixpatrol_top:
-      platform: hulu
-      location: united_states
-      time_window: this_month
-      limit: 20
+  # Top 20 on Hulu:
+  #   template: {name: Basic, num: "11", order: release.desc, library: true, shared: true, poster: streaming-hulu-flix.jpg}
+  #   summary: Up to the top 20 movies this month on Hulu according to Flixpatrol.
+  #   flixpatrol_top:
+  #     platform: hulu
+  #     location: united_states
+  #     time_window: this_month
+  #     limit: 20
   HBO Max Originals:
     template: {name: Basic, poster: streaming-hbo-originals.jpg, num: "12", order: release.desc, library: true, shared: true}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/hbomax-movies
@@ -81,14 +81,14 @@ collections:
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0754095&sort=user_rating,desc
       limit: 1000
-  Top 20 on HBO Max:
-    template: {name: Basic, num: "14", order: release.desc, library: true, shared: true, poster: streaming-hbo-flix.jpg}
-    summary: Up to the top 20 movies this month on HBO Max according to Flixpatrol.
-    flixpatrol_top:
-      platform: hbo
-      location: united_states
-      time_window: this_month
-      limit: 20
+  # Top 20 on HBO Max:
+  #   template: {name: Basic, num: "14", order: release.desc, library: true, shared: true, poster: streaming-hbo-flix.jpg}
+  #   summary: Up to the top 20 movies this month on HBO Max according to Flixpatrol.
+  #   flixpatrol_top:
+  #     platform: hbo
+  #     location: united_states
+  #     time_window: this_month
+  #     limit: 20
   Peacock Originals:
     template: {name: Basic, poster: streaming-peacock-originals.jpg, num: "15", order: release.desc, library: true, shared: true}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/peacock-movies
@@ -109,14 +109,14 @@ collections:
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0476953&sort=user_rating,desc
       limit: 1000
-  Top 20 on Prime Video:
-    template: {name: Basic, num: "19", order: release.desc, library: true, shared: true, poster: streaming-prime-flix.jpg}
-    summary: Up to the top 20 movies this month on Prime Video according to Flixpatrol.
-    flixpatrol_top:
-      platform: amazon_prime
-      location: united_states
-      time_window: this_month
-      limit: 20
+  # Top 20 on Prime Video:
+  #   template: {name: Basic, num: "19", order: release.desc, library: true, shared: true, poster: streaming-prime-flix.jpg}
+  #   summary: Up to the top 20 movies this month on Prime Video according to Flixpatrol.
+  #   flixpatrol_top:
+  #     platform: amazon_prime
+  #     location: united_states
+  #     time_window: this_month
+  #     limit: 20
   Paramount+ Originals:
     template: {name: Basic, poster: streaming-paramount-originals.jpg, num: "20", order: release.desc, library: true, shared: true}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/paramount-movies
@@ -127,14 +127,14 @@ collections:
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0820547&sort=user_rating,desc
       limit: 1000
-  Top 20 on Paramount+:
-    template: {name: Basic, num: "22", order: release.desc, library: true, shared: true, poster: streaming-paramount-flix.jpg}
-    summary: Up to the top 20 movies this month on Paramount+ according to Flixpatrol.
-    flixpatrol_top:
-      platform: paramount_plus
-      location: united_states
-      time_window: this_month
-      limit: 20
+  # Top 20 on Paramount+:
+  #   template: {name: Basic, num: "22", order: release.desc, library: true, shared: true, poster: streaming-paramount-flix.jpg}
+  #   summary: Up to the top 20 movies this month on Paramount+ according to Flixpatrol.
+  #   flixpatrol_top:
+  #     platform: paramount_plus
+  #     location: united_states
+  #     time_window: this_month
+  #     limit: 20
   Showtime Originals:
     template: {name: Basic, poster: streaming-showtime-originals.jpg, num: "23", order: release.desc, library: true, shared: true}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/showtime-movies

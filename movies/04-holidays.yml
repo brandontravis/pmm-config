@@ -106,7 +106,7 @@ collections:
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/holiday-mothers-day?sort=rank,asc
   And The World Will Know!:
-    template: {name: Basic, num: "08", poster: holiday-labor.jpg, order: customc}
+    template: {name: Basic, num: "08", poster: holiday-labor.jpg, order: custom}
     summary: Labor! Labor! Labor!.
     visible_home: range(08/10-09/05)
     visible_library: range(08/10-09/05)
