@@ -7,51 +7,12 @@ collections:
 #####################
 ##    Holidays     ##
 #####################
-  "'Tis the Season":
-    template: {name: Basic, poster: holiday-christmas.jpg, num: "01", order: release.desc}
-    summary: Winter holiday favorites.
-    visible_home: range(11/01-12/31)
-    visible_library: range(11/01-12/31)
-    visible_shared: range(11/01-12/31)
-    # schedule: range(12/01-12/31)
-    trakt_list:
-      - https://trakt.tv/users/jjjonesjr33/lists/christmas
-      - https://trakt.tv/users/jjjonesjr33/lists/christmas-static-list
-      - https://trakt.tv/users/movistapp/lists/christmas-movies
-      - https://trakt.tv/users/pualani78/lists/christmas-2020
-      - https://trakt.tv/users/veninjak/lists/complete-christmas-2021-copy
-      - https://trakt.tv/users/idealbrandon/lists/holiday-christmas?sort=title,asc
-    imdb_list:
-      - https://www.imdb.com/list/ls000096828/
-      - https://www.imdb.com/list/ls025976544/
-      - https://www.imdb.com/list/ls003863000/
-      - https://www.imdb.com/list/ls027454200/
-      - https://www.imdb.com/list/ls027886673/
-      - https://www.imdb.com/list/ls097998599/
-  Beware the Witching Hour:
-    template: {name: Basic, poster: holiday-halloween.jpg, num: "02", order: release.desc}
-    summary: Spooky films to celebrate Halloween.
-    visible_home: range(10/01-10/31)
-    visible_library: range(10/01-10/31)
-    visible_shared: range(10/01-10/31)
-    #schedule: range(10/01-10/31)
-    imdb_list:
-      - https://www.imdb.com/list/ls023118929/
-    trakt_list:
-      - https://trakt.tv/users/jjjonesjr33/lists/halloween
-      - https://trakt.tv/users/29zombies/lists/halloween
-      - https://trakt.tv/users/galacticboy/lists/not-so-spooky-halloween
-      - https://trakt.tv/users/triadcool/lists/halloween?sort=released,asc
-      - https://trakt.tv/users/evil-vin/lists/halloween-2021?sort=released,asc
-      - https://trakt.tv/users/kairbear08/lists/halloween
-      - https://trakt.tv/users/mybicycle/lists/halloween
-      - https://trakt.tv/users/idealbrandon/lists/holiday-halloween?sort=rank,asc
   Love is in the Air:
     template: {name: Basic, poster: holiday-valentines.jpg, num: "03", order: release.desc}
     summary: Valentine's day films.
-    visible_home: range(01/15-02/14)
-    visible_library: range(01/15-02/14)
-    visible_shared: range(01/15-02/14)
+    visible_home: range(01/01-02/14)
+    visible_library: range(01/01-02/14)
+    visible_shared: range(01/01-02/14)
     #schedule: range(02/01-02/14)
     imdb_list:
       - https://www.imdb.com/list/ls000094398/
@@ -77,24 +38,6 @@ collections:
       - https://trakt.tv/users/idealbrandon/lists/holiday-4-20?sort=rank,asc
     imdb_list:
      - https://www.imdb.com/list/ls075204988/
-  Never Forget:
-    template: {name: Basic, num: "05", poster: holiday-911.jpg, order: custom}
-    summary: Remebering 9/11.
-    visible_home: range(08/01-09/11)
-    visible_library: range(08/01-09/11)
-    visible_shared: range(08/01-09/11)
-    #schedule: range(02/01-02/14)
-    trakt_list:
-      - https://trakt.tv/users/idealbrandon/lists/holiday-9-11?sort=rank,asc
-  Steak & Y'know ...:
-    template: {name: Basic, num: "06", poster: holiday-fathers.jpg, order: custom}
-    summary: Because it's well deserved.
-    visible_home: range(05/15-06/20)
-    visible_library: range(05/15-06/20)
-    visible_shared: range(05/15-06/20)
-    #schedule: range(02/01-02/14)
-    trakt_list:
-      - https://trakt.tv/users/idealbrandon/lists/holiday-father-day?sort=rank,asc
   Alone Time is Overrated:
     template: {name: Basic, num: "07", poster: holiday-mothers.jpg, order: custom}
     summary: Because it's well deserved.
@@ -105,15 +48,6 @@ collections:
     # https://www.imdb.com/list/ls072551197/ # PMM List
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/holiday-mothers-day?sort=rank,asc
-  And The World Will Know!:
-    template: {name: Basic, num: "08", poster: holiday-labor.jpg, order: custom}
-    summary: Labor! Labor! Labor!.
-    visible_home: range(08/10-09/05)
-    visible_library: range(08/10-09/05)
-    visible_shared: range(08/10-09/05)
-    #schedule: range(02/01-02/14)
-    trakt_list:
-      - https://trakt.tv/users/idealbrandon/lists/holiday-labor-day?sort=rank,asc
   Honoring our Heroes:
     template: {name: Basic, num: "09", poster: holiday-memorial.jpg, order: custom}
     summary: For those we've lost.
@@ -122,6 +56,15 @@ collections:
     #schedule: range(02/01-02/14)
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/holiday-memorial-day?sort=rank,asc
+  Steak & Y'know ...:
+    template: {name: Basic, num: "06", poster: holiday-fathers.jpg, order: custom}
+    summary: Because it's well deserved.
+    visible_home: range(05/15-06/20)
+    visible_library: range(05/15-06/20)
+    visible_shared: range(05/15-06/20)
+    #schedule: range(02/01-02/14)
+    trakt_list:
+      - https://trakt.tv/users/idealbrandon/lists/holiday-father-day?sort=rank,asc
   Home of the Brave:
     template: {name: Basic, num: "10", poster: holiday-july4.jpg, order: custom}
     summary: We the People of the United States, in Order to form a more perfect Union...
@@ -131,5 +74,68 @@ collections:
     #schedule: range(02/01-02/14)
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/holiday-july-4?sort=rank,asc
+  Never Forget:
+    template: {name: Basic, num: "05", poster: holiday-911.jpg, order: custom}
+    summary: Remebering 9/11.
+    visible_home: range(08/01-09/11)
+    visible_library: range(08/01-09/11)
+    visible_shared: range(08/01-09/11)
+    #schedule: range(02/01-02/14)
+    trakt_list:
+      - https://trakt.tv/users/idealbrandon/lists/holiday-9-11?sort=rank,asc
+  And The World Will Know!:
+    template: {name: Basic, num: "08", poster: holiday-labor.jpg, order: custom}
+    summary: Labor! Labor! Labor!.
+    visible_home: range(08/10-09/05)
+    visible_library: range(08/10-09/05)
+    visible_shared: range(08/10-09/05)
+    #schedule: range(02/01-02/14)
+    trakt_list:
+      - https://trakt.tv/users/idealbrandon/lists/holiday-labor-day?sort=rank,asc
+  Beware the Witching Hour:
+    template: {name: Basic, poster: holiday-halloween.jpg, num: "02", order: release.desc}
+    summary: Spooky films to celebrate Halloween.
+    visible_home: range(10/01-10/31)
+    visible_library: range(10/01-10/31)
+    visible_shared: range(10/01-10/31)
+    #schedule: range(10/01-10/31)
+    imdb_list:
+      - https://www.imdb.com/list/ls023118929/
+    trakt_list:
+      - https://trakt.tv/users/jjjonesjr33/lists/halloween
+      - https://trakt.tv/users/29zombies/lists/halloween
+      - https://trakt.tv/users/galacticboy/lists/not-so-spooky-halloween
+      - https://trakt.tv/users/triadcool/lists/halloween?sort=released,asc
+      - https://trakt.tv/users/evil-vin/lists/halloween-2021?sort=released,asc
+      - https://trakt.tv/users/kairbear08/lists/halloween
+      - https://trakt.tv/users/mybicycle/lists/halloween
+      - https://trakt.tv/users/idealbrandon/lists/holiday-halloween?sort=rank,asc]
+  "'Tis the Season":
+    template: {name: Basic, poster: holiday-christmas.jpg, num: "01", order: release.desc}
+    summary: Winter holiday favorites.
+    visible_home: range(11/01-12/31)
+    visible_library: range(11/01-12/31)
+    visible_shared: range(11/01-12/31)
+    # schedule: range(12/01-12/31)
+    trakt_list:
+      - https://trakt.tv/users/jjjonesjr33/lists/christmas
+      - https://trakt.tv/users/jjjonesjr33/lists/christmas-static-list
+      - https://trakt.tv/users/movistapp/lists/christmas-movies
+      - https://trakt.tv/users/pualani78/lists/christmas-2020
+      - https://trakt.tv/users/veninjak/lists/complete-christmas-2021-copy
+      - https://trakt.tv/users/idealbrandon/lists/holiday-christmas?sort=title,asc
+    imdb_list:
+      - https://www.imdb.com/list/ls000096828/
+      - https://www.imdb.com/list/ls025976544/
+      - https://www.imdb.com/list/ls003863000/
+      - https://www.imdb.com/list/ls027454200/
+      - https://www.imdb.com/list/ls027886673/
+      - https://www.imdb.com/list/ls097998599/
+  
+  
+  
+  
+  
+  
 
 
