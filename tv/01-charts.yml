@@ -38,7 +38,7 @@ collections:
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=tv_series,tv_miniseries&num_votes=20000,&sort=user_rating,desc
       limit: 1000
-  Because You Watched (TV):
+  Because You Watched:
     template: {name: Basic, poster: chart-plex-you-watched-tv.jpg, num: "06", order: release.desc, home: true, library: true, shared: true}
     summary: Recommendations based off of recently watched movies (provided by couchmoney.tv)
     trakt_list:
