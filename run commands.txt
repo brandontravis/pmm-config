@@ -5,3 +5,10 @@ sudo docker run --rm -it -v "/volume1/docker/appdata/pmm-tv/config:/config:rw" m
 
 cd /volume1/docker/appdata/pmm
 sudo docker run --rm -it -v "/volume1/docker/appdata/pmm/config:/config:rw" meisnate12/plex-meta-manager --run | tee pmm.txt
+
+sudo docker run \
+--rm \
+-it \
+-e TZ=America/New_York \
+-v "/volume1/docker/appdata/pmm/config:/config:rw" meisnate12/plex-meta-manager \
+--run | tee pmm.txt

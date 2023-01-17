@@ -134,7 +134,7 @@ templates:
     sort_title: +<<collection_section>>_<<num>>-<<collection_name>>
     url_poster: <<poster>>
     sync_mode: sync
-    collection_order: custom
+    collection_order: random
     collection_mode: hide
     visible_library: <<library>>
     visible_home: <<home>

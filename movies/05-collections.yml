@@ -8,93 +8,93 @@ collections:
 ##     Collections     ##
 #########################
   Based on Books:
-    template: {name: Basic, poster: collection-based-on-books.jpg, num: "01", order: release.desc, library: true, shared: true}
+    template: {name: Basic, poster: collection-based-on-books.jpg, num: "01", order: release.desc, library: true}
     summary: Movies based on books or novels.
     tmdb_keyword: 818
   Based on Video Games:
-    template: {name: Basic, poster: collection-based-on-video-games.jpg, num: "02", order: release.desc, library: true, shared: true}
+    template: {name: Basic, poster: collection-based-on-video-games.jpg, num: "02", order: release.desc, library: "weekly(monday), weekly(wednesday), weekly(friday)"}
     summary: Movies based on video games.
     tmdb_keyword: 41645
   Based on Comic Books:
-    template: {name: Basic, poster: collection-based-on-comic-books.jpg, num: "03", order: release.desc, library: true, shared: true}
+    template: {name: Basic, poster: collection-based-on-comic-books.jpg, num: "03", order: release.desc, library: "weekly(sunday), weekly(tuesday), weekly(thursday), weekly(saturday)"}
     summary: Movies based on comic books.
     tmdb_keyword:
       - 9717
       - 18712
   Based on True Events:
-    template: {name: Basic, poster: collection-based-on-true-events.jpg, num: "04", order: release.desc, library: true, shared: true}
+    template: {name: Basic, poster: collection-based-on-true-events.jpg, num: "04", order: release.desc, library: true}
     summary: Movies based on true events.
     tmdb_keyword: 9672
     # trakt_list: https://trakt.tv/users/hdlists/lists/based-on-or-inspired-by-a-true-story
     trakt_list: https://trakt.tv/users/idealbrandon/lists/based-on-true-events
   Movies to See Before You Die:
-    template: {name: Basic, sort: release.desc, poster: collection-see-before-you-die.jpg, num: "05", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-see-before-you-die.jpg, num: "05", library: "weekly(sunday), weekly(monday)"}
     trakt_list:
      - https://trakt.tv/users/sp1ti/lists/1001-movies-you-must-see-before-you-die
   Movies So Bad, They're Good!:
-    template: {name: Basic, sort: release.desc, poster: collection-so-bad.jpg, num: "06", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-so-bad.jpg, num: "06", library: "weekly(tuesday)"}
     trakt_list:
      - https://trakt.tv/users/philrivers/lists/the-50-best-good-bad-movies?sort=rank,asc
      - https://trakt.tv/users/acelove/lists/good-bad-movies?sort=title,asc
      - https://trakt.tv/users/gristlemctough/lists/bad-movies?sort=title,asc
      - https://trakt.tv/users/maxwelldeux/lists/badmovies-org-best-b-movies?sort=rank,asc
   Twists and Turns:
-    template: {name: Basic, sort: release.desc, poster: collection-mindfucks.jpg, num: "07", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-mindfucks.jpg, num: "07", library: "weekly(friday), weekly(saturday)"}
     trakt_list:
      - https://trakt.tv/users/lish408/lists/mindfuck
      - https://trakt.tv/users/hdlists/lists/mindfuck-movies
      - https://trakt.tv/users/benfranklin/lists/best-mindfucks
   Cult Classics:
-    template: {name: Basic, sort: release.desc, poster: collection-cult-classics-alt.jpg, num: "08", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-cult-classics-alt.jpg, num: "08", library: "weekly(monday)"}
     trakt_list:
      - https://trakt.tv/users/mr-mc86/lists/cult-classics?sort=rank,asc
      - https://trakt.tv/users/mekwall/lists/cult-films?sort=rank,asc
   80's Cult Classics:
-    template: {name: Basic, sort: release.desc, poster: collection-cult-classics-80s.jpg, num: "09", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-cult-classics-80s.jpg, num: "09", library: false}
     trakt_list: https://trakt.tv/users/zyrus/lists/80s-classics
   90's Cult Classics:
-    template: {name: Basic, sort: release.desc, poster: collection-cult-classics-90s.jpg, num: "10", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-cult-classics-90s.jpg, num: "10", library: false}
     imdb_list: https://www.imdb.com/list/ls002348409/
   DC Comics:
-    template: {name: Basic, sort: release.desc, poster: collection-dc.jpg, num: "11", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-dc.jpg, num: "11", library: "weekly(monday), weekly(wednesday), weekly(friday)"}
     imdb_list:
      - https://www.imdb.com/list/ls021326258/
   Marvel Comics:
-    template: {name: Basic, sort: release.desc, poster: collection-marvel-comics.jpg, num: "12", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-marvel-comics.jpg, num: "12", library: "weekly(monday), weekly(wednesday), weekly(friday)"}
     trakt_list:
      - https://trakt.tv/users/ishalioh/lists/marvel-non-mcu-live-action?sort=released,asc
     imdb_list:
      - https://www.imdb.com/list/ls000024621/
   DC Extended Universe:
-    template: {name: Basic, sort: release.desc, poster: collection-DCEU.png, num: "13", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-DCEU.png, num: "13", library: "weekly(sunday), weekly(tuesday), weekly(thursday), weekly(friday)"}
     trakt_list:
      - https://trakt.tv/users/donxy/lists/dc-extended-universe
   Marvel Cinematic Universe:
-    template: {name: Basic, sort: release.desc, poster: collection-MCU.jpg, num: "14", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-MCU.jpg, num: "14", library: "weekly(sunday), weekly(tuesday), weekly(thursday), weekly(friday)"}
     trakt_list:
      - https://trakt.tv/users/tetharion/lists/marvel-cinematic-universe?sort=rank,asc
   Middle Earth:
-    template: {name: Basic, sort: release.desc, poster: collection-middle-earth.jpg, num: "15", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-middle-earth.jpg, num: "15", library: false}
     trakt_list:
      - https://trakt.tv/users/lutgnature/lists/lord-of-the-rings-hobbit
   Star Wars Universe:
-    template: {name: Basic, sort: release.desc, poster: collection-star-wars.jpg, num: "16", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-star-wars.jpg, num: "16", library: "weekly(monday), weekly(friday)"}
     trakt_list:
      - https://trakt.tv/users/julienicoletv/lists/star-wars-universe?sort=rank,asc
   Star Trek:
-    template: {name: Basic, sort: release.desc, poster: collection-star-trek.jpg, num: "17", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-star-trek.jpg, num: "17", library: "weekly(tuesday), weekly(saturday)"}
     trakt_list:
      - https://trakt.tv/users/buzdekay/lists/star-trek?sort=released,asc
   The Wizarding World:
-    template: {name: Basic, sort: release.desc, poster: collection-wizarding-world.jpg, num: "18", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-wizarding-world.jpg, num: "18", library: "weekly(sunday), weekly(thursday)"}
     trakt_list:
      - https://trakt.tv/users/bubbles-prior/lists/wizarding-world?sort=rank,asc
   The Mutant Collection:
-    template: {name: Basic, sort: release.desc, poster: collection-mutant.jpg, num: "19", library: true, shared: true}
+    template: {name: Basic, sort: release.desc, poster: collection-mutant.jpg, num: "19", library: "weekly(wednesday)"}
     trakt_list:
      - https://trakt.tv/users/bertjj/lists/x-men?sort=released,desc
   The Common Sense Selection:
-    template: {name: Basic, num: "20", order: custom, poster: collection-common-sense.jpg, library: true, shared: true}
+    template: {name: Basic, num: "20", order: custom, poster: collection-common-sense.jpg, library: "weekly(wednesday), weekly(thursday)"}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/cssfamiliesmovies?sort=score&sortorder=desc
     summary: Common Sense recognizes outstanding entertainment with an official seal for quality and impact. Common Sense Selections include age-appropriate media with the potential to spark family conversations. Sorted by user rating.
 

@@ -18,15 +18,15 @@ collections:
   Best Of Children:
     template: {name: HighestRatedGenre, label: "Children", poster: genre-children-best.jpg}
   Best Of Comedy:
-    template: {name: HighestRatedGenre, label: "Comedy", poster: genre-comedy-best.jpg}
+    template: {name: HighestRatedGenre, label: "Comedy", poster: genre-comedy-best.jpg, library: "weekly(thursday)"}
   Best Of Competition:
     template: {name: HighestRatedGenre, label: "Competition", poster: genre-competition-best.jpg}
   Best Of Crime:
-    template: {name: HighestRatedGenre, label: "Crime", poster: genre-crime-best.jpg}
+    template: {name: HighestRatedGenre, label: "Crime", poster: genre-crime-best.jpg, library: "weekly(wednesday)"}
   Best Of Disaster:
     template: {name: HighestRatedGenre, label: "Disaster", poster: genre-disaster-best.jpg}
   Best Of Documentary:
-    template: {name: HighestRatedGenre, label: "Documentary", poster: genre-documentary-best.jpg}
+    template: {name: HighestRatedGenre, label: "Documentary", poster: genre-documentary-best.jpg, library: "weekly(tuesday)"}
   Best Of Drama:
     template: {name: HighestRatedGenre, label: "Drama", poster: genre-drama-best.jpg}
   Best Of Dystopian:
@@ -46,13 +46,13 @@ collections:
   Best Of History:
     template: {name: HighestRatedGenre, label: "History", poster: genre-history-best.jpg}
   Best Of Horror:
-    template: {name: HighestRatedGenre, label: "Horror", poster: genre-horror-best.jpg}
+    template: {name: HighestRatedGenre, label: "Horror", poster: genre-horror-best.jpg, library: "weekly(friday)"}
   Best Of Music:
     template: {name: HighestRatedGenre, label: "Music", poster: genre-music-best.jpg}
   Best Of Musical:
     template: {name: HighestRatedGenre, label: "Musical", poster: genre-musical-best.jpg}
   Best Of Mystery:
-    template: {name: HighestRatedGenre, label: "Mystery", poster: genre-mystery-best.jpg}
+    template: {name: HighestRatedGenre, label: "Mystery", poster: genre-mystery-best.jpg, library: "weekly(monday)"}
   Best Of News & Politics:
     template: {name: HighestRatedGenre, label: "News & Politics", poster: genre-news-best.jpg}
   Best Of Outer Space:
@@ -64,11 +64,11 @@ collections:
   Best Of Romance:
     template: {name: HighestRatedGenre, label: "Romance", poster: genre-romance-best.jpg}
   Best Of Romantic Comedy:
-    template: {name: HighestRatedGenre, label: "Romantic Comedy", poster: genre-romcom-best.jpg}
+    template: {name: HighestRatedGenre, label: "Romantic Comedy", poster: genre-romcom-best.jpg, library: "weekly(sunday)"}
   Best Of Romantic Drama:
     template: {name: HighestRatedGenre, label: "Romantic Drama", poster: genre-romdrama-best.jpg}
   Best Of Science Fiction:
-    template: {name: HighestRatedGenre, label: "Science Fiction", poster: genre-sci-fi-best.jpg}
+    template: {name: HighestRatedGenre, label: "Science Fiction", poster: genre-sci-fi-best.jpg, library: "weekly(saturday)"}
   Best Of Sports:
     template: {name: HighestRatedGenre, label: "Sports", poster: genre-sports-best.jpg}
   Best Of Slasher:
@@ -76,13 +76,13 @@ collections:
   Best Of Stand Up Comedy:
     template: {name: HighestRatedGenre, label: "Stand Up Comedy", poster: genre-stand-up-best.jpg}
   Best Of Superhero:
-    template: {name: HighestRatedGenre, label: "Superhero", poster: genre-superhero-best.jpg}
+    template: {name: HighestRatedGenre, label: "Superhero", poster: genre-superhero-best.jpg, library: "weekly(wednesday)"}
   Best Of Suspense:
     template: {name: HighestRatedGenre, label: "Suspense", poster: genre-suspense-best.jpg}
   Best Of Sword & Sorcery:
     template: {name: HighestRatedGenre, label: "Sword & Sorcery", poster: genre-sword-best.jpg}
   Best Of Thriller:
-    template: {name: HighestRatedGenre, label: "Thriller", poster: genre-thriller-best.jpg}
+    template: {name: HighestRatedGenre, label: "Thriller", poster: genre-thriller-best.jpg, library: "weekly(friday)"}
   Best Of Time Travel:
     template: {name: HighestRatedGenre, label: "Time Travel", poster: genre-time-travel-best.jpg}
   Best Of True Crime:

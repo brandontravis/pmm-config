@@ -8,7 +8,7 @@ collections:
 ##     Award Shows     ##
 #########################
   Award Winning TV Shows:
-    template: {name: Basic, poster: award-winners.jpg, num: "01", order: release.desc, library: true, shared: true}
+    template: {name: Basic, poster: award-winners.jpg, num: "01", order: release.desc, library: "weekly(sunday), weekly(wednesday), weekly(saturday)"}
     summary: Emmy and Golden Globe award winners.
     imdb_list:
       - url: https://www.imdb.com/search/title/?groups=emmy_winner

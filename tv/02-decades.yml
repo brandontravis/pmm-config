@@ -8,10 +8,10 @@ collections:
 ##     Decades & Years     ##
 #############################
   Best TV Shows of the 2000's:
-    template: {name: BestOfTimePeriod, poster: best-2000s.jpg, summary: "2000's", start: 2000, end: 2009, num: "01", library: true, shared: true}
+    template: {name: BestOfTimePeriod, poster: best-2000s.jpg, summary: "2000's", start: 2000, end: 2009, num: "01", library: "weekly(monday), weekly(thursday)"}
   Best TV Shows of the 2010's:
-    template: {name: BestOfTimePeriod, poster: best-2010s.jpg, summary: "2010's", start: 2010, end: 2019, num: "02", library: true, shared: true}
+    template: {name: BestOfTimePeriod, poster: best-2010s.jpg, summary: "2010's", start: 2010, end: 2019, num: "02", library: "weekly(tuesday), weekly(friday)"}
   Best TV Shows of the 2020's:
-    template: {name: BestOfTimePeriod, poster: best-2020s.jpg, summary: "2020's", start: 2020, end: 2029, num: "03", library: true, shared: true}
+    template: {name: BestOfTimePeriod, poster: best-2020s.jpg, summary: "2020's", start: 2020, end: 2029, num: "03", library: "weekly(sunday), weekly(wednesday), weekly(saturday)"}
   Best TV Shows of the Last Five Years:
-    template: {name: BestOfTimePeriod, poster: best-5-years.jpg, summary: "last five years", start: 2017, end: 2023, num: "04", library: true, shared: true}
+    template: {name: BestOfTimePeriod, poster: best-5-years.jpg, summary: "last five years", start: 2017, end: 2023, num: "04", library: true}
