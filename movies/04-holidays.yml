@@ -10,6 +10,7 @@ collections:
   Love is in the Air:
     template: {name: Basic, poster: holiday-valentines.jpg, num: "03", order: release.desc}
     summary: Valentine's day films.
+    # visible_home: true
     visible_home: range(01/01-02/14)
     visible_library: range(01/01-02/14)
     visible_shared: range(01/01-02/14)
@@ -50,6 +51,7 @@ collections:
     summary: For those we've lost.
     visible_home: range(05/01-05/31)
     visible_shared: range(05/01-05/31)
+    visible_library: range(05/01-05/31)
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/holiday-memorial-day?sort=rank,asc
   Steak & Y'know ...:
@@ -121,11 +123,6 @@ collections:
       - https://www.imdb.com/list/ls027454200/
       - https://www.imdb.com/list/ls027886673/
       - https://www.imdb.com/list/ls097998599/
-  
-  
-  
-  
-  
-  
+
 
 

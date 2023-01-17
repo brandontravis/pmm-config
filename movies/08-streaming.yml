@@ -8,145 +8,97 @@ collections:
 ##     Originals     ##
 #######################
   Netflix Originals:
-    template: {name: Basic, poster: streaming-netflix-originals.jpg, num: "01", order: release.desc, library: "weekly(sunday), weekly(tuesday), weekly(thursday), weekly(saturday)"}
+    template: {name: Basic, poster: streaming-netflix-originals.jpg, num: "01", order: release.desc, home: false, shared: false, library: "weekly(sunday), weekly(tuesday), weekly(thursday), weekly(saturday)"}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/netflix-movies
     summary: Netflix original movies.
   Most Popular On Netflix:
-    template: {name: Basic, poster: streaming-netflix-popular.jpg, num: "02", order: custom, library: "weekly(monday), weekly(wednesday), weekly(friday)", limit: 100}
+    template: {name: Basic, poster: streaming-netflix-popular.jpg, num: "02", order: custom, home: false, shared: false, library: "weekly(monday), weekly(wednesday), weekly(friday)", limit: 100}
     summary: Most popular movies on Netflix.
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0144901&sort=user_rating,desc
       limit: 1000
-  # Top 20 on Netflix:
-  #   template: {name: Basic, num: "03", order: release.desc, library: true, poster: streaming-netflix-flix.jpg}
-  #   summary: Up to the top 20 movies this month on Netflix according to Flixpatrol.
-  #   flixpatrol_top:
-  #     platform: netflix
-  #     location: united_states
-  #     time_window: this_month
-  #     limit: 20
   Apple TV+ Originals:
-    template: {name: Basic, poster: streaming-atv-originals.jpg, num: "04", order: release.desc, library: "weekly(sunday)"}
+    template: {name: Basic, poster: streaming-atv-originals.jpg, num: "04", order: release.desc, home: false, shared: false, library: "weekly(sunday)"}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/appletv-movies
     summary: Apple TV+ original movies.
   Most Popular On Apple TV+:
-    template: {name: Basic, poster: streaming-apple-popular.jpg, num: "05", order: custom, library: true, limit: 100}
+    template: {name: Basic, poster: streaming-apple-popular.jpg, num: "05", order: custom, home: false, shared: false, library: true, limit: 100}
     summary: Most popular movies on Apple TV+
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0546168&sort=user_rating,desc
       limit: 1000
   Disney+ Originals:
-    template: {name: Basic, poster: streaming-disney-originals.jpg, num: "06", order: release.desc, library: "weekly(monday)"}
+    template: {name: Basic, poster: streaming-disney-originals.jpg, num: "06", order: release.desc, home: false, shared: false, library: "weekly(monday)"}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/disney-movies
     summary: Disney+ original movies.
   Most Popular On Disney+:
-    template: {name: Basic, poster: streaming-disney-popular.jpg, num: "07", order: custom, library: false, limit: 100}
+    template: {name: Basic, poster: streaming-disney-popular.jpg, num: "07", order: custom, home: false, shared: false, library: false, limit: 100}
     summary: Most popular movies on Disney+
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0721120&sort=user_rating,desc
       limit: 1000
-  # Top 20 on Disney+:
-  #   template: {name: Basic, num: "08", order: release.desc, library: true, poster: streaming-disney-flix.jpg}
-  #   summary: Up to the top 20 movies this month on Disney+ according to Flixpatrol.
-  #   flixpatrol_top:
-  #     platform: disney
-  #     location: united_states
-  #     time_window: this_month
-  #     limit: 20
   Hulu Originals:
-    template: {name: Basic, poster: streaming-hulu-originals.jpg, num: "09", order: release.desc, library: "weekly(tuesday)"}
+    template: {name: Basic, poster: streaming-hulu-originals.jpg, num: "09", order: release.desc, home: false, shared: false, library: "weekly(tuesday)"}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/hulu-movies
     summary: Hulu original movies.
   Most Popular On Hulu:
-    template: {name: Basic, poster: streaming-hulu-popular.jpg, num: "10", order: custom, library: false, limit: 100}
+    template: {name: Basic, poster: streaming-hulu-popular.jpg, num: "10", order: custom, home: false, shared: false, library: false, limit: 100}
     summary: Most popular movies on Hulu.
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0218858&sort=user_rating,desc
       limit: 1000
-  # Top 20 on Hulu:
-  #   template: {name: Basic, num: "11", order: release.desc, library: true, poster: streaming-hulu-flix.jpg}
-  #   summary: Up to the top 20 movies this month on Hulu according to Flixpatrol.
-  #   flixpatrol_top:
-  #     platform: hulu
-  #     location: united_states
-  #     time_window: this_month
-  #     limit: 20
   HBO Max Originals:
-    template: {name: Basic, poster: streaming-hbo-originals.jpg, num: "12", order: release.desc, library: "weekly(sunday), weekly(tuesday), weekly(thursday), weekly(saturday)"}
+    template: {name: Basic, poster: streaming-hbo-originals.jpg, num: "12", order: release.desc, home: false, shared: false, library: "weekly(sunday), weekly(tuesday), weekly(thursday), weekly(saturday)"}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/hbomax-movies
     summary: HBO Max original movies.
   Most Popular On HBO Max:
-    template: {name: Basic, poster: streaming-hbo-popular.jpg, num: "13", order: custom, library: "weekly(monday), weekly(wednesday), weekly(friday)", limit: 100}
+    template: {name: Basic, poster: streaming-hbo-popular.jpg, num: "13", order: custom, home: false, shared: false, library: "weekly(monday), weekly(wednesday), weekly(friday)", limit: 100}
     summary: Most popular movies on HBO Max.
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0754095&sort=user_rating,desc
       limit: 1000
-  # Top 20 on HBO Max:
-  #   template: {name: Basic, num: "14", order: release.desc, library: true, poster: streaming-hbo-flix.jpg}
-  #   summary: Up to the top 20 movies this month on HBO Max according to Flixpatrol.
-  #   flixpatrol_top:
-  #     platform: hbo
-  #     location: united_states
-  #     time_window: this_month
-  #     limit: 20
   Peacock Originals:
-    template: {name: Basic, poster: streaming-peacock-originals.jpg, num: "15", order: release.desc, library: "weekly(saturday)"}
+    template: {name: Basic, poster: streaming-peacock-originals.jpg, num: "15", order: release.desc, home: false, shared: false, library: "weekly(saturday)"}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/peacock-movies
     summary: Peacock original movies.
   Most Popular On Peacock:
-    template: {name: Basic, poster: streaming-peacock-popular.jpg, num: "16", order: custom, library: true, limit: 100}
+    template: {name: Basic, poster: streaming-peacock-popular.jpg, num: "16", order: custom, home: false, shared: false, library: true, limit: 100}
     summary: Most popular movies on Peacock.
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0764707&sort=user_rating,desc
       limit: 1000
   Prime Video Originals:
-    template: {name: Basic, poster: streaming-amazon-originals.jpg, num: "17", order: release.desc, library: "weekly(wednesday)"}
+    template: {name: Basic, poster: streaming-amazon-originals.jpg, num: "17", order: release.desc, home: false, shared: false, library: "weekly(wednesday)"}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/amazon-movies
     summary: Prime Video original movies.
   Most Popular On Prime Video:
-    template: {name: Basic, poster: streaming-amazon-popular.jpg, num: "18", order: custom, library: false, limit: 100}
+    template: {name: Basic, poster: streaming-amazon-popular.jpg, num: "18", order: custom, home: false, shared: false, library: false, limit: 100}
     summary: Most popular movies on Prime Video.
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0476953&sort=user_rating,desc
       limit: 1000
-  # Top 20 on Prime Video:
-  #   template: {name: Basic, num: "19", order: release.desc, library: true, poster: streaming-prime-flix.jpg}
-  #   summary: Up to the top 20 movies this month on Prime Video according to Flixpatrol.
-  #   flixpatrol_top:
-  #     platform: amazon_prime
-  #     location: united_states
-  #     time_window: this_month
-  #     limit: 20
   Paramount+ Originals:
-    template: {name: Basic, poster: streaming-paramount-originals.jpg, num: "20", order: release.desc, library: "weekly(thursday)"}
+    template: {name: Basic, poster: streaming-paramount-originals.jpg, num: "20", order: release.desc, home: false, shared: false, library: "weekly(thursday)"}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/paramount-movies
     summary: Paramount original movies.
   Most Popular On Paramount+:
-    template: {name: Basic, poster: streaming-paramount-popular.jpg, num: "21", order: custom, library: false, limit: 100}
+    template: {name: Basic, poster: streaming-paramount-popular.jpg, num: "21", order: custom, home: false, shared: false, library: false, limit: 100}
     summary: Most popular movies on Paramount+.
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0820547&sort=user_rating,desc
       limit: 1000
-  # Top 20 on Paramount+:
-  #   template: {name: Basic, num: "22", order: release.desc, library: true, poster: streaming-paramount-flix.jpg}
-  #   summary: Up to the top 20 movies this month on Paramount+ according to Flixpatrol.
-  #   flixpatrol_top:
-  #     platform: paramount_plus
-  #     location: united_states
-  #     time_window: this_month
-  #     limit: 20
   Showtime Originals:
-    template: {name: Basic, poster: streaming-showtime-originals.jpg, num: "23", order: release.desc, library: "weekly(friday)"}
+    template: {name: Basic, poster: streaming-showtime-originals.jpg, num: "23", order: release.desc, home: false, shared: false, library: "weekly(friday)"}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/showtime-movies
     summary: Showtime original movies.
   Most Popular On Showtime:
-    template: {name: Basic, poster: streaming-showtime-popular.jpg, num: "24", order: custom, library: true, limit: 100}
+    template: {name: Basic, poster: streaming-showtime-popular.jpg, num: "24", order: custom, home: false, shared: false, library: true, limit: 100}
     summary: Most popular movies on Showtime.
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0052980&sort=user_rating,desc
       limit: 1000
   Most Popular On Discovery+:
-    template: {name: Basic, poster: streaming-discovery-popular.jpg, num: "25", order: custom, library: true, limit: 100}
+    template: {name: Basic, poster: streaming-discovery-popular.jpg, num: "25", order: custom, home: false, shared: false, library: true, limit: 100}
     summary: Most popular movies on Discovery+.
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,tv_series,tv_special,tv_miniseries,tv_short&countries=us&languages=en&sort=release_date,desc&companies=co0834810&sort=user_rating,desc

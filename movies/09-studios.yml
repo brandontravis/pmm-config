@@ -8,30 +8,30 @@ collections:
 ##     Networks & Studios     ##
 ################################
   Apatow Productions:
-    template: {name: Basic, poster: studio-apatow.jpg, num: "01", order: release.desc}
+    template: {name: Basic, poster: studio-apatow.jpg, num: "01", order: release.desc, home: false, shared: false, library: false}
     summary: Apatow Productions (or The Apatow Company) is an American film and television production company founded by Judd Apatow in 1999.
     tmdb_company: 10105
   Blumhouse Productions:
-    template: {name: Basic, poster: studio-Blumhouse.jpg, num: "02", order: release.desc}
+    template: {name: Basic, poster: studio-Blumhouse.jpg, num: "02", order: release.desc, home: false, shared: false, library: false}
     summary: Blumhouse Productions is an American film and television production company founded in 2000 by Jason Blum. It is known mainly for producing horror films.
     tmdb_company: 3172
   DreamWorks:
-    template: {name: Basic, poster: studio-DreamWorks-Animation.jpg, num: "03", order: release.desc}
+    template: {name: Basic, poster: studio-DreamWorks-Animation.jpg, num: "03", order: release.desc, home: false, shared: false, library: false}
     summary: DreamWorks Animation LLC (also simply known as DreamWorks) is an American animation studio and a subsidiary of Universal Pictures, itself a subsidiary of Comcast's NBCUniversal. It is based in Glendale, California, and produces animated feature films, television programs, and online virtual games.
     tmdb_company: 521
   Lucasfilm:
-    template: {name: Basic, poster: studio-Lucasfilm.jpg, num: "04", order: release.desc}
+    template: {name: Basic, poster: studio-Lucasfilm.jpg, num: "04", order: release.desc, home: false, shared: false, library: false}
     summary: Lucasfilm Ltd. LLC is an American film and television production company that is a subsidiary of Walt Disney Studios, which is a business segment of The Walt Disney Company. The studio is best known for creating and producing the Star Wars and Indiana Jones franchises, as well as its leadership in developing special effects, sound, and computer animation for films. Lucasfilm was founded by filmmaker George Lucas in 1971 in San Rafael, California; most of the company's operations were moved to San Francisco in 2005.[3] Disney acquired Lucasfilm in October 2012 for $2.2 billion in cash and $1.855 billion in stock.
     tmdb_company: 1
   Marvel Studios:
-    template: {name: Basic, poster: studio-marvel.jpg, num: "05", order: release.desc}
+    template: {name: Basic, poster: studio-marvel.jpg, num: "05", order: release.desc, home: false, shared: false, library: false}
     summary: Marvel Studios, LLC is an American film and television studio that is a subsidiary of Walt Disney Studios, a division of The Walt Disney Company. Marvel Studios is known for the production of the Marvel Cinematic Universe films, based on characters that appear in Marvel Comics publications.
     tmdb_company: "420,7505"
   Pixar:
-    template: {name: Basic, poster: studio-pixar-animation-studios.jpg, num: "06", order: release.desc}
+    template: {name: Basic, poster: studio-pixar-animation-studios.jpg, num: "06", order: release.desc, home: false, shared: false, library: false}
     summary: Pixar Animation Studios, commonly known as Pixar, is an American computer animation studio based in Emeryville, California, a subsidiary of Disney Studios Content owned by The Walt Disney Company. Pixar began in 1979 as part of the Lucasfilm computer division, known as the Graphics Group, before its spin-off as a corporation on February 3, 1986, with funding from Apple co-founder Steve Jobs, who became its majority shareholder. Disney purchased Pixar in 2006 at a valuation of $7.4 billion by converting each share of Pixar stock to 2.3 shares of Disney stock, a transaction that resulted in Jobs becoming Disney's largest single shareholder at the time. Pixar is best known for its feature films technologically powered by RenderMan, the company's own implementation of the industry-standard RenderMan Interface Specification image-rendering application programming interface. Luxo Jr., a desk lamp from the studio's 1986 short film of the same name, is the studio's mascot.
     tmdb_company: 3
   Walt Disney Animation Studios:
-    template: {name: Basic, poster: studio-walt-disney.jpeg, num: "07", order: release.desc}
+    template: {name: Basic, poster: studio-walt-disney.jpeg, num: "07", order: release.desc, home: false, shared: false, library: false}
     summary: Walt Disney Animation Studios (WDAS), sometimes shortened to Disney Animation, is an American animation studio that creates animated features and short films for The Walt Disney Company. Founded on October 16, 1923 by brothers Walt Disney and Roy O. Disney, it is one of the oldest-running animation studios in the world. It is currently organized as a division of Walt Disney Studios and is headquartered at the Roy E. Disney Animation Building at the Walt Disney Studios lot in Burbank, California.
     tmdb_company: "6125,3475,3166,2"

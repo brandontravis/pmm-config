@@ -7,15 +7,15 @@ collections:
 ####################
 ##     Charts     ##
 ####################
-  # The Curated Movies Collection:
-  #   template: {name: Basic, poster: chart-brandon-curated.jpg, num: "01", order: random, library: true}
-  #   summary: Brandon's favorites.
-  #   trakt_list:
-  #     - https://trakt.tv/users/idealbrandon/lists/the-curated-collection?sort=rank,asc
-  # Trending Movies Right Now:
-  #   template: {name: Basic, poster: chart-trakt-trending.jpg, limit: 150, num: "02", order: custom, home: true, library: true, shared: true}
-  #   summary: Hot and trending movies from across the internet.
-  #   trakt_trending: 300
+  The Curated Movies Collection:
+    template: {name: Basic, poster: chart-brandon-curated.jpg, num: "01", order: random, home: false, shared: false, library: true}
+    summary: Brandon's favorites.
+    trakt_list:
+      - https://trakt.tv/users/idealbrandon/lists/the-curated-collection?sort=rank,asc
+  Trending Movies Right Now:
+    template: {name: Basic, poster: chart-trakt-trending.jpg, limit: 150, num: "02", order: custom, home: true, library: true, shared: true}
+    summary: Hot and trending movies from across the internet.
+    trakt_trending: 300
   Most Popular Movies This Week on Trakt: # FIX MY SCHEDULE
     template: {name: Basic, poster: chart-trakt-most-popular-this-week.jpg, limit: 100, num: "03", order: custom, home: true, library: true, shared: true, schedule: "weekly(sunday)"}
     # template: {name: Basic, poster: chart-trakt-most-popular-this-week.jpg, limit: 100, num: "03", order: custom, home: true, library: true, shared: true}
@@ -26,11 +26,11 @@ collections:
     # template: {name: Basic, poster: chart-trakt-most-popular-this-year.jpg, limit: 200, num: "04", order: custom, home: true, library: true, shared: true}
     summary: The most watched movies in the last year.
     trakt_watched_yearly: 1000
-  # Top Rated Movies on IMDB:
-  #   template: {name: Basic, poster: chart-imdb-top-rated.jpg, limit: 150, num: "05", order: custom, library: "weekly(tuesday), weekly(friday)"}
-  #   imdb_list:
-  #     url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,short&num_votes=20000,&sort=user_rating,desc
-  #     limit: 1000
+  Top Rated Movies on IMDB:
+    template: {name: Basic, poster: chart-imdb-top-rated.jpg, limit: 150, num: "05", order: custom, home: false, shared: false, library: "weekly(tuesday), weekly(friday)"}
+    imdb_list:
+      url: https://www.imdb.com/search/title/?title_type=feature,tv_movie,documentary,short&num_votes=20000,&sort=user_rating,desc
+      limit: 1000
   Best Movies of the Last Six Months: # FIX MY SCHEDULE
     template: {name: Basic, order: random, num: "06", poster: chart-imdb-best-six-months.jpg, home: true, library: true, shared: true, schedule: "weekly(monday), weekly(thursday)"}
     # template: {name: Basic, order: random, num: "06", poster: chart-imdb-best-six-months.jpg, home: true, library: true, shared: true}
@@ -38,35 +38,35 @@ collections:
     plex_search:
       audience_rating.gte: 7.0
       release: 180
-  # Because You Watched:
-  #   template: {name: Basic, poster: chart-plex-you-watched-movies.jpg, num: "07", order: random, library: true, sync_mode: append}
-  #   summary: Recommendations based off of recently watched movies (provided by couchmoney.tv)
-  #   trakt_list:
-  #     - https://trakt.tv/users/idealbrandon/lists/movies-based-on-recently-watched-couchmoney-tv?sort=rank,asc
-  # Our Most Watched Movies:
-  #   template: {name: Basic, poster: chart-plex-most-watched.jpg, limit: 100, num: "08", order: release.desc, library: true}
-  #   summary: Our most watched movies on Plex.
-  #   tautulli_watched:
-  #     list_days: 180
-  #     list_size: 60
-  #     list_buffer: 60
-  #   tautulli_popular:
-  #     list_days: 180
-  #     list_size: 60
-  #     list_buffer: 60
-  # Unwatched Movies from Our Watchlist:
-  #   template: {name: Basic, poster: chart-plex-unwatched-movies.jpg, num: "09", order: release.desc, home: true, library: true, shared: true}
-  #   summary: Unwatched movies from our watchlist, sorted by release date.
-  #   plex_watchlist: release.desc
-  #   filters:
-  #     plays.lt: 1
-  # Quick Flicks:
-  #   template: {name: Basic, order: release.desc, num: "10", poster: chart-quick-flicks.jpg, library: "weekly(sunday), weekly(wednesday), weekly(saturday)", limit: 150}
-  #   summary: Movies 90 minutes or less.
-  #   plex_search:
-  #     duration.lte: 90
-  #     genre.not: Animation
-  # Certified Fresh:
-  #   template: {name: Basic, num: "11", order: custom, poster: chart-certified-fresh.jpg, library: "weekly(monday), weekly(thursday)", limit: 150}
-  #   mdblist_list: https://mdblist.com/lists/plexmetamanager/certifiedfreshmovies?sort=score&sortorder=desc
-  #   summary: Certified Fresh movies, sorted by user rating.
+  Because You Watched:
+    template: {name: Basic, poster: chart-plex-you-watched-movies.jpg, num: "07", order: random, home: false, shared: false, library: true, sync_mode: append}
+    summary: Recommendations based off of recently watched movies (provided by couchmoney.tv)
+    trakt_list:
+      - https://trakt.tv/users/idealbrandon/lists/movies-based-on-recently-watched-couchmoney-tv?sort=rank,asc
+  Our Most Watched Movies:
+    template: {name: Basic, poster: chart-plex-most-watched.jpg, limit: 100, num: "08", order: release.desc, home: false, shared: false, library: true}
+    summary: Our most watched movies on Plex.
+    tautulli_watched:
+      list_days: 180
+      list_size: 60
+      list_buffer: 60
+    tautulli_popular:
+      list_days: 180
+      list_size: 60
+      list_buffer: 60
+  Unwatched Movies from Our Watchlist:
+    template: {name: Basic, poster: chart-plex-unwatched-movies.jpg, num: "09", order: release.desc, home: true, library: true, shared: true}
+    summary: Unwatched movies from our watchlist, sorted by release date.
+    plex_watchlist: release.desc
+    filters:
+      plays.lt: 1
+  Quick Flicks:
+    template: {name: Basic, order: release.desc, num: "10", poster: chart-quick-flicks.jpg, home: false, shared: false, library: "weekly(sunday), weekly(wednesday), weekly(saturday)", limit: 150}
+    summary: Movies 90 minutes or less.
+    plex_search:
+      duration.lte: 90
+      genre.not: Animation
+  Certified Fresh:
+    template: {name: Basic, num: "11", order: custom, poster: chart-certified-fresh.jpg, home: false, shared: false, library: "weekly(monday), weekly(thursday)", limit: 150}
+    mdblist_list: https://mdblist.com/lists/plexmetamanager/certifiedfreshmovies?sort=score&sortorder=desc
+    summary: Certified Fresh movies, sorted by user rating.

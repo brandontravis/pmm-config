@@ -27,8 +27,9 @@ templates:
     url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
     collection_order: custom
     collection_mode: hide
-    visible_home: true
-    visible_shared: true
+    visible_home: <<home>>
+    visible_shared: <<shared>>
+    visible_library: <<library>>
     limit: 150
     summary: Top rated films from the <<summary>>.
     imdb_list:
@@ -37,6 +38,9 @@ templates:
     schedule: <<schedule>>
     optional:
       - schedule
+      - home
+      - shared
+      - library
   PlexGenre:
     sort_title: +<<collection_section>>_<<collection_name>>
     url_poster: https://raw.githubusercontent.com/brandontravis/pmm-config/main/posters/<<poster>>
@@ -44,8 +48,8 @@ templates:
     smart_label: release.desc
     collection_mode: hide
     visible_library: <<library>>
-    visible_home: <<home>>
-    visible_shared: <<shared>>
+    visible_home: false
+    visible_shared: false
     limit: <<limit>>
     plex_search:
       genre: <<genre>> ## CAN I EXCLUDE ANIMATION
@@ -67,8 +71,8 @@ templates:
     sync_mode: sync
     collection_mode: hide
     visible_library: <<library>>
-    visible_home: <<home>>
-    visible_shared: <<shared>>
+    visible_home: false
+    visible_shared: false
     schedule: <<schedule>>
     smart_filter:
       limit: <<limit>>
@@ -93,8 +97,8 @@ templates:
     smart_label: release.desc
     collection_mode: hide
     visible_library: <<library>>
-    visible_home: <<home>>
-    visible_shared: <<shared>>
+    visible_home: false
+    visible_shared: false
     schedule: <<schedule>>
     optional:
       - num

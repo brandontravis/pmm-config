@@ -8,7 +8,7 @@ collections:
 ##     Charts     ##
 ####################
   The Curated TV Shows Collection:
-    template: {name: Basic, poster: chart-brandon-curated.jpg, num: "01", order: random, library: true}
+    template: {name: Basic, poster: chart-brandon-curated.jpg, num: "01", order: random, library: true, home: false, shared: false}
     summary: Brandon's favorites.
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/the-curated-collection?sort=rank,asc
@@ -16,35 +16,33 @@ collections:
     template: {name: Basic, poster: chart-trakt-trending.jpg, limit: 100, num: "02", order: custom, library: true, home: true, shared: true}
     summary: Hot and trending tv shows from across the internet.
     trakt_trending: 150
-  Most Popular TV Shows This Week on Trakt: # FIX MY SCHEDULE
+  Most Popular TV Shows This Week on Trakt:
     template: {name: Basic, poster: chart-trakt-most-popular-this-week.jpg, limit: 100, num: "03", order: custom, home: true, library: true, shared: true, schedule: "weekly(sunday)"}
-    # template: {name: Basic, poster: chart-trakt-most-popular-this-week.jpg, limit: 100, num: "03", order: custom, home: true, library: true, shared: true}
     summary: The most watched TV shows for the last seven days. Sorted by number of unique watchers.
     trakt_chart:
       chart: watched
       time_period: weekly
       limit: 1000
-  Most Popular TV Shows This Year on Trakt: # FIX MY SCHEDULE
+  Most Popular TV Shows This Year on Trakt:
     template: {name: Basic, poster: chart-trakt-most-popular-this-year.jpg, limit: 100, num: "04", order: custom, home: true, library: true, shared: true, schedule: "weekly(sunday)"}
-    # template: {name: Basic, poster: chart-trakt-most-popular-this-year.jpg, limit: 100, num: "04", order: custom, home: true, library: true, shared: true}
     summary: The most watched TV shows for the last year. Sorted by number of unique watchers.
     trakt_chart:
       chart: watched
       time_period: yearly
       limit: 1000
   Top Rated TV Shows on IMDB:
-    template: {name: Basic, poster: chart-imdb-top-rated.jpg, limit: 100, num: "05", order: custom, library: "weekly(tuesday), weekly(friday)"}
+    template: {name: Basic, poster: chart-imdb-top-rated.jpg, limit: 100, num: "05", order: custom, home: false, shared: false, library: "weekly(tuesday), weekly(friday)"}
     summary: Popular movies on IMDB, sorted by random.
     imdb_list:
       url: https://www.imdb.com/search/title/?title_type=tv_series,tv_miniseries&num_votes=20000,&sort=user_rating,desc
       limit: 1000
   Because You Watched:
-    template: {name: Basic, poster: chart-plex-you-watched-tv.jpg, num: "06", order: release.desc, library: true}
+    template: {name: Basic, poster: chart-plex-you-watched-tv.jpg, num: "06", order: release.desc, library: true, home: false, shared: false}
     summary: Recommendations based off of recently watched movies (provided by couchmoney.tv)
     trakt_list:
       - https://trakt.tv/users/idealbrandon/lists/tv-based-on-recently-watched-couchmoney-tv?sort=rank,asc
   Our Most Watched TV Shows:
-    template: {name: Basic, poster: chart-plex-most-watched.jpg, limit: 100, num: "07", order: release.desc, library: true}
+    template: {name: Basic, poster: chart-plex-most-watched.jpg, limit: 100, num: "07", order: release.desc, library: true, home: false, shared: false}
     summary: Our most watched TV shows on Plex.
     tautulli_popular:
       list_days: 180
@@ -71,12 +69,11 @@ collections:
     filters:
       plays.lt: 1
   Certified Fresh:
-    template: {name: Basic, num: "11", order: custom, poster: chart-certified-fresh.jpg, library: "weekly(monday), weekly(thursday)", limit: 100}
+    template: {name: Basic, num: "11", order: custom, poster: chart-certified-fresh.jpg, library: "weekly(monday), weekly(thursday)", home: false, shared: false, limit: 100}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/certifiedfreshshows
     summary: Certified Fresh TV Shows, sorted by user rating.
-  Best TV Shows of the Last Year: # FIX MY SCHEDULE
+  Best TV Shows of the Last Year:
     template: {name: Basic, order: random, num: "12", poster: chart-imdb-best-six-months.jpg, home: true, library: true, shared: true, schedule: "weekly(monday), weekly(thursday)"}
-    # template: {name: Basic, order: random, num: "12", poster: chart-imdb-best-six-months.jpg, home: true, library: true, shared: true}
     summary: TV Shows rated 7 or higher on IMDb, released in the past 12 months.
     plex_search:
       audience_rating.gte: 7.0
