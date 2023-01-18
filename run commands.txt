@@ -11,4 +11,13 @@ sudo docker run \
 -it \
 -e TZ=America/New_York \
 -v "/volume1/docker/appdata/pmm/config:/config:rw" meisnate12/plex-meta-manager \
+--run | tee pmm-$(date +"%Y_%m_%d_%I_%M_%p").txt
+
+
+sudo docker run \
+--rm \
+-it \
+-e TZ=America/New_York \
+-v "/volume1/docker/appdata/pmm/config:/config:rw" meisnate12/plex-meta-manager \
+--run-collections "Love is in the Air, Don't Panic! It's Organic, Alone Time is Overrated, Honoring our Heroes, Steak & Y'know ..., Home of the Brave, Never Forget, And The World Will Know!, Beware the Witching Hour, 'Tis the Season" \
 --run | tee pmm.txt
