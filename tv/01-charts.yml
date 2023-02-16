@@ -17,6 +17,7 @@ collections:
     summary: Hot and trending tv shows from across the internet.
     trakt_trending: 150
   Most Popular TV Shows This Week on Trakt:
+    # template: {name: Basic, poster: chart-trakt-most-popular-this-week.jpg, limit: 100, num: "03", order: custom, home: true, library: true, shared: true}
     template: {name: Basic, poster: chart-trakt-most-popular-this-week.jpg, limit: 100, num: "03", order: custom, home: true, library: true, shared: true, schedule: "weekly(sunday)"}
     summary: The most watched TV shows for the last seven days. Sorted by number of unique watchers.
     trakt_chart:
@@ -24,6 +25,7 @@ collections:
       time_period: weekly
       limit: 1000
   Most Popular TV Shows This Year on Trakt:
+    # template: {name: Basic, poster: chart-trakt-most-popular-this-year.jpg, limit: 100, num: "04", order: custom, home: true, library: true, shared: true}
     template: {name: Basic, poster: chart-trakt-most-popular-this-year.jpg, limit: 100, num: "04", order: custom, home: true, library: true, shared: true, schedule: "weekly(sunday)"}
     summary: The most watched TV shows for the last year. Sorted by number of unique watchers.
     trakt_chart:
@@ -31,6 +33,7 @@ collections:
       time_period: yearly
       limit: 1000
   Top Rated TV Shows on IMDB:
+    # template: {name: Basic, poster: chart-imdb-top-rated.jpg, limit: 100, num: "05", order: custom, home: false, shared: false, library: true}
     template: {name: Basic, poster: chart-imdb-top-rated.jpg, limit: 100, num: "05", order: custom, home: false, shared: false, library: "weekly(tuesday), weekly(friday)"}
     summary: Popular movies on IMDB, sorted by random.
     imdb_list:
@@ -69,10 +72,12 @@ collections:
     filters:
       plays.lt: 1
   Certified Fresh:
+    # template: {name: Basic, num: "11", order: custom, poster: chart-certified-fresh.jpg, library: true, home: false, shared: false, limit: 100}
     template: {name: Basic, num: "11", order: custom, poster: chart-certified-fresh.jpg, library: "weekly(monday), weekly(thursday)", home: false, shared: false, limit: 100}
     mdblist_list: https://mdblist.com/lists/plexmetamanager/certifiedfreshshows
     summary: Certified Fresh TV Shows, sorted by user rating.
   Best TV Shows of the Last Year:
+    # template: {name: Basic, order: random, num: "12", poster: chart-imdb-best-six-months.jpg, home: true, library: true, shared: true}
     template: {name: Basic, order: random, num: "12", poster: chart-imdb-best-six-months.jpg, home: true, library: true, shared: true, schedule: "weekly(monday), weekly(thursday)"}
     summary: TV Shows rated 7 or higher on IMDb, released in the past 12 months.
     plex_search:
